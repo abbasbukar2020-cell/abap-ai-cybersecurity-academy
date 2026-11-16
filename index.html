@@ -45,8 +45,8 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
   <p>Build your cybersecurity knowledge step by step. Learn in English first, followed by Hausa explanations.</p>
   <p><strong>Creator:</strong> Abbas Bukar</p>
   <p><strong>Learning system:</strong> Lessons, examples, practical exercises and assessments.</p>
-  <div class="progress" role="progressbar" aria-label="Progress across the three available lessons" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="bar"></div></div>
-  <p class="small" id="progressText">Progress across 3 available lessons: 0%</p>
+  <div class="progress" role="progressbar" aria-label="Progress across the four available lessons" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="bar"></div></div>
+  <p class="small" id="progressText">Progress across 4 available lessons: 0%</p>
   <button type="button" onclick="startLesson()">Start Learning</button>
   <p class="small">The lessons open below this dashboard only after you select Start Learning.</p>
 </section>
@@ -61,7 +61,7 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
     <li>Expert – Enterprise security and advanced research</li>
     <li>Executive – Governance, risk and security leadership</li>
   </ol>
-  <p class="small">Lessons unlock progressively after passing their assessments. Three lessons are currently available in this version.</p>
+  <p class="small">Lessons unlock progressively after passing their assessments. Four lessons are currently available in this version.</p>
 </section>
 
 <section class="panel lesson" id="lesson1">
@@ -321,28 +321,170 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
   </form>
   <p class="result" id="result3" aria-live="polite"></p>
   <button type="button" class="secondary" onclick="returnToDashboard()">Return to Dashboard</button>
-  <p class="notice" id="lesson3Complete" hidden><strong>Lesson 3 Passed — All currently available lessons completed!</strong><br>You have completed all 3 lessons in this version. / Ka kammala duk darussa 3 da suke cikin wannan sigar.</p>
+  <p class="notice" id="lesson3Complete" hidden><strong>Lesson 3 Passed — Lesson 4 unlocked!</strong><br>You can now continue to Computer Networking Fundamentals. / Ka ci Darasi na 3; yanzu Darasi na 4 ya buɗe.</p>
+  <button type="button" id="next3" disabled onclick="openLesson4()">Lesson 4 (Locked)</button>
 </section>
+
+<section class="panel lesson" id="lesson4">
+  <h2>LEVEL 1: BEGINNER</h2>
+  <h3>Lesson 4: Computer Networking Fundamentals</h3>
+  <div class="notice"><strong>Learning Objectives – Manufofin Darasi</strong>
+    <p>By the end of this lesson, you should be able to explain what a computer network is, identify common network types and devices, understand IP and MAC addresses, and describe basic internet communication.</p>
+    <p>A ƙarshen darasin, za ka iya bayyana menene network, bambance nau'ikan network da na'urorinsa, fahimtar IP da MAC address, da kuma yadda sadarwar intanet take aiki.</p>
+  </div>
+  <h3>PART A – ENGLISH EXPLANATION</h3>
+  <h3>1. What is a Computer Network?</h3>
+  <p>A computer network is a group of two or more computers or digital devices connected so they can communicate and share information or resources. Devices may connect using cables (wired) or radio signals such as Wi-Fi (wireless).</p>
+  <p><strong>Example:</strong> A home Wi-Fi network connects phones, laptops and smart TVs to a router so they can communicate with one another and access the internet.</p>
+  <div class="diagram"><strong>Phone</strong> &nbsp; <strong>Laptop</strong> &nbsp; <strong>Smart TV</strong><br>↘ &nbsp; ↓ &nbsp; ↙<br><strong>Wi-Fi Router</strong><br>↓<br><strong>Internet Service Provider</strong><br>↓<br><strong>Internet</strong></div>
+  <h3>2. Why are Networks Used?</h3>
+  <ul><li><strong>Communication:</strong> Devices exchange information.</li><li><strong>Resource sharing:</strong> Users can share printers, files and internet connections.</li><li><strong>Central management:</strong> Organizations can manage users and systems centrally.</li><li><strong>Remote access:</strong> Authorized users can access services from other locations.</li></ul>
+  <p><strong>Security warning:</strong> Sharing must be controlled. A network that is not properly secured can expose private files and devices to unauthorized people.</p>
+  <h3>3. Types of Networks</h3>
+  <div class="term"><strong>PAN – Personal Area Network:</strong> A very small network around one person, such as a phone connected to wireless earbuds using Bluetooth.</div>
+  <div class="term"><strong>LAN – Local Area Network:</strong> A network within a limited area, such as a home, office, school or computer laboratory.</div>
+  <div class="term"><strong>MAN – Metropolitan Area Network:</strong> A network that can cover a town or city, often connecting multiple LANs.</div>
+  <div class="term"><strong>WAN – Wide Area Network:</strong> A network covering large geographical areas. The internet is the best-known example of a global network of networks.</div>
+  <p><strong>Remember:</strong> These names describe the general geographical scope of a network. Real networks can be designed in different ways.</p>
+  <h3>4. Common Network Devices</h3>
+  <ul>
+    <li><strong>Router:</strong> Connects different networks and forwards data between them. A home router commonly connects the home network to the internet.</li>
+    <li><strong>Switch:</strong> Connects devices inside a wired LAN and forwards local network traffic to the appropriate device.</li>
+    <li><strong>Modem:</strong> Connects to an internet service provider's access technology and converts signals as required by that connection. Some home devices combine a modem and router.</li>
+    <li><strong>Wireless Access Point (AP):</strong> Allows wireless devices to join a network, usually through Wi-Fi.</li>
+    <li><strong>Network Interface Card (NIC):</strong> Hardware that enables a device to connect to a network, through Ethernet or Wi-Fi.</li>
+  </ul>
+  <h3>5. Wired and Wireless Connections</h3>
+  <p><strong>Wired networking:</strong> Uses physical cables, commonly Ethernet. It can provide stable and fast connections, but devices need a cable connection.</p>
+  <p><strong>Wireless networking:</strong> Uses radio signals, such as Wi-Fi or Bluetooth. It offers mobility, but signal quality and security settings matter.</p>
+  <h3>6. IP Address and MAC Address</h3>
+  <p><strong>IP address (Internet Protocol address):</strong> A logical address used to identify an interface on an IP network so data can be delivered to the right network destination. IPv4 addresses look like <code>192.168.1.10</code>. IPv6 addresses are longer and use hexadecimal characters.</p>
+  <p><strong>MAC address (Media Access Control address):</strong> A link-layer address associated with a network interface. It is commonly shown as six pairs of hexadecimal digits, for example <code>00:1A:2B:3C:4D:5E</code>. Some devices use randomized MAC addresses for privacy.</p>
+  <div class="term"><strong>Key difference:</strong> An IP address is used for communication at the network layer and may change depending on the network. A MAC address is used on the local network link and identifies a network interface there. Neither should be treated as a password or proof of a person's identity.</div>
+  <h3>7. DNS and DHCP</h3>
+  <p><strong>DNS – Domain Name System:</strong> Helps translate human-readable domain names, such as <code>example.com</code>, into IP addresses used by computers to locate services.</p>
+  <p><strong>DHCP – Dynamic Host Configuration Protocol:</strong> Automatically provides network settings to devices, commonly including an IP address, subnet information, default gateway and DNS server.</p>
+  <p><strong>Simple example:</strong> When a phone joins Wi-Fi, DHCP may give it a local IP address. When the user enters a website name, DNS helps the phone find the address of that website's server.</p>
+  <h3>8. TCP, UDP and Ports</h3>
+  <p><strong>TCP – Transmission Control Protocol:</strong> A transport protocol that establishes a connection and provides reliable, ordered delivery of data.</p>
+  <p><strong>UDP – User Datagram Protocol:</strong> A transport protocol that sends datagrams without setting up a TCP-style connection. It has lower overhead, but does not itself guarantee delivery or order.</p>
+  <p><strong>Port number:</strong> A number used by transport protocols to direct traffic to the correct application or service on a device. A port is not a physical socket.</p>
+  <ul><li><strong>HTTPS:</strong> Commonly uses TCP port 443; modern HTTP/3 uses QUIC over UDP port 443.</li><li><strong>DNS:</strong> Commonly uses port 53 over UDP or TCP, depending on the operation.</li><li><strong>SSH:</strong> Commonly uses TCP port 22 for secure remote administration.</li></ul>
+  <h3>9. What Happens When You Open a Website?</h3>
+  <ol><li>Your device connects to a network, often using Wi-Fi or mobile data.</li><li>It uses DNS to find the IP address associated with the website name, if it is not already known.</li><li>Your device sends network traffic toward the server, through routers and other network equipment.</li><li>The browser and server communicate using the relevant web protocols. HTTPS protects the connection using encryption and authentication.</li><li>The server sends data back and your browser displays the page.</li></ol>
+  <h3>10. Basic Network Security</h3>
+  <ul><li>Use WPA2-AES or WPA3 security on Wi-Fi where supported; avoid open Wi-Fi for sensitive activity.</li><li>Change default router administrator passwords.</li><li>Keep router firmware and connected devices updated.</li><li>Use a strong, unique Wi-Fi password and do not share it publicly.</li><li>Turn off features such as remote administration if they are not needed.</li><li>Only scan or test networks that you own or have clear permission to assess.</li></ul>
+  <hr>
+  <h3>PART B – BAYANIN HAUSA</h3>
+  <h3>1. Menene Computer Network?</h3>
+  <p>Computer Network na nufin haɗin kwamfutoci ko na'urorin zamani guda biyu ko fiye domin su iya sadarwa, musayar bayanai ko amfani da wasu kayan aiki tare. Ana iya haɗa su da waya (cable) ko ta siginar iska kamar Wi-Fi.</p>
+  <p><strong>Misali:</strong> Wi-Fi na gida yana haɗa waya, laptop da smart TV da router domin su samu damar sadarwa da shiga intanet.</p>
+  <h3>2. Me ya sa ake amfani da Network?</h3>
+  <ul><li><strong>Communication:</strong> Na'urori suna musayar bayanai.</li><li><strong>Resource sharing:</strong> Ana iya raba printer, files da internet connection.</li><li><strong>Central management:</strong> Cibiyoyi za su iya kula da na'urori da masu amfani daga wuri guda.</li><li><strong>Remote access:</strong> Mutumin da aka ba izini zai iya shiga wasu ayyuka daga wani wuri.</li></ul>
+  <p><strong>Gargaɗin tsaro:</strong> Dole ne a kula da yadda ake raba bayanai. Idan ba a tsare network ba, wanda ba shi da izini zai iya samun damar ganin fayiloli ko na'urori.</p>
+  <h3>3. Nau'ikan Network</h3>
+  <div class="term"><strong>PAN – Personal Area Network:</strong> Ƙaramin network da ke kusa da mutum, misali haɗa waya da wireless earbuds ta Bluetooth.</div>
+  <div class="term"><strong>LAN – Local Area Network:</strong> Network da ke cikin ƙaramin wuri kamar gida, ofis, makaranta ko computer laboratory.</div>
+  <div class="term"><strong>MAN – Metropolitan Area Network:</strong> Network da zai iya rufe gari ko birni, yana haɗa LAN da dama.</div>
+  <div class="term"><strong>WAN – Wide Area Network:</strong> Network da ya ratsa manyan yankuna ko ƙasashe. Intanet misali ne na babbar hanyar sadarwa ta duniya.</div>
+  <h3>4. Na'urorin Network</h3>
+  <ul><li><strong>Router:</strong> Yana haɗa networks daban-daban kuma yana tura bayanai zuwa inda ya dace. Router na gida yakan haɗa network na gida da intanet.</li><li><strong>Switch:</strong> Yana haɗa na'urori a cikin LAN ta cable, sannan yana tura bayanai zuwa na'urar da ta dace.</li><li><strong>Modem:</strong> Yana taimaka wa na'ura ta haɗu da fasahar sadarwar kamfanin internet service provider. Wasu na'urori suna haɗa modem da router a jiki guda.</li><li><strong>Wireless Access Point:</strong> Yana ba na'urorin Wi-Fi damar shiga network.</li><li><strong>NIC:</strong> Kayan cikin na'ura da ke ba ta damar haɗuwa da network ta Ethernet ko Wi-Fi.</li></ul>
+  <h3>5. Wired da Wireless</h3>
+  <p><strong>Wired:</strong> Haɗin network ne ta hanyar cable, misali Ethernet. Yana iya ba da haɗi mai ƙarfi da sauri, amma na'ura tana buƙatar cable.</p>
+  <p><strong>Wireless:</strong> Haɗi ne ta siginar iska kamar Wi-Fi ko Bluetooth. Yana ba mutum damar motsawa, amma dole a kula da ƙarfin sigina da tsaro.</p>
+  <h3>6. IP Address da MAC Address</h3>
+  <p><strong>IP Address:</strong> Adireshi ne na sadarwa da ake amfani da shi wajen gano inda za a aika bayanai a IP network. Misalin IPv4 shi ne <code>192.168.1.10</code>. IPv6 kuma yana da tsari mai tsawo.</p>
+  <p><strong>MAC Address:</strong> Adireshin network interface ne da ake amfani da shi wajen sadarwa a local network. Yawanci yana kama da <code>00:1A:2B:3C:4D:5E</code>. Wasu wayoyi suna iya canza MAC address domin kare sirrin mai amfani.</p>
+  <div class="term"><strong>Bambanci:</strong> IP address yana taimakawa wajen isar da bayanai tsakanin networks, kuma yana iya canzawa idan an sauya network. MAC address ana amfani da shi a haɗin local network. Babu ɗayansu da ya kamata a ɗauka a matsayin password ko cikakkiyar shaida ta ainihin mutum.</div>
+  <h3>7. DNS da DHCP</h3>
+  <p><strong>DNS:</strong> Yana taimakawa wajen mayar da sunan website kamar <code>example.com</code> zuwa IP address domin na'ura ta iya gano server.</p>
+  <p><strong>DHCP:</strong> Yana ba na'ura network settings kai tsaye, kamar IP address, subnet, default gateway da DNS server.</p>
+  <p><strong>Misali:</strong> Idan waya ta haɗu da Wi-Fi, DHCP zai iya ba ta IP address. Idan ka rubuta sunan website, DNS zai taimaka wajen gano adireshin server ɗin.</p>
+  <h3>8. TCP, UDP da Ports</h3>
+  <p><strong>TCP:</strong> Hanyar sadarwa ce da ke kafa haɗi kuma tana taimakawa wajen tabbatar da cewa bayanai sun isa cikin tsari.</p>
+  <p><strong>UDP:</strong> Hanyar sadarwa ce da ke aika bayanai ba tare da kafa irin haɗin TCP ba. Tana da ƙarancin ƙarin nauyi, amma ba ita kaɗai ke tabbatar da isar da bayanai ko tsarinsu ba.</p>
+  <p><strong>Port Number:</strong> Lamba ce da ke taimaka wa kwamfuta tura bayanan da suka shigo zuwa manhaja ko service ɗin da ya dace. Port ba ramin zahiri ba ne.</p>
+  <ul><li><strong>HTTPS:</strong> Yawanci TCP port 443; HTTP/3 kuma yana amfani da QUIC ta UDP port 443.</li><li><strong>DNS:</strong> Yawanci port 53 ta UDP ko TCP gwargwadon aikin.</li><li><strong>SSH:</strong> Yawanci TCP port 22 domin gudanar da na'ura daga nesa cikin tsaro.</li></ul>
+  <h3>9. Me ke faruwa idan ka buɗe Website?</h3>
+  <ol><li>Wayarka tana haɗuwa da network ta Wi-Fi ko mobile data.</li><li>DNS yana taimakawa wajen gano IP address na website.</li><li>Na'urarka tana aika bayanai zuwa server ta hanyar routers da sauran kayan network.</li><li>Browser da server suna sadarwa. HTTPS yana amfani da encryption da tabbatar da sahihancin haɗi.</li><li>Server yana dawo da bayanai, browser kuma ya nuna shafin.</li></ol>
+  <h3>10. Muhimman Dokokin Tsaron Network</h3>
+  <ul><li>Yi amfani da WPA2-AES ko WPA3 a Wi-Fi idan na'urarka tana tallafa musu.</li><li>Canza password na asusun admin na router daga wanda aka sa tun farko.</li><li>Sabunta firmware na router da sauran na'urori.</li><li>Yi amfani da password mai ƙarfi kuma kada ka raba shi a fili.</li><li>Kashe remote administration idan ba ka buƙatarsa.</li><li>Kada ka gwada ko bincikar network da ba naka ba sai kana da izini bayyananne.</li></ul>
+  <hr>
+  <h2>Practical Exercises – Ayyukan Gwaji</h2>
+  <h3>Practical 1: Identify your connection</h3>
+  <p>On your phone, open Settings and look at Wi-Fi or Mobile Network. Identify which connection you are currently using. Do not share your password with anyone.</p>
+  <p><strong>Hausa:</strong> A wayarka, shiga Settings ka duba Wi-Fi ko Mobile Network. Ka gano irin haɗin da kake amfani da shi. Kada ka ba kowa password ɗinka.</p>
+  <h3>Practical 2: View your IP address safely</h3>
+  <p>Open the details of your connected Wi-Fi network in Settings. Find the IP address field. It may look like 192.168.x.x. This is often a private local address; do not post your network details publicly.</p>
+  <p><strong>Hausa:</strong> Ka buɗe bayanan Wi-Fi ɗin da ka haɗa a Settings, ka nemo IP address. Yana iya kama da 192.168.x.x. Wannan yawanci adireshin cikin network na gida ne; kada ka wallafa bayanan network ɗinka a fili.</p>
+  <h3>Practical 3: Recognize network equipment</h3>
+  <p>If you have permission, look at a home or school router. Identify its power cable, network ports and Wi-Fi name label. Do not reset it or change its settings.</p>
+  <p><strong>Hausa:</strong> Idan kana da izini, ka duba router na gida ko makaranta. Ka gano wurin wuta, network ports da sunan Wi-Fi. Kada ka yi reset ko canza settings.</p>
+  <div class="notice"><strong>Ethical Practice – Aikin da ya dace</strong><p>Only inspect your own device or a network you have explicit permission to use. Never attempt to access another person's router, Wi-Fi or data without permission.</p><p>Ka binciki na'urarka ko network da aka ba ka izini kawai. Kada ka yi ƙoƙarin shiga router, Wi-Fi ko bayanan wani ba tare da izininsa ba.</p></div>
+  <h3>Important Terms – Muhimman Kalmomi</h3>
+  <div class="term"><strong>Network:</strong> Haɗin na'urori domin sadarwa.</div><div class="term"><strong>Router:</strong> Na'urar haɗa networks.</div><div class="term"><strong>Switch:</strong> Na'urar haɗa na'urori a LAN.</div><div class="term"><strong>IP Address:</strong> Adireshin sadarwar na'ura.</div><div class="term"><strong>MAC Address:</strong> Adireshin network interface.</div><div class="term"><strong>DNS:</strong> Tsarin gano IP ta sunan domain.</div><div class="term"><strong>DHCP:</strong> Tsarin raba network settings kai tsaye.</div><div class="term"><strong>TCP:</strong> Hanyar sadarwa mai tabbatar da isar da bayanai cikin tsari.</div><div class="term"><strong>UDP:</strong> Hanyar aika bayanai ba tare da tabbatar da isarsu da kanta ba.</div><div class="term"><strong>Port:</strong> Lambar da ke nuna service ko application da ya kamata ya karɓi bayanai.</div>
+  <h3>Lesson Summary – Takaitaccen Darasi</h3>
+  <p>A computer network connects devices so they can communicate and share resources. PAN, LAN, MAN and WAN describe different network scopes. Routers connect networks, switches connect devices in a LAN, and access points provide Wi-Fi. IP addresses help route data, MAC addresses identify interfaces on a local link, DNS resolves names, DHCP provides network settings, and TCP/UDP carry application data.</p>
+  <p>Computer Network yana haɗa na'urori domin su sadar da juna. PAN, LAN, MAN da WAN suna bayyana girman network. Router yana haɗa networks, switch yana haɗa na'urori a LAN, Access Point yana ba da Wi-Fi. IP address yana taimakawa wajen isar da bayanai, MAC address yana gano network interface a local link, DNS yana gano adireshin website, DHCP yana raba network settings, TCP da UDP kuma hanyoyi ne na jigilar bayanai.</p>
+  <hr>
+  <h2>Lesson 4 Assessment – Jarrabawar Fahimta</h2>
+  <p>Answer all five questions. You need at least 4 correct answers out of 5 to pass.</p>
+  <form id="quiz4">
+    <p><strong>1. What is a computer network?</strong></p>
+    <label class="option"><input type="radio" name="l4q1" value="a"> A group of connected devices that can communicate</label>
+    <label class="option"><input type="radio" name="l4q1" value="b"> A single computer with no connection</label>
+    <label class="option"><input type="radio" name="l4q1" value="c"> A type of keyboard</label>
+    <label class="option"><input type="radio" name="l4q1" value="d"> A computer game</label>
+    <p><strong>2. Which network type is commonly used within a home or office?</strong></p>
+    <label class="option"><input type="radio" name="l4q2" value="a"> WAN</label>
+    <label class="option"><input type="radio" name="l4q2" value="b"> LAN</label>
+    <label class="option"><input type="radio" name="l4q2" value="c"> MAN</label>
+    <label class="option"><input type="radio" name="l4q2" value="d"> GPS</label>
+    <p><strong>3. What does a router mainly do?</strong></p>
+    <label class="option"><input type="radio" name="l4q3" value="a"> Print documents</label>
+    <label class="option"><input type="radio" name="l4q3" value="b"> Store photos permanently</label>
+    <label class="option"><input type="radio" name="l4q3" value="c"> Connect different networks and forward data</label>
+    <label class="option"><input type="radio" name="l4q3" value="d"> Scan paper documents</label>
+    <p><strong>4. What is the main purpose of DNS?</strong></p>
+    <label class="option"><input type="radio" name="l4q4" value="a"> Charge a phone</label>
+    <label class="option"><input type="radio" name="l4q4" value="b"> Create user passwords</label>
+    <label class="option"><input type="radio" name="l4q4" value="c"> Increase screen brightness</label>
+    <label class="option"><input type="radio" name="l4q4" value="d"> Help translate domain names into IP addresses</label>
+    <p><strong>5. Wane ne babban aikin DHCP?</strong></p>
+    <label class="option"><input type="radio" name="l4q5" value="a"> Yana raba network settings kamar IP address kai tsaye</label>
+    <label class="option"><input type="radio" name="l4q5" value="b"> Yana buga takardu</label>
+    <label class="option"><input type="radio" name="l4q5" value="c"> Yana kashe kwamfuta</label>
+    <label class="option"><input type="radio" name="l4q5" value="d"> Yana goge fayiloli</label>
+    <button type="button" onclick="checkQuiz4()">Submit Answers</button>
+  </form>
+  <p class="result" id="result4" aria-live="polite"></p>
+  <p class="notice" id="lesson4Complete" hidden><strong>Lesson 4 Passed — Excellent work!</strong><br>You have completed all four lessons currently included in this version. / Ka kammala darussa huɗu da ke cikin wannan sigar.</p>
+  <button type="button" class="secondary" onclick="openLesson3()">Back to Lesson 3</button>
+  <button type="button" class="secondary" onclick="returnToDashboard()">Return to Dashboard</button>
+</section>
+
 </main>
 <footer>ABAP AI CYBERSECURITY ACADEMY<br>Prepared by Abbas Bukar</footer>
 
 <script>
-const lessonKeys = ["abap_lesson1_passed","abap_lesson2_passed","abap_lesson3_passed"];
+const lessonKeys = ["abap_lesson1_passed","abap_lesson2_passed","abap_lesson3_passed","abap_lesson4_passed"];
 let passed1 = localStorage.getItem(lessonKeys[0]) === "yes";
 let passed2 = localStorage.getItem(lessonKeys[1]) === "yes";
 let passed3 = localStorage.getItem(lessonKeys[2]) === "yes";
+let passed4 = localStorage.getItem(lessonKeys[3]) === "yes";
 
 function updateProgress(){
-  const completed = [passed1, passed2, passed3].filter(Boolean).length;
-  const value = Math.round((completed / 3) * 100);
+  const completed = [passed1, passed2, passed3, passed4].filter(Boolean).length;
+  const value = Math.round((completed / 4) * 100);
   document.getElementById("bar").style.width = value + "%";
   const progress = document.querySelector('[role="progressbar"]');
   progress.setAttribute("aria-valuenow", String(value));
   document.getElementById("progressText").textContent =
-    "Progress across 3 available lessons: " + value + "% | " +
+    "Progress across 4 available lessons: " + value + "% | " +
     "Lesson 1: " + (passed1 ? "Passed" : "Not completed") + " | " +
     "Lesson 2: " + (passed2 ? "Passed" : "Locked") + " | " +
-    "Lesson 3: " + (passed3 ? "Passed" : "Locked");
+    "Lesson 3: " + (passed3 ? "Passed" : "Locked") + " | " +
+    "Lesson 4: " + (passed4 ? "Passed" : "Locked");
 }
 
 function hideLessons(){
@@ -360,6 +502,7 @@ function showLesson(id){
 }
 
 function startLesson(){
+  if(passed3) return showLesson("lesson4");
   if(passed2) return showLesson("lesson3");
   if(passed1) return showLesson("lesson2");
   return showLesson("lesson1");
@@ -429,6 +572,23 @@ function checkQuiz3(){
     4, "result3", lessonKeys[2], () => {
       passed3 = true;
       document.getElementById("lesson3Complete").hidden = false;
+      const button = document.getElementById("next3");
+      button.disabled = false;
+      button.textContent = "Open Lesson 4";
+    });
+}
+
+
+function openLesson4(){
+  if(!passed3){ alert("Pass Lesson 3 first. / Ka ci jarrabawar Darasi na 3 tukuna."); return; }
+  showLesson("lesson4");
+}
+function checkQuiz4(){
+  gradeQuiz(["l4q1","l4q2","l4q3","l4q4","l4q5"],
+    {l4q1:"a",l4q2:"b",l4q3:"c",l4q4:"d",l4q5:"a"},
+    4, "result4", lessonKeys[3], () => {
+      passed4 = true;
+      document.getElementById("lesson4Complete").hidden = false;
     });
 }
 
@@ -443,7 +603,13 @@ function restoreProgress(){
   }
   if(passed3){
     document.getElementById("lesson3Complete").hidden = false;
+    document.getElementById("next3").disabled = false;
+    document.getElementById("next3").textContent = "Open Lesson 4";
     document.getElementById("result3").textContent = "Lesson 3 was previously passed. / Ka riga ka ci jarrabawar Darasi na 3.";
+  }
+  if(passed4){
+    document.getElementById("lesson4Complete").hidden = false;
+    document.getElementById("result4").textContent = "Lesson 4 was previously passed. / Ka riga ka ci jarrabawar Darasi na 4.";
   }
   updateProgress();
 }
