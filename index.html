@@ -22,6 +22,11 @@ button:disabled{opacity:.5;cursor:not-allowed}
 button:focus-visible,input:focus-visible{outline:3px solid #f5cf66;outline-offset:2px}
 .option{display:block;padding:12px;margin:9px 0;background:#172e4b;border-radius:9px;line-height:1.5;cursor:pointer}
 .option input{margin-right:8px;transform:scale(1.15)}
+.option.correct{border:2px solid #22c55e;background:#123d32}
+.option.incorrect{border:2px solid #ef4444;background:#48232b}
+.answer-review{padding:9px 12px;margin:6px 0 14px;border-radius:8px;background:#10243a;line-height:1.6}
+.answer-review .right{color:#4ade80;font-weight:bold}
+.answer-review .wrong{color:#f87171;font-weight:bold}
 .small{font-size:13px;color:#b7c8dc}
 .progress{height:10px;background:#294563;border-radius:20px;overflow:hidden}
 .progress div{height:100%;width:0;background:#54d6c5;transition:width .3s}
@@ -525,6 +530,15 @@ function openLesson3(){
 
 function gradeQuiz(questions, answers, passMark, resultId, storageKey, onPass){
   let score = 0;
+  // Remove feedback from an earlier attempt before grading again.
+  for(const question of questions){
+    document.querySelectorAll('input[name="' + question + '"]').forEach(input => {
+      input.closest("label").classList.remove("correct", "incorrect");
+    });
+    const oldReview = document.getElementById("review-" + question);
+    if(oldReview) oldReview.remove();
+  }
+
   for(const question of questions){
     const selected = document.querySelector('input[name="' + question + '"]:checked');
     if(!selected){
@@ -534,6 +548,29 @@ function gradeQuiz(questions, answers, passMark, resultId, storageKey, onPass){
     }
     if(selected.value === answers[question]) score++;
   }
+
+  // Show the exact answer selected and mark the correct option for every question.
+  for(const question of questions){
+    const selected = document.querySelector('input[name="' + question + '"]:checked');
+    const options = Array.from(document.querySelectorAll('input[name="' + question + '"]'));
+    const correct = options.find(input => input.value === answers[question]);
+    selected.closest("label").classList.add(selected.value === answers[question] ? "correct" : "incorrect");
+    correct.closest("label").classList.add("correct");
+
+    const review = document.createElement("div");
+    review.className = "answer-review";
+    review.id = "review-" + question;
+    const selectedText = selected.closest("label").textContent.trim();
+    const correctText = correct.closest("label").textContent.trim();
+    if(selected.value === answers[question]){
+      review.innerHTML = '<span class="right">✓ Correct! / Daidai!</span> You selected: ' + correctText;
+    }else{
+      review.innerHTML = '<span class="wrong">✗ Your answer was incorrect. / Amsarka ba daidai ba ce.</span><br>' +
+        'Your answer: ' + selectedText + '<br><span class="right">✓ Correct answer: ' + correctText + '</span>';
+    }
+    correct.closest("label").insertAdjacentElement("afterend", review);
+  }
+
   const total = questions.length;
   if(score >= passMark){
     localStorage.setItem(storageKey, "yes");
@@ -543,7 +580,7 @@ function gradeQuiz(questions, answers, passMark, resultId, storageKey, onPass){
   }else{
     document.getElementById(resultId).textContent =
       "Your score is " + score + "/" + total + ". You need " + passMark +
-      " correct answers to pass. Review the lesson and try again. / Ka sake nazari sannan ka sake gwadawa.";
+      " correct answers to pass. The incorrect answers are marked below. Review and try again. / Ka samu " + score + "/" + total + ". An nuna maka inda ka yi kuskure da amsar da ta dace a ƙasa. Ka sake nazari sannan ka sake gwadawa.";
   }
   updateProgress();
 }
