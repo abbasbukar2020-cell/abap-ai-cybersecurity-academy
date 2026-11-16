@@ -320,8 +320,8 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
     <button type="button" onclick="checkQuiz3()">Submit Answers</button>
   </form>
   <p class="result" id="result3" aria-live="polite"></p>
-  <button type="button" class="secondary" onclick="showLesson2()">Back to Lesson 2</button>
-  <p class="notice" id="lesson3Complete" hidden><strong>Lesson 3 completed!</strong> This version currently contains three lessons. The next lesson will be added in a future update.</p>
+  <button type="button" class="secondary" onclick="returnToDashboard()">Return to Dashboard</button>
+  <p class="notice" id="lesson3Complete" hidden><strong>Lesson 3 Passed — All currently available lessons completed!</strong><br>You have completed all 3 lessons in this version. / Ka kammala duk darussa 3 da suke cikin wannan sigar.</p>
 </section>
 </main>
 <footer>ABAP AI CYBERSECURITY ACADEMY<br>Prepared by Abbas Bukar</footer>
@@ -364,6 +364,11 @@ function startLesson(){
   if(passed1) return showLesson("lesson2");
   return showLesson("lesson1");
 }
+function returnToDashboard(){
+  hideLessons();
+  document.getElementById("dashboard").scrollIntoView({behavior:"smooth", block:"start"});
+}
+
 function showLesson1(){ showLesson("lesson1"); }
 function showLesson2(){
   if(!passed1){ alert("Pass Lesson 1 first. / Ka ci jarrabawar Darasi na 1 tukuna."); return; }
