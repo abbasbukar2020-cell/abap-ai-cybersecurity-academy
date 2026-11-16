@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,131 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#081426">
 <title>ABAP AI Cybersecurity Academy</title>
-
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#081426;
-  color:#eef5ff
-}
-header{
-  padding:22px 16px;
-  background:#10233d;
-  border-bottom:1px solid #294563
-}
-header h1{
-  font-size:23px;
-  margin:0 0 8px;
-  color:#54d6c5
-}
+body{margin:0;font-family:Arial,sans-serif;background:#081426;color:#eef5ff}
+header{padding:22px 16px;background:#10233d;border-bottom:1px solid #294563}
+header h1{font-size:23px;margin:0 0 8px;color:#54d6c5}
 header p{margin:0;color:#c5d4e8;font-size:14px}
 main{max-width:850px;margin:auto;padding:18px}
-.panel{
-  background:#10233d;
-  border:1px solid #294563;
-  border-radius:14px;
-  padding:18px;
-  margin-bottom:16px
-}
+.panel{background:#10233d;border:1px solid #294563;border-radius:14px;padding:18px;margin-bottom:16px}
 h2{font-size:20px;color:#54d6c5;margin-top:0}
 h3{color:#a9c9ff}
 p,li{line-height:1.65}
-button{
-  background:#18a999;
-  color:#061b27;
-  border:0;
-  border-radius:9px;
-  padding:13px 17px;
-  font-weight:bold;
-  font-size:15px;
-  min-height:46px;
-  cursor:pointer;
-  margin:5px 4px 5px 0
-}
+button{background:#18a999;color:#061b27;border:0;border-radius:9px;padding:13px 17px;font-weight:bold;font-size:15px;min-height:46px;cursor:pointer;margin:5px 4px 5px 0}
 button.secondary{background:#294563;color:white}
 button:disabled{opacity:.5;cursor:not-allowed}
-.option{
-  display:block;
-  padding:12px;
-  margin:9px 0;
-  background:#172e4b;
-  border-radius:9px;
-  line-height:1.5
-}
-.option input{margin-right:8px}
+button:focus-visible,input:focus-visible{outline:3px solid #f5cf66;outline-offset:2px}
+.option{display:block;padding:12px;margin:9px 0;background:#172e4b;border-radius:9px;line-height:1.5;cursor:pointer}
+.option input{margin-right:8px;transform:scale(1.15)}
 .small{font-size:13px;color:#b7c8dc}
-.progress{
-  height:10px;
-  background:#294563;
-  border-radius:20px;
-  overflow:hidden
-}
-.progress div{
-  height:100%;
-  width:0;
-  background:#54d6c5;
-  transition:.3s
-}
-.lesson{
-  display:none;
-}
+.progress{height:10px;background:#294563;border-radius:20px;overflow:hidden}
+.progress div{height:100%;width:0;background:#54d6c5;transition:width .3s}
+.lesson{display:none}
 .result{font-weight:bold;margin-top:12px;line-height:1.6}
-.diagram{
-  background:#071a30;
-  border:1px solid #365777;
-  border-radius:10px;
-  padding:15px;
-  margin:14px 0;
-  text-align:center;
-  line-height:2
-}
-.term{
-  background:#172e4b;
-  padding:12px;
-  border-radius:9px;
-  margin:9px 0;
-  line-height:1.6
-}
-.notice{
-  border-left:4px solid #54d6c5;
-  padding:10px 13px;
-  background:#172e4b;
-  border-radius:5px;
-  margin:14px 0
-}
-footer{
-  text-align:center;
-  padding:25px;
-  color:#9db0c8;
-  font-size:13px
-}
+.diagram{background:#071a30;border:1px solid #365777;border-radius:10px;padding:15px;margin:14px 0;text-align:center;line-height:2}
+.term{background:#172e4b;padding:12px;border-radius:9px;margin:9px 0;line-height:1.6}
+.notice{border-left:4px solid #54d6c5;padding:10px 13px;background:#172e4b;border-radius:5px;margin:14px 0}
+footer{text-align:center;padding:25px;color:#9db0c8;font-size:13px}
+hr{border:0;border-top:1px solid #294563;margin:22px 0}
 </style>
 </head>
-
 <body>
-
 <header>
   <h1>ABAP AI CYBERSECURITY ACADEMY</h1>
   <p>Learn Cybersecurity from Beginner to Executive Level</p>
 </header>
-
 <main>
-
-<section class="panel">
+<section class="panel" id="dashboard">
   <h2>Welcome to ABAP AI Academy</h2>
-  <p>
-    Build your cybersecurity knowledge step by step.
-    Learn in English first, followed by Hausa explanations.
-  </p>
+  <p>Build your cybersecurity knowledge step by step. Learn in English first, followed by Hausa explanations.</p>
   <p><strong>Creator:</strong> Abbas Bukar</p>
   <p><strong>Learning system:</strong> Lessons, examples, practical exercises and assessments.</p>
-
-  <div class="progress"><div id="bar"></div></div>
-  <p class="small" id="progressText">Your learning progress: 0%</p>
-
-  <button onclick="startLesson()">Start Learning</button>
+  <div class="progress" role="progressbar" aria-label="Progress across the three available lessons" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="bar"></div></div>
+  <p class="small" id="progressText">Progress across 3 available lessons: 0%</p>
+  <button type="button" onclick="startLesson()">Start Learning</button>
+  <p class="small">The lessons open below this dashboard only after you select Start Learning.</p>
 </section>
 
 <section class="panel">
@@ -143,907 +61,388 @@ footer{
     <li>Expert – Enterprise security and advanced research</li>
     <li>Executive – Governance, risk and security leadership</li>
   </ol>
-  <p class="small">
-    Lessons unlock progressively after passing their assessments.
-  </p>
+  <p class="small">Lessons unlock progressively after passing their assessments. Three lessons are currently available in this version.</p>
 </section>
 
-<!-- LESSON 1 -->
-
 <section class="panel lesson" id="lesson1">
-
   <h2>LEVEL 1: BEGINNER</h2>
   <h3>Lesson 1: Introduction to Cybersecurity</h3>
-
   <h3>PART A – ENGLISH</h3>
-
   <p><strong>What is Cybersecurity?</strong></p>
-  <p>
-    Cybersecurity is the practice of protecting computers, mobile devices,
-    networks, applications and digital information from unauthorized access,
-    attacks, damage or theft.
-  </p>
-
-  <p><strong>Example:</strong> When you protect your phone with a strong
-  password and avoid suspicious links, you are practising basic cybersecurity.</p>
-
+  <p>Cybersecurity is the practice of protecting computers, mobile devices, networks, applications and digital information from unauthorized access, attacks, damage or theft.</p>
+  <p><strong>Example:</strong> When you protect your phone with a strong password and avoid suspicious links, you are practising basic cybersecurity.</p>
   <h3>Why is Cybersecurity Important?</h3>
   <ul>
-    <li>It protects personal information.</li>
-    <li>It helps prevent financial fraud.</li>
-    <li>It protects organizations and businesses.</li>
-    <li>It helps keep computer systems available and reliable.</li>
+    <li>It protects personal information.</li><li>It helps prevent financial fraud.</li><li>It protects organizations and businesses.</li><li>It helps keep computer systems available and reliable.</li>
   </ul>
-
   <h3>PART B – HAUSA</h3>
-
   <p><strong>Menene Cybersecurity?</strong></p>
-  <p>
-    Cybersecurity na nufin hanyoyin kare kwamfuta, wayar hannu, network,
-    manhajoji da bayanan sirri daga shiga ba tare da izini ba,
-    hare-haren yanar gizo, lalacewa ko satar bayanai.
-  </p>
-
-  <p><strong>Misali:</strong> Idan ka saka password mai ƙarfi a wayarka
-  kuma ka guji danna links da ba ka yarda da su ba,
-  kana yin aikin kariya ta yanar gizo.</p>
-
+  <p>Cybersecurity na nufin hanyoyin kare kwamfuta, wayar hannu, network, manhajoji da bayanan sirri daga shiga ba tare da izini ba, hare-haren yanar gizo, lalacewa ko satar bayanai.</p>
+  <p><strong>Misali:</strong> Idan ka saka password mai ƙarfi a wayarka kuma ka guji danna links da ba ka yarda da su ba, kana yin aikin kariya ta yanar gizo.</p>
   <h3>Me ya sa Cybersecurity yake da muhimmanci?</h3>
-  <ul>
-    <li>Yana kare bayanan mutum.</li>
-    <li>Yana taimakawa wajen hana zamba ta kuɗi.</li>
-    <li>Yana kare kamfanoni da cibiyoyi.</li>
-    <li>Yana taimakawa tsarin kwamfuta ya ci gaba da aiki lafiya.</li>
-  </ul>
-
+  <ul><li>Yana kare bayanan mutum.</li><li>Yana taimakawa wajen hana zamba ta kuɗi.</li><li>Yana kare kamfanoni da cibiyoyi.</li><li>Yana taimakawa tsarin kwamfuta ya ci gaba da aiki lafiya.</li></ul>
   <h3>Important Terms – Muhimman Kalmomi</h3>
   <ul>
     <li><strong>Cyber:</strong> Abubuwan da suka shafi duniyar kwamfuta da intanet.</li>
-    <li><strong>Security:</strong> Tsaro ko kariya.</li>
-    <li><strong>Threat:</strong> Barazana.</li>
-    <li><strong>Attack:</strong> Hari.</li>
-    <li><strong>Data:</strong> Bayanai.</li>
-    <li><strong>Unauthorized access:</strong> Shiga ba tare da izini ba.</li>
+    <li><strong>Security:</strong> Tsaro ko kariya.</li><li><strong>Threat:</strong> Barazana.</li><li><strong>Attack:</strong> Hari.</li><li><strong>Data:</strong> Bayanai.</li><li><strong>Unauthorized access:</strong> Shiga ba tare da izini ba.</li>
   </ul>
-
   <h3>Lesson Summary – Takaitaccen Darasi</h3>
-  <p>
-    Cybersecurity protects digital systems and information.
-    A good learner must understand the risks and learn how to prevent them.
-  </p>
-  <p>
-    Cybersecurity yana kare na'urorin zamani da bayanai.
-    Dalibi nagari ya kamata ya fahimci barazanar tsaro da hanyoyin kariya.
-  </p>
-
-  <hr style="border-color:#294563">
-
+  <p>Cybersecurity protects digital systems and information. A good learner must understand the risks and learn how to prevent them.</p>
+  <p>Cybersecurity yana kare na'urorin zamani da bayanai. Dalibi nagari ya kamata ya fahimci barazanar tsaro da hanyoyin kariya.</p>
+  <hr>
   <h2>Knowledge Test – Gwajin Fahimta</h2>
   <p>Answer all three questions. You need at least 2 correct answers to pass.</p>
-
   <form id="quiz1">
-
     <p><strong>1. What does Cybersecurity protect?</strong></p>
     <label class="option"><input type="radio" name="q1" value="a"> Only clothes and food</label>
     <label class="option"><input type="radio" name="q1" value="b"> Computers, networks and digital information</label>
     <label class="option"><input type="radio" name="q1" value="c"> Only buildings</label>
-
     <p><strong>2. Menene ma'anar Password mai ƙarfi?</strong></p>
     <label class="option"><input type="radio" name="q2" value="a"> Kalmar sirri mai sauƙin zato</label>
     <label class="option"><input type="radio" name="q2" value="b"> Kalmar sirri da kowa ya sani</label>
     <label class="option"><input type="radio" name="q2" value="c"> Kalmar sirri mai wahalar zato</label>
-
     <p><strong>3. What is unauthorized access?</strong></p>
     <label class="option"><input type="radio" name="q3" value="a"> Access without permission</label>
     <label class="option"><input type="radio" name="q3" value="b"> Learning with a teacher</label>
     <label class="option"><input type="radio" name="q3" value="c"> Turning off a computer</label>
-
     <button type="button" onclick="checkQuiz1()">Submit Answers</button>
   </form>
-
-  <p class="result" id="result1"></p>
-
-  <button id="next1" disabled onclick="openLesson2()">
-    Lesson 2 (Locked)
-  </button>
+  <p class="result" id="result1" aria-live="polite"></p>
+  <button type="button" id="next1" disabled onclick="openLesson2()">Lesson 2 (Locked)</button>
 </section>
 
-
-<!-- LESSON 2 -->
-
 <section class="panel lesson" id="lesson2">
-
   <h2>LEVEL 1: BEGINNER</h2>
   <h3>Lesson 2: Computer Fundamentals</h3>
-
   <div class="notice">
-    <strong>Learning Objectives</strong>
-    <p>At the end of this lesson, you should be able to:</p>
-    <ul>
-      <li>Define a computer.</li>
-      <li>Explain the difference between hardware and software.</li>
-      <li>Identify the major parts of a computer.</li>
-      <li>Explain input, processing, output and storage.</li>
-      <li>Understand CPU, RAM and storage.</li>
-    </ul>
+    <strong>Learning Objectives</strong><p>At the end of this lesson, you should be able to:</p>
+    <ul><li>Define a computer.</li><li>Explain the difference between hardware and software.</li><li>Identify the major parts of a computer.</li><li>Explain input, processing, output and storage.</li><li>Understand CPU, RAM and storage.</li></ul>
   </div>
-
   <h3>PART A – ENGLISH EXPLANATION</h3>
-
   <h3>1. What is a Computer?</h3>
-  <p>
-    A computer is an electronic device that accepts data as input,
-    processes the data according to instructions, stores information
-    and produces useful output.
-  </p>
-
-  <p><strong>Example:</strong> When you use a calculator on your phone
-  and enter 5 + 5, the phone processes the numbers and displays 10.</p>
-
+  <p>A computer is an electronic device that accepts data as input, processes the data according to instructions, stores information and produces useful output.</p>
+  <p><strong>Example:</strong> When you use a calculator on your phone and enter 5 + 5, the phone processes the numbers and displays 10.</p>
   <h3>2. Data and Information</h3>
-  <p>
-    <strong>Data</strong> means raw facts that have not yet been processed.
-    Examples include numbers, names, words and measurements.
-  </p>
-  <p>
-    <strong>Information</strong> is data that has been processed
-    and organized so that it becomes meaningful.
-  </p>
-
-  <div class="term">
-    <strong>Example:</strong><br>
-    Data: 40, 50, 60.<br>
-    Information: The average of these three numbers is 50.
-  </div>
-
+  <p><strong>Data</strong> means raw facts that have not yet been processed. Examples include numbers, names, words and measurements.</p>
+  <p><strong>Information</strong> is data that has been processed and organized so that it becomes meaningful.</p>
+  <div class="term"><strong>Example:</strong><br>Data: 40, 50, 60.<br>Information: The average of these three numbers is 50.</div>
   <h3>3. Main Functions of a Computer</h3>
   <p>A computer performs four major functions:</p>
-
-  <div class="diagram">
-    <strong>INPUT</strong>
-    <p>↓</p>
-    <strong>PROCESSING</strong>
-    <p>↓</p>
-    <strong>OUTPUT</strong>
-    <p>↓</p>
-    <strong>STORAGE</strong>
-  </div>
-
-  <ul>
-    <li><strong>Input:</strong> Receiving data from a user or another device.</li>
-    <li><strong>Processing:</strong> Working on the data using instructions.</li>
-    <li><strong>Output:</strong> Presenting the result to the user.</li>
-    <li><strong>Storage:</strong> Saving data and information for future use.</li>
-  </ul>
-
+  <div class="diagram"><strong>INPUT</strong><p>↓</p><strong>PROCESSING</strong><p>↓</p><strong>OUTPUT</strong><p>↓</p><strong>STORAGE</strong></div>
+  <ul><li><strong>Input:</strong> Receiving data from a user or another device.</li><li><strong>Processing:</strong> Working on the data using instructions.</li><li><strong>Output:</strong> Presenting the result to the user.</li><li><strong>Storage:</strong> Saving data and information for future use.</li></ul>
   <p><strong>Example:</strong> When you type a document:</p>
-  <ul>
-    <li>Input: You type using a keyboard.</li>
-    <li>Processing: The computer handles the typed characters.</li>
-    <li>Output: The words appear on the screen.</li>
-    <li>Storage: You save the document on the device.</li>
-  </ul>
-
+  <ul><li>Input: You type using a keyboard.</li><li>Processing: The computer handles the typed characters.</li><li>Output: The words appear on the screen.</li><li>Storage: You save the document on the device.</li></ul>
   <h3>4. Hardware</h3>
-  <p>
-    Hardware refers to the physical parts of a computer that
-    you can see and touch.
-  </p>
-
+  <p>Hardware refers to the physical parts of a computer that you can see and touch.</p>
   <p><strong>Examples of hardware:</strong></p>
-  <ul>
-    <li>Monitor – Displays information.</li>
-    <li>Keyboard – Used for typing.</li>
-    <li>Mouse – Used to control the pointer.</li>
-    <li>CPU – Processes instructions.</li>
-    <li>Hard drive or SSD – Stores files and programs.</li>
-    <li>RAM – Temporarily holds data currently being used.</li>
-    <li>Motherboard – Connects major computer components.</li>
-  </ul>
-
+  <ul><li>Monitor – Displays information.</li><li>Keyboard – Used for typing.</li><li>Mouse – Used to control the pointer.</li><li>CPU – Processes instructions.</li><li>Hard drive or SSD – Stores files and programs.</li><li>RAM – Temporarily holds data currently being used.</li><li>Motherboard – Connects major computer components.</li></ul>
   <h3>5. Software</h3>
-  <p>
-    Software is a collection of programs and instructions
-    that tells computer hardware what to do.
-    You cannot physically touch software.
-  </p>
-
+  <p>Software is a collection of programs and instructions that tells computer hardware what to do. You cannot physically touch software.</p>
   <p><strong>Examples:</strong></p>
-  <ul>
-    <li>Windows – An operating system.</li>
-    <li>Android – An operating system.</li>
-    <li>Microsoft Word – A word-processing application.</li>
-    <li>Google Chrome – A web browser.</li>
-    <li>Antivirus programs – Software that helps detect and prevent malware.</li>
-  </ul>
-
-  <div class="term">
-    <strong>Important difference:</strong><br>
-    Hardware = Physical parts of a computer.<br>
-    Software = Programs and instructions that run on the computer.
-  </div>
-
+  <ul><li>Windows – An operating system.</li><li>Android – An operating system.</li><li>Microsoft Word – A word-processing application.</li><li>Google Chrome – A web browser.</li><li>Antivirus programs – Software that helps detect and prevent malware.</li></ul>
+  <div class="term"><strong>Important difference:</strong><br>Hardware = Physical parts of a computer.<br>Software = Programs and instructions that run on the computer.</div>
   <h3>6. Understanding the CPU</h3>
-  <p>
-    CPU means <strong>Central Processing Unit</strong>.
-    It is the main processor of a computer.
-    It executes instructions and performs calculations.
-  </p>
-
+  <p>CPU means <strong>Central Processing Unit</strong>. It is the main processor of a computer. It executes instructions and performs calculations.</p>
   <p>The CPU has important internal parts, including:</p>
-  <ul>
-    <li><strong>Control Unit (CU):</strong> Directs and coordinates operations.</li>
-    <li><strong>Arithmetic Logic Unit (ALU):</strong> Performs arithmetic and logical operations.</li>
-    <li><strong>Registers:</strong> Very small, very fast storage locations inside the CPU.</li>
-  </ul>
-
+  <ul><li><strong>Control Unit (CU):</strong> Directs and coordinates operations.</li><li><strong>Arithmetic Logic Unit (ALU):</strong> Performs arithmetic and logical operations.</li><li><strong>Registers:</strong> Very small, very fast storage locations inside the CPU.</li></ul>
   <h3>7. Understanding RAM</h3>
-  <p>
-    RAM means <strong>Random Access Memory</strong>.
-    It temporarily holds data and programs that the computer
-    is actively using.
-  </p>
-  <p>
-    RAM is generally volatile memory. This means its contents
-    are lost when power is switched off.
-  </p>
-
-  <p><strong>Example:</strong> When you open a browser,
-  some of the data needed by the browser is loaded into RAM.</p>
-
+  <p>RAM means <strong>Random Access Memory</strong>. It temporarily holds data and programs that the computer is actively using.</p>
+  <p>RAM is generally volatile memory. This means its contents are lost when power is switched off.</p>
+  <p><strong>Example:</strong> When you open a browser, some of the data needed by the browser is loaded into RAM.</p>
   <h3>8. Storage: HDD and SSD</h3>
-  <p>
-    Storage devices keep files, applications and operating systems
-    for long-term use, even when the computer is switched off.
-  </p>
-  <ul>
-    <li><strong>HDD:</strong> Hard Disk Drive. Uses spinning magnetic disks.</li>
-    <li><strong>SSD:</strong> Solid State Drive. Uses flash memory and has no spinning disks.</li>
-    <li><strong>Flash drive:</strong> A portable storage device.</li>
-    <li><strong>Memory card:</strong> A small storage device commonly used in phones and cameras.</li>
-  </ul>
-
+  <p>Storage devices keep files, applications and operating systems for long-term use, even when the computer is switched off.</p>
+  <ul><li><strong>HDD:</strong> Hard Disk Drive. Uses spinning magnetic disks.</li><li><strong>SSD:</strong> Solid State Drive. Uses flash memory and has no spinning disks.</li><li><strong>Flash drive:</strong> A portable storage device.</li><li><strong>Memory card:</strong> A small storage device commonly used in phones and cameras.</li></ul>
   <h3>9. Operating System</h3>
-  <p>
-    An operating system (OS) is system software that manages
-    computer hardware and software resources and provides
-    services for applications.
-  </p>
+  <p>An operating system (OS) is system software that manages computer hardware and software resources and provides services for applications.</p>
   <p><strong>Examples:</strong> Windows, Linux, macOS and Android.</p>
-
   <p>Common responsibilities of an operating system include:</p>
-  <ul>
-    <li>Managing files and folders.</li>
-    <li>Managing memory and running programs.</li>
-    <li>Controlling hardware devices.</li>
-    <li>Providing a user interface.</li>
-    <li>Supporting security features and user accounts.</li>
-  </ul>
-
+  <ul><li>Managing files and folders.</li><li>Managing memory and running programs.</li><li>Controlling hardware devices.</li><li>Providing a user interface.</li><li>Supporting security features and user accounts.</li></ul>
   <h3>10. Why Computer Fundamentals Matter in Cybersecurity</h3>
-  <p>
-    Cybersecurity students must understand computers before studying
-    security attacks and protection techniques.
-  </p>
-  <ul>
-    <li>Understanding files helps you protect important data.</li>
-    <li>Understanding operating systems helps you manage system security.</li>
-    <li>Understanding networks helps you learn how devices communicate.</li>
-    <li>Understanding software helps you recognize unsafe applications.</li>
-    <li>Understanding hardware helps you identify physical security risks.</li>
-  </ul>
-
-  <hr style="border-color:#294563">
-
+  <p>Cybersecurity students must understand computers before studying security attacks and protection techniques.</p>
+  <ul><li>Understanding files helps you protect important data.</li><li>Understanding operating systems helps you manage system security.</li><li>Understanding networks helps you learn how devices communicate.</li><li>Understanding software helps you recognize unsafe applications.</li><li>Understanding hardware helps you identify physical security risks.</li></ul>
+  <hr>
   <h3>PART B – BAYANIN HAUSA</h3>
-
   <h3>1. Menene Computer?</h3>
-  <p>
-    Computer ko kwamfuta na'urar lantarki ce da take karɓar bayanai,
-    ta sarrafa su bisa umarnin da aka ba ta, ta adana bayanai,
-    sannan ta fitar da sakamako mai amfani.
-  </p>
-
-  <p><strong>Misali:</strong> Idan ka buɗe calculator a wayarka,
-  ka saka 5 + 5, wayar za ta sarrafa lissafin sannan ta nuna maka 10.</p>
-
+  <p>Computer ko kwamfuta na'urar lantarki ce da take karɓar bayanai, ta sarrafa su bisa umarnin da aka ba ta, ta adana bayanai, sannan ta fitar da sakamako mai amfani.</p>
+  <p><strong>Misali:</strong> Idan ka buɗe calculator a wayarka, ka saka 5 + 5, wayar za ta sarrafa lissafin sannan ta nuna maka 10.</p>
   <h3>2. Menene Data da Information?</h3>
-  <p>
-    <strong>Data</strong> na nufin ɗanyen bayanai waɗanda ba a sarrafa su ba tukuna.
-    Misalai su ne lambobi, sunaye da kalmomi.
-  </p>
-  <p>
-    <strong>Information</strong> kuwa bayanai ne da aka sarrafa
-    kuma aka tsara su har suka zama masu ma'ana.
-  </p>
-
-  <div class="term">
-    <strong>Misali:</strong><br>
-    Data: 40, 50, 60.<br>
-    Information: Matsakaicin waɗannan lambobi uku shi ne 50.
-  </div>
-
+  <p><strong>Data</strong> na nufin ɗanyen bayanai waɗanda ba a sarrafa su ba tukuna. Misalai su ne lambobi, sunaye da kalmomi.</p>
+  <p><strong>Information</strong> kuwa bayanai ne da aka sarrafa kuma aka tsara su har suka zama masu ma'ana.</p>
+  <div class="term"><strong>Misali:</strong><br>Data: 40, 50, 60.<br>Information: Matsakaicin waɗannan lambobi uku shi ne 50.</div>
   <h3>3. Manyan Ayyukan Computer</h3>
   <p>Akwai manyan ayyuka guda huɗu:</p>
-
-  <div class="diagram">
-    <strong>INPUT – Shigar da bayanai</strong>
-    <p>↓</p>
-    <strong>PROCESSING – Sarrafa bayanai</strong>
-    <p>↓</p>
-    <strong>OUTPUT – Fitar da sakamako</strong>
-    <p>↓</p>
-    <strong>STORAGE – Adana bayanai</strong>
-  </div>
-
-  <ul>
-    <li><strong>Input:</strong> Karɓar bayanai daga mutum ko wata na'ura.</li>
-    <li><strong>Processing:</strong> Sarrafa bayanan bisa umarni.</li>
-    <li><strong>Output:</strong> Nuna sakamakon aikin.</li>
-    <li><strong>Storage:</strong> Adana bayanai domin amfani a gaba.</li>
-  </ul>
-
+  <div class="diagram"><strong>INPUT – Shigar da bayanai</strong><p>↓</p><strong>PROCESSING – Sarrafa bayanai</strong><p>↓</p><strong>OUTPUT – Fitar da sakamako</strong><p>↓</p><strong>STORAGE – Adana bayanai</strong></div>
+  <ul><li><strong>Input:</strong> Karɓar bayanai daga mutum ko wata na'ura.</li><li><strong>Processing:</strong> Sarrafa bayanan bisa umarni.</li><li><strong>Output:</strong> Nuna sakamakon aikin.</li><li><strong>Storage:</strong> Adana bayanai domin amfani a gaba.</li></ul>
   <p><strong>Misali:</strong> Idan kana rubuta takarda:</p>
-  <ul>
-    <li>Input: Kana amfani da keyboard wajen rubutu.</li>
-    <li>Processing: Kwamfuta tana sarrafa haruffan da ka rubuta.</li>
-    <li>Output: Rubutun yana bayyana a screen.</li>
-    <li>Storage: Ka ajiye takardar a cikin kwamfuta.</li>
-  </ul>
-
+  <ul><li>Input: Kana amfani da keyboard wajen rubutu.</li><li>Processing: Kwamfuta tana sarrafa haruffan da ka rubuta.</li><li>Output: Rubutun yana bayyana a screen.</li><li>Storage: Ka ajiye takardar a cikin kwamfuta.</li></ul>
   <h3>4. Menene Hardware?</h3>
-  <p>
-    Hardware su ne sassan kwamfuta na zahiri waɗanda mutum
-    zai iya gani kuma ya taɓa.
-  </p>
+  <p>Hardware su ne sassan kwamfuta na zahiri waɗanda mutum zai iya gani kuma ya taɓa.</p>
   <p><strong>Misalai:</strong></p>
-  <ul>
-    <li>Monitor – Allon nuna bayanai.</li>
-    <li>Keyboard – Na'urar rubutu.</li>
-    <li>Mouse – Na'urar sarrafa alamar kwamfuta.</li>
-    <li>CPU – Mai sarrafa umarni.</li>
-    <li>Hard drive ko SSD – Na'urar adana fayiloli.</li>
-    <li>RAM – Ƙwaƙwalwar wucin gadi da kwamfuta ke amfani da ita.</li>
-    <li>Motherboard – Babban allo da ke haɗa sassan kwamfuta.</li>
-  </ul>
-
+  <ul><li>Monitor – Allon nuna bayanai.</li><li>Keyboard – Na'urar rubutu.</li><li>Mouse – Na'urar sarrafa alamar kwamfuta.</li><li>CPU – Mai sarrafa umarni.</li><li>Hard drive ko SSD – Na'urar adana fayiloli.</li><li>RAM – Ƙwaƙwalwar wucin gadi da kwamfuta ke amfani da ita.</li><li>Motherboard – Babban allo da ke haɗa sassan kwamfuta.</li></ul>
   <h3>5. Menene Software?</h3>
-  <p>
-    Software tarin shirye-shirye da umarni ne da ke gaya wa
-    hardware abin da zai yi. Ba za ka iya taɓa software da hannu ba.
-  </p>
+  <p>Software tarin shirye-shirye da umarni ne da ke gaya wa hardware abin da zai yi. Ba za ka iya taɓa software da hannu ba.</p>
   <p><strong>Misalai:</strong></p>
-  <ul>
-    <li>Windows – Tsarin gudanar da kwamfuta.</li>
-    <li>Android – Tsarin gudanar da waya.</li>
-    <li>Microsoft Word – Manhajar rubutu.</li>
-    <li>Google Chrome – Manhajar buɗe shafukan yanar gizo.</li>
-    <li>Antivirus – Manhajar gano da hana cututtukan kwamfuta.</li>
-  </ul>
-
-  <div class="term">
-    <strong>Ka tuna:</strong><br>
-    Hardware = Sassan kwamfuta na zahiri.<br>
-    Software = Shirye-shirye da umarnin kwamfuta.
-  </div>
-
+  <ul><li>Windows – Tsarin gudanar da kwamfuta.</li><li>Android – Tsarin gudanar da waya.</li><li>Microsoft Word – Manhajar rubutu.</li><li>Google Chrome – Manhajar buɗe shafukan yanar gizo.</li><li>Antivirus – Manhajar gano da hana cututtukan kwamfuta.</li></ul>
+  <div class="term"><strong>Ka tuna:</strong><br>Hardware = Sassan kwamfuta na zahiri.<br>Software = Shirye-shirye da umarnin kwamfuta.</div>
   <h3>6. Menene CPU?</h3>
-  <p>
-    CPU na nufin Central Processing Unit.
-    Shi ne babban mai sarrafa umarni a cikin kwamfuta.
-    Yana aiwatar da umarni da lissafi.
-  </p>
-  <ul>
-    <li><strong>Control Unit (CU):</strong> Yana tsara yadda ayyukan kwamfuta za su gudana.</li>
-    <li><strong>Arithmetic Logic Unit (ALU):</strong> Yana yin lissafi da ayyukan kwatantawa.</li>
-    <li><strong>Registers:</strong> Ƙananan wuraren ajiya masu sauri a cikin CPU.</li>
-  </ul>
-
+  <p>CPU na nufin Central Processing Unit. Shi ne babban mai sarrafa umarni a cikin kwamfuta. Yana aiwatar da umarni da lissafi.</p>
+  <ul><li><strong>Control Unit (CU):</strong> Yana tsara yadda ayyukan kwamfuta za su gudana.</li><li><strong>Arithmetic Logic Unit (ALU):</strong> Yana yin lissafi da ayyukan kwatantawa.</li><li><strong>Registers:</strong> Ƙananan wuraren ajiya masu sauri a cikin CPU.</li></ul>
   <h3>7. Menene RAM?</h3>
-  <p>
-    RAM na nufin Random Access Memory.
-    Wuri ne da kwamfuta ke riƙe bayanan da take amfani da su a lokacin aiki.
-  </p>
-  <p>
-    RAM yawanci ƙwaƙwalwa ce ta wucin gadi.
-    Idan aka kashe wutar kwamfuta, bayanan da ke cikinta sukan ɓace.
-  </p>
-  <p><strong>Misali:</strong> Idan ka buɗe browser,
-  wasu bayanan da browser ke buƙata suna shiga RAM.</p>
-
+  <p>RAM na nufin Random Access Memory. Wuri ne da kwamfuta ke riƙe bayanan da take amfani da su a lokacin aiki.</p>
+  <p>RAM yawanci ƙwaƙwalwa ce ta wucin gadi. Idan aka kashe wutar kwamfuta, bayanan da ke cikinta sukan ɓace.</p>
+  <p><strong>Misali:</strong> Idan ka buɗe browser, wasu bayanan da browser ke buƙata suna shiga RAM.</p>
   <h3>8. Menene Storage?</h3>
-  <p>
-    Storage na nufin wurin adana fayiloli, manhajoji da tsarin kwamfuta
-    domin a sake amfani da su nan gaba, ko da an kashe na'ura.
-  </p>
-  <ul>
-    <li><strong>HDD:</strong> Na'urar adana bayanai mai faifai da ke juyawa.</li>
-    <li><strong>SSD:</strong> Na'urar adana bayanai mai amfani da flash memory.</li>
-    <li><strong>Flash drive:</strong> Ƙaramar na'urar adana bayanai mai ɗaukuwa.</li>
-    <li><strong>Memory card:</strong> Ƙaramar na'urar adana bayanai da ake amfani da ita a waya ko camera.</li>
-  </ul>
-
+  <p>Storage na nufin wurin adana fayiloli, manhajoji da tsarin kwamfuta domin a sake amfani da su nan gaba, ko da an kashe na'ura.</p>
+  <ul><li><strong>HDD:</strong> Na'urar adana bayanai mai faifai da ke juyawa.</li><li><strong>SSD:</strong> Na'urar adana bayanai mai amfani da flash memory.</li><li><strong>Flash drive:</strong> Ƙaramar na'urar adana bayanai mai ɗaukuwa.</li><li><strong>Memory card:</strong> Ƙaramar na'urar adana bayanai da ake amfani da ita a waya ko camera.</li></ul>
   <h3>9. Menene Operating System?</h3>
-  <p>
-    Operating System (OS) manhajar asali ce da ke kula da sassan kwamfuta,
-    manhajoji, ƙwaƙwalwa da sauran ayyukan na'ura.
-  </p>
+  <p>Operating System (OS) manhajar asali ce da ke kula da sassan kwamfuta, manhajoji, ƙwaƙwalwa da sauran ayyukan na'ura.</p>
   <p><strong>Misalai:</strong> Windows, Linux, macOS da Android.</p>
   <p>Wasu ayyukansa sun haɗa da:</p>
-  <ul>
-    <li>Gudanar da fayiloli da folders.</li>
-    <li>Kula da ƙwaƙwalwa da manhajojin da ke gudana.</li>
-    <li>Haɗa kwamfuta da na'urorin da take amfani da su.</li>
-    <li>Bayar da hanyar da mutum zai yi amfani da kwamfuta.</li>
-    <li>Taimakawa wajen tsaron na'ura da asusun masu amfani.</li>
-  </ul>
-
+  <ul><li>Gudanar da fayiloli da folders.</li><li>Kula da ƙwaƙwalwa da manhajojin da ke gudana.</li><li>Haɗa kwamfuta da na'urorin da take amfani da su.</li><li>Bayar da hanyar da mutum zai yi amfani da kwamfuta.</li><li>Taimakawa wajen tsaron na'ura da asusun masu amfani.</li></ul>
   <h3>10. Me ya sa wannan darasi yake da muhimmanci ga Cybersecurity?</h3>
-  <p>
-    Dalibin Cybersecurity dole ne ya fara fahimtar kwamfuta
-    kafin ya zurfafa cikin hare-haren yanar gizo da hanyoyin kariya.
-  </p>
-  <ul>
-    <li>Sanin fayiloli yana taimaka maka kare muhimman bayanai.</li>
-    <li>Sanin Operating System yana taimaka maka kula da tsaron na'ura.</li>
-    <li>Sanin network yana taimaka maka fahimtar sadarwar na'urori.</li>
-    <li>Sanin software yana taimaka maka gane manhajoji masu haɗari.</li>
-    <li>Sanin hardware yana taimaka maka gane barazanar tsaron na'ura ta zahiri.</li>
-  </ul>
-
-  <hr style="border-color:#294563">
-
+  <p>Dalibin Cybersecurity dole ne ya fara fahimtar kwamfuta kafin ya zurfafa cikin hare-haren yanar gizo da hanyoyin kariya.</p>
+  <ul><li>Sanin fayiloli yana taimaka maka kare muhimman bayanai.</li><li>Sanin Operating System yana taimaka maka kula da tsaron na'ura.</li><li>Sanin network yana taimaka maka fahimtar sadarwar na'urori.</li><li>Sanin software yana taimaka maka gane manhajoji masu haɗari.</li><li>Sanin hardware yana taimaka maka gane barazanar tsaron na'ura ta zahiri.</li></ul>
+  <hr>
   <h2>Practical Exercise – Aikin Gwaji</h2>
-
   <h3>Practical 1: Identify Hardware</h3>
-  <p>
-    Look at your phone or computer. Identify the screen, buttons,
-    keyboard (if available), storage and charging port.
-  </p>
-  <p>
-    <strong>A Hausa:</strong> Ka kalli wayarka ko kwamfutarka.
-    Ka gano screen, buttons, keyboard idan akwai, wurin adana bayanai
-    da wurin caji.
-  </p>
-
+  <p>Look at your phone or computer. Identify the screen, buttons, keyboard (if available), storage and charging port.</p>
+  <p><strong>A Hausa:</strong> Ka kalli wayarka ko kwamfutarka. Ka gano screen, buttons, keyboard idan akwai, wurin adana bayanai da wurin caji.</p>
   <h3>Practical 2: Identify Software</h3>
-  <p>
-    Find three applications installed on your phone or computer.
-    Examples: browser, calculator and file manager.
-  </p>
-  <p>
-    <strong>A Hausa:</strong> Ka nemo manhajoji guda uku a wayarka
-    ko kwamfutarka, misali browser, calculator da file manager.
-  </p>
-
+  <p>Find three applications installed on your phone or computer. Examples: browser, calculator and file manager.</p>
+  <p><strong>A Hausa:</strong> Ka nemo manhajoji guda uku a wayarka ko kwamfutarka, misali browser, calculator da file manager.</p>
   <h3>Practical 3: Understand Storage</h3>
-  <p>
-    Open your device settings and find the storage information.
-    Observe how much space is used and how much is available.
-    Do not delete anything for this exercise.
-  </p>
-  <p>
-    <strong>A Hausa:</strong> Ka shiga Settings na wayarka,
-    ka nemo Storage. Ka duba adadin wurin da aka yi amfani da shi
-    da kuma wanda ya rage. Kada ka goge wani abu saboda wannan gwaji.
-  </p>
-
-  <div class="notice">
-    <strong>Safety Rule – Dokar Tsaro</strong>
-    <p>
-      Do not open, dismantle or modify electrical equipment
-      unless you are trained and authorized to do so.
-    </p>
-    <p>
-      Kada ka buɗe ko lalata na'urar lantarki idan ba ka da horo
-      da izinin yin hakan.
-    </p>
-  </div>
-
+  <p>Open your device settings and find the storage information. Observe how much space is used and how much is available. Do not delete anything for this exercise.</p>
+  <p><strong>A Hausa:</strong> Ka shiga Settings na wayarka, ka nemo Storage. Ka duba adadin wurin da aka yi amfani da shi da kuma wanda ya rage. Kada ka goge wani abu saboda wannan gwaji.</p>
+  <div class="notice"><strong>Safety Rule – Dokar Tsaro</strong><p>Do not open, dismantle or modify electrical equipment unless you are trained and authorized to do so.</p><p>Kada ka buɗe ko lalata na'urar lantarki idan ba ka da horo da izinin yin hakan.</p></div>
   <h3>Important Terms – Muhimman Kalmomi</h3>
-
-  <div class="term"><strong>Computer:</strong> Kwamfuta – Na'urar sarrafa bayanai.</div>
-  <div class="term"><strong>Data:</strong> Ɗanyen bayanai.</div>
-  <div class="term"><strong>Information:</strong> Bayanai da aka sarrafa suka zama masu ma'ana.</div>
-  <div class="term"><strong>Hardware:</strong> Sassan kwamfuta na zahiri.</div>
-  <div class="term"><strong>Software:</strong> Shirye-shiryen kwamfuta.</div>
-  <div class="term"><strong>CPU:</strong> Babban mai sarrafa umarni.</div>
-  <div class="term"><strong>RAM:</strong> Ƙwaƙwalwar wucin gadi.</div>
-  <div class="term"><strong>Storage:</strong> Wurin adana bayanai.</div>
-  <div class="term"><strong>Operating System:</strong> Tsarin gudanar da kwamfuta.</div>
-  <div class="term"><strong>Input:</strong> Shigar da bayanai.</div>
-  <div class="term"><strong>Output:</strong> Fitar da sakamako.</div>
-
+  <div class="term"><strong>Computer:</strong> Kwamfuta – Na'urar sarrafa bayanai.</div><div class="term"><strong>Data:</strong> Ɗanyen bayanai.</div><div class="term"><strong>Information:</strong> Bayanai da aka sarrafa suka zama masu ma'ana.</div><div class="term"><strong>Hardware:</strong> Sassan kwamfuta na zahiri.</div><div class="term"><strong>Software:</strong> Shirye-shiryen kwamfuta.</div><div class="term"><strong>CPU:</strong> Babban mai sarrafa umarni.</div><div class="term"><strong>RAM:</strong> Ƙwaƙwalwar wucin gadi.</div><div class="term"><strong>Storage:</strong> Wurin adana bayanai.</div><div class="term"><strong>Operating System:</strong> Tsarin gudanar da kwamfuta.</div><div class="term"><strong>Input:</strong> Shigar da bayanai.</div><div class="term"><strong>Output:</strong> Fitar da sakamako.</div>
   <h3>Lesson Summary – Takaitaccen Darasi</h3>
-  <p>
-    A computer receives data, processes it, produces output and stores
-    information. Hardware refers to physical components, while software
-    refers to programs and instructions. The CPU processes instructions,
-    RAM temporarily holds active data, and storage keeps files for future use.
-  </p>
-  <p>
-    Kwamfuta tana karɓar bayanai, ta sarrafa su, ta fitar da sakamako
-    sannan ta adana bayanai. Hardware sassan kwamfuta ne na zahiri,
-    Software kuma shirye-shirye ne. CPU yana sarrafa umarni,
-    RAM yana riƙe bayanan wucin gadi, Storage kuma yana adana fayiloli.
-  </p>
-
-  <hr style="border-color:#294563">
-
+  <p>A computer receives data, processes it, produces output and stores information. Hardware refers to physical components, while software refers to programs and instructions. The CPU processes instructions, RAM temporarily holds active data, and storage keeps files for future use.</p>
+  <p>Kwamfuta tana karɓar bayanai, ta sarrafa su, ta fitar da sakamako sannan ta adana bayanai. Hardware sassan kwamfuta ne na zahiri, Software kuma shirye-shirye ne. CPU yana sarrafa umarni, RAM yana riƙe bayanan wucin gadi, Storage kuma yana adana fayiloli.</p>
+  <hr>
   <h2>Lesson 2 Assessment – Gwajin Fahimta</h2>
-  <p>
-    Answer all five questions. You need at least 4 correct answers
-    to pass this lesson.
-  </p>
-
+  <p>Answer all five questions. You need at least 4 correct answers to pass this lesson.</p>
   <form id="quiz2">
-
     <p><strong>1. What is a computer?</strong></p>
     <label class="option"><input type="radio" name="l2q1" value="a"> A device used only for cooking</label>
     <label class="option"><input type="radio" name="l2q1" value="b"> An electronic device that receives and processes data</label>
     <label class="option"><input type="radio" name="l2q1" value="c"> A type of furniture</label>
-
     <p><strong>2. Which one is hardware?</strong></p>
     <label class="option"><input type="radio" name="l2q2" value="a"> Microsoft Word</label>
     <label class="option"><input type="radio" name="l2q2" value="b"> Android</label>
     <label class="option"><input type="radio" name="l2q2" value="c"> Keyboard</label>
-
     <p><strong>3. What does CPU mean?</strong></p>
     <label class="option"><input type="radio" name="l2q3" value="a"> Central Processing Unit</label>
     <label class="option"><input type="radio" name="l2q3" value="b"> Computer Personal User</label>
     <label class="option"><input type="radio" name="l2q3" value="c"> Central Power Utility</label>
-
     <p><strong>4. Menene aikin RAM?</strong></p>
     <label class="option"><input type="radio" name="l2q4" value="a"> Buga takarda</label>
     <label class="option"><input type="radio" name="l2q4" value="b"> Riƙe bayanan wucin gadi da kwamfuta ke amfani da su</label>
     <label class="option"><input type="radio" name="l2q4" value="c"> Nuna hotuna kawai</label>
-
     <p><strong>5. Which one is an operating system?</strong></p>
     <label class="option"><input type="radio" name="l2q5" value="a"> Keyboard</label>
     <label class="option"><input type="radio" name="l2q5" value="b"> Mouse</label>
     <label class="option"><input type="radio" name="l2q5" value="c"> Windows</label>
-
     <button type="button" onclick="checkQuiz2()">Submit Answers</button>
   </form>
-
-  <p class="result" id="result2"></p>
-
-  <button class="secondary" onclick="showLesson1()">Back to Lesson 1</button>
-
-  <button id="next2" disabled onclick="openLesson3()">
-    Lesson 3 (Locked)
-  </button>
-
+  <p class="result" id="result2" aria-live="polite"></p>
+  <button type="button" class="secondary" onclick="showLesson1()">Back to Lesson 1</button>
+  <button type="button" id="next2" disabled onclick="openLesson3()">Lesson 3 (Locked)</button>
 </section>
-
 
 <section class="panel lesson" id="lesson3">
   <h2>LESSON 3: OPERATING SYSTEMS FUNDAMENTALS</h2>
-
   <h3>1. Learning Objectives</h3>
   <p>By the end of this lesson, students should be able to:</p>
-  <ul>
-    <li>Define an Operating System (OS).</li>
-    <li>Explain the major functions of an OS.</li>
-    <li>Identify common operating systems.</li>
-    <li>Understand files, folders, users and permissions.</li>
-    <li>Explain the relationship between operating systems and cybersecurity.</li>
-  </ul>
-
+  <ul><li>Define an Operating System (OS).</li><li>Explain the major functions of an OS.</li><li>Identify common operating systems.</li><li>Understand files, folders, users and permissions.</li><li>Explain the relationship between operating systems and cybersecurity.</li></ul>
   <h3>2. What is an Operating System?</h3>
   <p>An Operating System (OS) is system software that manages computer hardware and software resources. It provides an environment where applications can run and users can interact with a computer.</p>
-
   <h3>Hausa Explanation</h3>
   <p>Operating System (OS) wani babban manhaja ne da ke kula da aikin kwamfuta. Yana haɗa mai amfani da kwamfuta da kayan cikin kwamfuta (hardware), sannan yana taimaka wa sauran manhajoji su yi aiki.</p>
-
   <p><b>Examples:</b> Windows, Linux, macOS, Android and iOS.</p>
-
   <h3>3. Major Functions of an Operating System</h3>
-  <ul>
-    <li><b>Process Management:</b> Controls running programs and tasks.</li>
-    <li><b>Memory Management:</b> Allocates and manages RAM.</li>
-    <li><b>File Management:</b> Organizes files and folders.</li>
-    <li><b>Device Management:</b> Controls devices such as keyboards, printers and storage drives.</li>
-    <li><b>Security Management:</b> Helps control access to the computer and its resources.</li>
-    <li><b>User Interface:</b> Allows users to interact with the computer.</li>
-  </ul>
-
+  <ul><li><b>Process Management:</b> Controls running programs and tasks.</li><li><b>Memory Management:</b> Allocates and manages RAM.</li><li><b>File Management:</b> Organizes files and folders.</li><li><b>Device Management:</b> Controls devices such as keyboards, printers and storage drives.</li><li><b>Security Management:</b> Helps control access to the computer and its resources.</li><li><b>User Interface:</b> Allows users to interact with the computer.</li></ul>
   <h3>Bayani a Hausa</h3>
-  <ul>
-    <li><b>Process Management:</b> Kula da manhajojin da suke aiki.</li>
-    <li><b>Memory Management:</b> Kula da yadda ake amfani da RAM.</li>
-    <li><b>File Management:</b> Tsara fayiloli da manyan fayiloli (folders).</li>
-    <li><b>Device Management:</b> Kula da na'urorin kwamfuta.</li>
-    <li><b>Security Management:</b> Kare kwamfuta da hana mutanen da ba su da izini shiga.</li>
-    <li><b>User Interface:</b> Hanyar da mutum yake amfani da ita wajen mu'amala da kwamfuta.</li>
-  </ul>
-
+  <ul><li><b>Process Management:</b> Kula da manhajojin da suke aiki.</li><li><b>Memory Management:</b> Kula da yadda ake amfani da RAM.</li><li><b>File Management:</b> Tsara fayiloli da manyan fayiloli (folders).</li><li><b>Device Management:</b> Kula da na'urorin kwamfuta.</li><li><b>Security Management:</b> Kare kwamfuta da hana mutanen da ba su da izini shiga.</li><li><b>User Interface:</b> Hanyar da mutum yake amfani da ita wajen mu'amala da kwamfuta.</li></ul>
   <h3>4. Types of User Interfaces</h3>
   <p><b>Graphical User Interface (GUI):</b> Allows users to interact through windows, icons, menus and buttons.</p>
   <p><b>Command-Line Interface (CLI):</b> Allows users to interact by typing commands.</p>
   <p><b>Hausa:</b> GUI yana amfani da hotuna, maballai da menus. CLI kuma yana amfani da rubuta umarni (commands).</p>
-
   <h3>5. Common Operating Systems</h3>
-  <ul>
-    <li><b>Microsoft Windows:</b> Commonly used on personal computers.</li>
-    <li><b>Linux:</b> Widely used on servers and in cybersecurity laboratories.</li>
-    <li><b>macOS:</b> Apple's operating system for Mac computers.</li>
-    <li><b>Android:</b> Used on many smartphones and tablets.</li>
-    <li><b>iOS:</b> Apple's mobile operating system for iPhones.</li>
-  </ul>
-
+  <ul><li><b>Microsoft Windows:</b> Commonly used on personal computers.</li><li><b>Linux:</b> Widely used on servers and in cybersecurity laboratories.</li><li><b>macOS:</b> Apple's operating system for Mac computers.</li><li><b>Android:</b> Used on many smartphones and tablets.</li><li><b>iOS:</b> Apple's mobile operating system for iPhones.</li></ul>
   <h3>6. Files, Folders and File Systems</h3>
   <p>A file stores information such as documents, pictures, videos or programs. A folder organizes files. A file system controls how data is stored and retrieved on a storage device.</p>
   <p><b>Hausa:</b> File na ɗauke da bayanai kamar hotuna ko takardu. Folder kuma yana taimakawa wajen tsara files. File system yana tsara yadda ake adana bayanai da dawo da su.</p>
-
   <h3>7. User Accounts and Permissions</h3>
   <p>A user account identifies a person using a computer. Permissions determine what that user is allowed to read, change, create or delete.</p>
   <p><b>Administrator:</b> A user with elevated privileges to manage the system.</p>
   <p><b>Standard User:</b> A user with more limited permissions.</p>
   <p><b>Hausa:</b> User account yana bambance masu amfani da kwamfuta. Permissions kuma suna bayyana abin da kowane mutum yake da izinin yi. Administrator yana da iko mafi girma fiye da Standard User.</p>
-
   <h3>8. The Booting Process</h3>
   <p>Booting is the process of starting a computer and loading its operating system into memory.</p>
-  <ol>
-    <li>The computer is powered on.</li>
-    <li>Firmware (BIOS or UEFI) initializes hardware.</li>
-    <li>The bootloader starts loading the operating system.</li>
-    <li>The operating system initializes system services.</li>
-    <li>The login screen or desktop appears.</li>
-  </ol>
+  <ol><li>The computer is powered on.</li><li>Firmware (BIOS or UEFI) initializes hardware.</li><li>The bootloader starts loading the operating system.</li><li>The operating system initializes system services.</li><li>The login screen or desktop appears.</li></ol>
   <p><b>Hausa:</b> Booting shi ne tsarin kunna kwamfuta da loda Operating System har kwamfuta ta shirya amfani.</p>
-
   <h3>9. Operating Systems and Cybersecurity</h3>
   <p>Cybersecurity professionals must understand operating systems because many security tasks involve managing users, permissions, updates, processes, files, logs and network settings.</p>
-  <ul>
-    <li>Keep the operating system updated.</li>
-    <li>Use strong passwords.</li>
-    <li>Limit administrator privileges.</li>
-    <li>Install trusted software only.</li>
-    <li>Enable appropriate security protections.</li>
-  </ul>
+  <ul><li>Keep the operating system updated.</li><li>Use strong passwords.</li><li>Limit administrator privileges.</li><li>Install trusted software only.</li><li>Enable appropriate security protections.</li></ul>
   <p><b>Hausa:</b> Masu aikin cybersecurity dole su fahimci Operating System domin kare kwamfuta, sarrafa izini, binciken matsalolin tsaro da gano abubuwan da ba su dace ba.</p>
-
   <h3>10. Practical Activities</h3>
-  <ol>
-    <li>Identify the operating system on your computer or phone.</li>
-    <li>Open the file manager and create a folder called Cybersecurity Practice.</li>
-    <li>Find out whether your account is an Administrator or Standard User.</li>
-    <li>Identify where your device displays its operating system version.</li>
-  </ol>
-
-  <h3>11. Lesson 3 Assessment</h3>
-  <p>Answer these questions to check your understanding:</p>
-
-  <p><b>1. What is an Operating System?</b></p>
-  <p>A. A computer game<br>B. System software that manages computer resources<br>C. A keyboard<br>D. A website</p>
-
-  <p><b>2. Which of these is an Operating System?</b></p>
-  <p>A. Microsoft Word<br>B. Google Chrome<br>C. Linux<br>D. Photoshop</p>
-
-  <p><b>3. What does RAM management mean?</b></p>
-  <p>A. Managing computer memory<br>B. Printing documents<br>C. Playing music<br>D. Connecting a mouse</p>
-
-  <p><b>4. What is the purpose of user permissions?</b></p>
-  <p>A. To change screen colour<br>B. To control what users are allowed to do<br>C. To increase internet speed<br>D. To play videos</p>
-
-  <p><b>5. What is booting?</b></p>
-  <p>A. Deleting files<br>B. Turning off a monitor<br>C. Starting a computer and loading its operating system<br>D. Installing a keyboard</p>
-
-  <p><b>Pass requirement: 4 out of 5 correct answers.</b></p>
+  <ol><li>Identify the operating system on your computer or phone.</li><li>Open the file manager and create a folder called Cybersecurity Practice.</li><li>Find out whether your account is an Administrator or Standard User.</li><li>Identify where your device displays its operating system version.</li></ol>
+  <hr>
+  <h2>11. Lesson 3 Assessment – Gwajin Fahimta</h2>
+  <p>Answer all five questions. Select one answer for each question. You need at least 4 correct answers out of 5 to pass.</p>
+  <form id="quiz3">
+    <p><strong>1. What is an Operating System?</strong></p>
+    <label class="option"><input type="radio" name="l3q1" value="a"> A computer game</label>
+    <label class="option"><input type="radio" name="l3q1" value="b"> System software that manages computer resources</label>
+    <label class="option"><input type="radio" name="l3q1" value="c"> A keyboard</label>
+    <label class="option"><input type="radio" name="l3q1" value="d"> A website</label>
+    <p><strong>2. Which of these is an Operating System?</strong></p>
+    <label class="option"><input type="radio" name="l3q2" value="a"> Microsoft Word</label>
+    <label class="option"><input type="radio" name="l3q2" value="b"> Google Chrome</label>
+    <label class="option"><input type="radio" name="l3q2" value="c"> Linux</label>
+    <label class="option"><input type="radio" name="l3q2" value="d"> Photoshop</label>
+    <p><strong>3. What does RAM management mean?</strong></p>
+    <label class="option"><input type="radio" name="l3q3" value="a"> Managing computer memory</label>
+    <label class="option"><input type="radio" name="l3q3" value="b"> Printing documents</label>
+    <label class="option"><input type="radio" name="l3q3" value="c"> Playing music</label>
+    <label class="option"><input type="radio" name="l3q3" value="d"> Connecting a mouse</label>
+    <p><strong>4. What is the purpose of user permissions?</strong></p>
+    <label class="option"><input type="radio" name="l3q4" value="a"> To change screen colour</label>
+    <label class="option"><input type="radio" name="l3q4" value="b"> To control what users are allowed to do</label>
+    <label class="option"><input type="radio" name="l3q4" value="c"> To increase internet speed</label>
+    <label class="option"><input type="radio" name="l3q4" value="d"> To play videos</label>
+    <p><strong>5. What is booting?</strong></p>
+    <label class="option"><input type="radio" name="l3q5" value="a"> Deleting files</label>
+    <label class="option"><input type="radio" name="l3q5" value="b"> Turning off a monitor</label>
+    <label class="option"><input type="radio" name="l3q5" value="c"> Starting a computer and loading its operating system</label>
+    <label class="option"><input type="radio" name="l3q5" value="d"> Installing a keyboard</label>
+    <button type="button" onclick="checkQuiz3()">Submit Answers</button>
+  </form>
+  <p class="result" id="result3" aria-live="polite"></p>
+  <button type="button" class="secondary" onclick="showLesson2()">Back to Lesson 2</button>
+  <p class="notice" id="lesson3Complete" hidden><strong>Lesson 3 completed!</strong> This version currently contains three lessons. The next lesson will be added in a future update.</p>
 </section>
-
-  </main>
-<footer>
-  ABAP AI CYBERSECURITY ACADEMY<br>
-  Prepared by Abbas Bukar
-</footer>
+</main>
+<footer>ABAP AI CYBERSECURITY ACADEMY<br>Prepared by Abbas Bukar</footer>
 
 <script>
-
-let passed1 = localStorage.getItem("abap_lesson1_passed") === "yes";
-let passed2 = localStorage.getItem("abap_lesson2_passed") === "yes";
+const lessonKeys = ["abap_lesson1_passed","abap_lesson2_passed","abap_lesson3_passed"];
+let passed1 = localStorage.getItem(lessonKeys[0]) === "yes";
+let passed2 = localStorage.getItem(lessonKeys[1]) === "yes";
+let passed3 = localStorage.getItem(lessonKeys[2]) === "yes";
 
 function updateProgress(){
-
-  let value = 0;
-
-  if(passed1) value += 50;
-  if(passed2) value += 50;
-
+  const completed = [passed1, passed2, passed3].filter(Boolean).length;
+  const value = Math.round((completed / 3) * 100);
   document.getElementById("bar").style.width = value + "%";
-
+  const progress = document.querySelector('[role="progressbar"]');
+  progress.setAttribute("aria-valuenow", String(value));
   document.getElementById("progressText").textContent =
-    "Learning progress: " + value + "% | " +
-    "Lesson 1: " + (passed1 ? "Passed" : "Not completed") +
-    " | Lesson 2: " + (passed2 ? "Passed" : "Locked");
+    "Progress across 3 available lessons: " + value + "% | " +
+    "Lesson 1: " + (passed1 ? "Passed" : "Not completed") + " | " +
+    "Lesson 2: " + (passed2 ? "Passed" : "Locked") + " | " +
+    "Lesson 3: " + (passed3 ? "Passed" : "Locked");
 }
 
-
 function hideLessons(){
-  document.getElementById("lesson1").style.display = "none";
-  document.getElementById("lesson2").style.display = "none";
-  document.getElementById("lesson3").style.display = "none";
+  document.querySelectorAll(".lesson").forEach(lesson => {
+    lesson.style.display = "none";
+  });
+}
+
+function showLesson(id){
+  hideLessons();
+  const lesson = document.getElementById(id);
+  lesson.style.display = "block";
+  lesson.scrollIntoView({behavior:"smooth", block:"start"});
+  updateProgress();
 }
 
 function startLesson(){
-
-  hideLessons();
-
-  if(passed2){
-    openLesson3();
-  }else if(passed1){
-    openLesson2();
-  }else{
-    showLesson1();
-  }
+  if(passed2) return showLesson("lesson3");
+  if(passed1) return showLesson("lesson2");
+  return showLesson("lesson1");
 }
-
-
-function showLesson1(){
-
-  hideLessons();
-
-  document.getElementById("lesson1").style.display = "block";
-
-  document.getElementById("lesson1").scrollIntoView({
-    behavior:"smooth"
-  });
-
-  updateProgress();
+function showLesson1(){ showLesson("lesson1"); }
+function showLesson2(){
+  if(!passed1){ alert("Pass Lesson 1 first. / Ka ci jarrabawar Darasi na 1 tukuna."); return; }
+  showLesson("lesson2");
 }
-
-function openLesson2(){
-
-  if(!passed1){
-    alert("Pass Lesson 1 before opening Lesson 2. / Ka ci jarrabawar Lesson 1 kafin buɗe Lesson 2.");
-    return;
-  }
-
-  hideLessons();
-
-  document.getElementById("lesson2").style.display = "block";
-
-  document.getElementById("lesson2").scrollIntoView({
-    behavior:"smooth"
-  });
-
-  updateProgress();
-}
-
+function openLesson2(){ showLesson2(); }
 function openLesson3(){
+  if(!passed2){ alert("Pass Lesson 2 first. / Ka ci jarrabawar Darasi na 2 tukuna."); return; }
+  showLesson("lesson3");
+}
 
-  if(!passed2){
-    alert("Pass Lesson 2 before opening Lesson 3. / Ka ci jarrabawar Lesson 2 kafin buɗe Lesson 3.");
-    return;
+function gradeQuiz(questions, answers, passMark, resultId, storageKey, onPass){
+  let score = 0;
+  for(const question of questions){
+    const selected = document.querySelector('input[name="' + question + '"]:checked');
+    if(!selected){
+      document.getElementById(resultId).textContent =
+        "Please answer every question first. / Da fatan ka amsa duk tambayoyin tukuna.";
+      return;
+    }
+    if(selected.value === answers[question]) score++;
   }
-
-  hideLessons();
-
-  document.getElementById("lesson3").style.display = "block";
-
-  document.getElementById("lesson3").scrollIntoView({
-    behavior:"smooth"
-  });
-
+  const total = questions.length;
+  if(score >= passMark){
+    localStorage.setItem(storageKey, "yes");
+    onPass();
+    document.getElementById(resultId).textContent =
+      "Congratulations! You passed: " + score + "/" + total + ". / Madalla! Ka ci jarrabawar.";
+  }else{
+    document.getElementById(resultId).textContent =
+      "Your score is " + score + "/" + total + ". You need " + passMark +
+      " correct answers to pass. Review the lesson and try again. / Ka sake nazari sannan ka sake gwadawa.";
+  }
   updateProgress();
 }
 
 function checkQuiz1(){
-
-  const answers = {
-    q1:"b",
-    q2:"c",
-    q3:"a"
-  };
-
-  let score = 0;
-
-  for(const q in answers){
-
-    const selected = document.querySelector(
-      'input[name="' + q + '"]:checked'
-    );
-
-    if(!selected){
-      document.getElementById("result1").textContent =
-        "Please answer all questions first. / Da fatan za ka amsa duk tambayoyin.";
-      return;
-    }
-
-    if(selected.value === answers[q]){
-      score++;
-    }
-  }
-
-  if(score >= 2){
-
+  gradeQuiz(["q1","q2","q3"], {q1:"b",q2:"c",q3:"a"}, 2, "result1", lessonKeys[0], () => {
     passed1 = true;
+    const button = document.getElementById("next1");
+    button.disabled = false;
+    button.textContent = "Open Lesson 2";
+  });
+}
+function checkQuiz2(){
+  gradeQuiz(["l2q1","l2q2","l2q3","l2q4","l2q5"],
+    {l2q1:"b",l2q2:"c",l2q3:"a",l2q4:"b",l2q5:"c"},
+    4, "result2", lessonKeys[1], () => {
+      passed2 = true;
+      const button = document.getElementById("next2");
+      button.disabled = false;
+      button.textContent = "Open Lesson 3";
+    });
+}
+function checkQuiz3(){
+  gradeQuiz(["l3q1","l3q2","l3q3","l3q4","l3q5"],
+    {l3q1:"b",l3q2:"c",l3q3:"a",l3q4:"b",l3q5:"c"},
+    4, "result3", lessonKeys[2], () => {
+      passed3 = true;
+      document.getElementById("lesson3Complete").hidden = false;
+    });
+}
 
-    localStorage.setItem("abap_lesson1_passed","yes");
-
-    document.getElementById("result1").textContent =
-      "Congratulations! You passed: " + score + "/3. Lesson 2 is now unlocked. / Madalla! Ka ci jarrabawar.";
-
+function restoreProgress(){
+  if(passed1){
     document.getElementById("next1").disabled = false;
     document.getElementById("next1").textContent = "Open Lesson 2";
-
-  }else{
-
-    document.getElementById("result1").textContent =
-      "Score: " + score + "/3. Review the lesson and try again. / Ka sake nazarin darasin.";
   }
-
+  if(passed2){
+    document.getElementById("next2").disabled = false;
+    document.getElementById("next2").textContent = "Open Lesson 3";
+  }
+  if(passed3){
+    document.getElementById("lesson3Complete").hidden = false;
+    document.getElementById("result3").textContent = "Lesson 3 was previously passed. / Ka riga ka ci jarrabawar Darasi na 3.";
+  }
   updateProgress();
 }
-
-function checkQuiz2(){
-
-  const answers = {
-    l2q1:"b",
-    l2q2:"c",
-    l2q3:"a",
-    l2q4:"b",
-    l2q5:"c"
-  };
-
-  let score = 0;
-
-  for(const q in answers){
-
-    const selected = document.querySelector(
-      'input[name="' + q + '"]:checked'
-    );
-
-    if(!selected){
-      document.getElementById("result2").textContent =
-        "Please answer all five questions first. / Da fatan za ka amsa tambayoyi biyar ɗin.";
-      return;
-    }
-
-    if(selected.value === answers[q]){
-      score++;
-    }
-  }
-
-  if(score >= 4){
-
-    passed2 = true;
-
-    localStorage.setItem("abap_lesson2_passed","yes");
-
-    document.getElementById("result2").textContent =
-      "Excellent! You passed: " + score + "/5. Lesson 2 completed. / Madalla! Ka kammala darasi na biyu.";
-
-  document.getElementById("next2").disabled = false;
-document.getElementById("next2").textContent =
-  "Open Lesson 3";
-
-  }else{
-
-    document.getElementById("result2").textContent =
-      "Your score is " + score + "/5. You need 4 correct answers to pass. Review the lesson and try again. / Ka sake nazarin darasin sannan ka sake gwadawa.";
-  }
-
-  updateProgress();
-}
-
-document.getElementById("next2").disabled = true;
-
-if(passed1){
-  document.getElementById("next1").disabled = false;
-  document.getElementById("next1").textContent = "Open Lesson 2";
-}
-
-if(passed2){
-  document.getElementById("next2").disabled = false;
-  document.getElementById("next2").textContent =
-    "Open Lesson 3";
-}
-
-updateProgress();
-
+restoreProgress();
 </script>
-
 </body>
 </html>
