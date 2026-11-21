@@ -468,6 +468,13 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <footer>ABAP AI CYBERSECURITY ACADEMY<br/>Prepared by Abbas Bukar</footer>
 <script>
 const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_lesson5_passed"];
+// Preserve previously earned passes when older versions used legacy keys.
+if(localStorage.getItem(lessonKeys[2]) !== "yes" && localStorage.getItem("abap_lesson3_passed") === "yes"){
+  localStorage.setItem(lessonKeys[2], "yes");
+}
+if(localStorage.getItem(lessonKeys[3]) !== "yes" && localStorage.getItem("abap_lesson4_passed") === "yes"){
+  localStorage.setItem(lessonKeys[3], "yes");
+}
 let passed1 = localStorage.getItem(lessonKeys[0]) === "yes";
 let passed2 = localStorage.getItem(lessonKeys[1]) === "yes";
 let passed3 = localStorage.getItem(lessonKeys[2]) === "yes";
@@ -483,6 +490,16 @@ function updateProgress(){
   }
   const done2 = document.getElementById("lesson2Complete");
   if(done2 && passed2) done2.hidden = false;
+  if(passed2){
+    const next2 = document.getElementById("next2");
+    if(next2){ next2.disabled = false; next2.textContent = "Open Lesson 3 — Types of Cyber Threats / Buɗe Darasi na 3"; next2.onclick = openLesson3; }
+  }
+  if(passed3){
+    const done3 = document.getElementById("lesson3Complete");
+    if(done3) done3.hidden = false;
+    const next3 = document.getElementById("next3");
+    if(next3){ next3.disabled = false; next3.textContent = "Open Lesson 4 — Computer Fundamentals / Buɗe Darasi na 4"; next3.onclick = openLesson4; }
+  }
   const completed = [passed1, passed2, passed3, passed4].filter(Boolean).length;
   const value = Math.round((completed / 15) * 100);
   document.getElementById("bar").style.width = value + "%";
@@ -607,8 +624,9 @@ function checkQuiz2(){
       passed2 = true;
       document.getElementById("lesson2Complete").hidden = false;
       const button = document.getElementById("next2");
-      button.disabled = true;
-      button.textContent = "Lesson 3 — Coming next / Darasi na 3 zai biyo baya";
+      button.disabled = false;
+      button.textContent = "Open Lesson 3 — Types of Cyber Threats / Buɗe Darasi na 3";
+      button.onclick = openLesson3;
     });
 }
 function checkQuiz3(){
@@ -619,7 +637,8 @@ function checkQuiz3(){
       document.getElementById("lesson3Complete").hidden = false;
       const button = document.getElementById("next3");
       button.disabled = false;
-      button.textContent = "Lesson 4 — Coming next";
+      button.textContent = "Open Lesson 4 — Computer Fundamentals / Buɗe Darasi na 4";
+      button.onclick = openLesson4;
     });
 }
 
