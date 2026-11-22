@@ -766,13 +766,76 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <button onclick="checkQuiz10()" type="button">Submit Answers / Aika Amsoshi</button></form>
 <p aria-live="polite" class="result" id="result10"></p>
 <p class="notice" hidden id="lesson10Complete"><strong>Lesson 10 Passed — Excellent work!</strong><br/>Topic 10 of the official Level 1 roadmap is complete. Lesson 11 is DNS, DHCP, HTTP and HTTPS. / Ka kammala topic na goma. Darasi na 11 shi ne DNS, DHCP, HTTP da HTTPS.</p>
+<button class="secondary" id="next11" disabled onclick="openLesson11()" type="button">Lesson 11 — Locked / A kulle yake</button>
 <button class="secondary" onclick="openLesson9()" type="button">Back to Lesson 9 / Komawa Darasi na 9</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
+</section>
+
+<section class="panel lesson" id="lesson11" style="display:none">
+<h2>LEVEL 1 — BEGINNER</h2>
+<nav aria-label="Lesson navigation" class="lesson-nav"><strong>Available lessons / Darussan da suke nan:</strong><button class="lesson-jump" onclick="showLesson1()" type="button">Lesson 1</button><button class="lesson-jump" onclick="showLesson2()" type="button">Lesson 2</button><button class="lesson-jump" onclick="openLesson3()" type="button">Lesson 3</button><button class="lesson-jump" onclick="openLesson4()" type="button">Lesson 4</button><button class="lesson-jump" onclick="openLesson5()" type="button">Lesson 5</button><button class="lesson-jump" onclick="openLesson6()" type="button">Lesson 6</button><button class="lesson-jump" onclick="openLesson7()" type="button">Lesson 7</button><button class="lesson-jump" onclick="openLesson8()" type="button">Lesson 8</button><button class="lesson-jump" onclick="openLesson9()" type="button">Lesson 9</button><button class="lesson-jump" onclick="openLesson10()" type="button">Lesson 10</button><button class="lesson-jump" onclick="openLesson11()" type="button">Lesson 11</button></nav>
+<h3>Lesson 11: DNS, DHCP, HTTP and HTTPS / DNS, DHCP, HTTP da HTTPS</h3>
+<div class="notice"><strong>Learning Objectives / Manufofin Koyo</strong><p>By the end of this lesson, you should be able to explain DNS name resolution, describe how DHCP assigns network settings, distinguish HTTP from HTTPS, recognize common DNS record types, and use basic commands to investigate connectivity safely.</p><p class="hausa">A ƙarshen darasin za ka iya bayyana yadda DNS ke juya sunan website zuwa IP address, yadda DHCP ke ba na'ura network settings, bambancin HTTP da HTTPS, gane nau'ikan DNS records, da amfani da wasu umarni na binciken network cikin aminci.</p></div>
+<h3>PART A — ENGLISH</h3>
+<h3>1. DNS — Domain Name System</h3>
+<p>DNS is the system that helps devices find internet services by translating human-readable domain names, such as <strong>example.com</strong>, into IP addresses used by networks. It works like a phone directory: people remember names more easily than numbers.</p>
+<p><strong>Basic lookup:</strong> You enter a website name → your device asks a DNS resolver → the resolver finds the relevant DNS answer → your device uses the returned IP address to contact the website. Results may be cached, so a new lookup is not always required.</p>
+<p><strong>Common DNS record types:</strong></p><ul><li><strong>A:</strong> maps a name to an IPv4 address.</li><li><strong>AAAA:</strong> maps a name to an IPv6 address.</li><li><strong>CNAME:</strong> makes one name an alias of another name.</li><li><strong>MX:</strong> identifies mail servers for a domain.</li><li><strong>TXT:</strong> stores text data, often used for domain verification and email-security policies.</li></ul>
+<p><strong>Example:</strong> When you type a website address into a browser, DNS helps your device discover the server's IP address. DNS does not itself download the webpage; it helps locate the destination.</p>
+<h3>2. DHCP — Dynamic Host Configuration Protocol</h3>
+<p>DHCP automatically provides devices with network configuration, commonly an IP address, subnet mask, default gateway and DNS server addresses. Without DHCP, an administrator may need to configure these settings manually on each device.</p>
+<p><strong>The DORA process:</strong></p><ol><li><strong>Discover:</strong> the client broadcasts to find a DHCP server.</li><li><strong>Offer:</strong> a DHCP server offers an available address and settings.</li><li><strong>Request:</strong> the client requests the offered configuration.</li><li><strong>Acknowledge:</strong> the server confirms the lease.</li></ol>
+<p>A DHCP address is usually leased for a period of time. The client may renew the lease. DHCP makes connecting phones and computers to a network easier, but rogue or unauthorized DHCP servers can cause security and connectivity problems.</p>
+<h3>3. HTTP — Hypertext Transfer Protocol</h3>
+<p>HTTP is an application-layer protocol used by web browsers and web servers to exchange requests and responses. A browser may send a request for a page; the server replies with a status code and content such as HTML, images or data.</p>
+<p>Common HTTP methods include <strong>GET</strong> (retrieve information), <strong>POST</strong> (send information for processing), <strong>PUT</strong> (create or replace a resource) and <strong>DELETE</strong> (request deletion). A status code such as 200 usually indicates success, 404 means the requested resource was not found, and 500 indicates a server error.</p>
+<p>Plain HTTP does not provide encryption by itself. Data sent over an unprotected HTTP connection may be read or altered by an attacker who can intercept the traffic.</p>
+<h3>4. HTTPS — HTTP Secure</h3>
+<p>HTTPS is HTTP protected by TLS (Transport Layer Security). TLS helps provide <strong>encryption</strong> (keeps traffic private), <strong>integrity</strong> (helps detect tampering) and <strong>server authentication</strong> (helps the browser verify the server's identity using a digital certificate).</p>
+<p>HTTPS is especially important for sign-ins, payments and private information. Look for the correct website name and a secure connection indicator, but remember: HTTPS does not prove that a website is honest or safe. A phishing website can also use HTTPS.</p>
+<div class="diagram"><strong>How a secure website connection works</strong><br/>1. You enter https://website.example<br/>2. DNS helps find the server IP address<br/>3. Your browser establishes a TLS-secured connection<br/>4. HTTP request and response travel inside that protected connection</div>
+<h3>5. How These Four Technologies Work Together</h3>
+<ul><li><strong>DHCP</strong> can give your device its IP address, gateway and DNS resolver settings when it joins a network.</li><li><strong>DNS</strong> helps your device find the IP address for the website name.</li><li><strong>HTTPS</strong> protects the browser-server communication using TLS.</li><li><strong>HTTP</strong> carries the web requests and responses; with HTTPS, that HTTP traffic is protected by TLS.</li></ul>
+<h3>6. Basic Practical Checks</h3>
+<p>On Windows, open Command Prompt and use these read-only diagnostic commands on a device or network you are authorized to troubleshoot:</p>
+<ul><li><code>ipconfig /all</code> — displays network settings, including IP, gateway and DNS information.</li><li><code>nslookup example.com</code> — asks DNS to resolve a domain name.</li><li><code>ipconfig /release</code> and <code>ipconfig /renew</code> — release and request a DHCP address again; use only when you understand that network connectivity may briefly disconnect.</li></ul>
+<p><strong>Safe practice:</strong> Do not change DNS, DHCP or router settings on a network you do not own or administer. Record the original settings before making an authorized change.</p>
+<h3>PART B — HAUSA</h3>
+<h3>1. DNS — Tsarin Sunayen Domain</h3>
+<p>DNS wani tsari ne da ke taimaka wa na'ura ta gano IP address na website ta amfani da sunan da mutum zai iya karantawa, misali <strong>example.com</strong>. Kamar littafin lambobin waya ne: mutum ya fi sauƙin tuna suna fiye da lambobi.</p>
+<p>Idan ka rubuta sunan website, na'urarka tana tambayar DNS resolver. Resolver ɗin yana nemo amsar da ta dace, sannan ya dawo da IP address domin na'urarka ta iya tuntuɓar server. DNS ba shi ne yake sauke shafin ba; yana taimakawa wajen gano inda shafin yake.</p>
+<ul><li><strong>A:</strong> yana haɗa suna da IPv4 address.</li><li><strong>AAAA:</strong> yana haɗa suna da IPv6 address.</li><li><strong>CNAME:</strong> yana sa wani suna ya zama alias na wani suna.</li><li><strong>MX:</strong> yana nuna mail server na domain.</li><li><strong>TXT:</strong> yana adana rubutun bayanai domin tabbatar da domain da wasu manufofin tsaro.</li></ul>
+<h3>2. DHCP — Tsarin Raba Network Settings Kai Tsaye</h3>
+<p>DHCP yana ba waya ko computer network settings kai tsaye, kamar IP address, subnet mask, default gateway da DNS server. Wannan yana rage aikin saita kowace na'ura da hannu.</p>
+<p><strong>DORA:</strong> Discover — na'ura tana neman DHCP server; Offer — server yana miƙa mata adireshi; Request — na'ura tana neman a ba ta wannan saitin; Acknowledge — server yana tabbatar da rancen adireshin. Ana kiran wannan adireshi lease, domin ana ba shi na wani lokaci.</p>
+<h3>3. HTTP — Ka'idar Musayar Bayanan Web</h3>
+<p>HTTP yana ba browser damar aika request zuwa web server, sannan server ya dawo da response. Misali GET yana neman bayanai, POST yana aika bayanai, 200 yawanci yana nuna nasara, 404 yana nuna ba a samu abin da aka nema ba, 500 kuma yana nuna matsalar server.</p>
+<p>HTTP shi kaɗai ba ya ɓoye bayanan sadarwa. Idan ba a kare haɗin ba, mai kutse da ya samu damar leƙen hanyar sadarwa na iya karanta ko canza bayanan.</p>
+<h3>4. HTTPS — HTTP Mai Kariyar TLS</h3>
+<p>HTTPS yana amfani da TLS domin kare sadarwa. TLS yana taimakawa wajen ɓoye bayanai, gano canjin da aka yi musu, da tabbatar da asalin server ta digital certificate. Amma ka tuna: alamar HTTPS ba ta tabbatar da cewa website ba ya yaudara ba. Shafin phishing ma yana iya amfani da HTTPS.</p>
+<h3>5. Yadda Su Hudu Ke Aiki Tare</h3>
+<p>DHCP na iya ba na'urarka IP da DNS settings; DNS yana taimaka mata gano IP na website; HTTPS yana kare haɗin browser da server; HTTP kuma shi ne tsarin request da response da ke tafiya cikin wannan kariya ta TLS.</p>
+<h3>6. Aikin Gwaji</h3>
+<p>A Windows Command Prompt, idan kana da izini, ka gwada <code>ipconfig /all</code> domin duba network settings, sannan <code>nslookup example.com</code> domin duba DNS resolution. Kada ka canza saitin router ko network da ba naka ba ko ba ka da izinin gudanarwa.</p>
+<h3>PART C — KNOWLEDGE CHECK / TAMBAYOYIN FAHIMTA</h3>
+<ol><li>Which system translates a domain name into an IP address? / Wane tsari ke gano IP daga sunan domain?</li><li>What does DHCP commonly provide to a device? / Me DHCP ke bai wa na'ura?</li><li>What does the letter S in HTTPS indicate? / Menene S a HTTPS ke nufi?</li><li>Which DNS record identifies mail servers? / Wane DNS record ke nuna mail server?</li><li>Does HTTPS guarantee that a website is honest and not a phishing site? / Shin HTTPS yana tabbatar da cewa website ba ya yaudara?</li></ol>
+<h3>PART D — QUIZ / JARRABAWA</h3>
+<p>Answer all five questions. You need at least 4/5 to pass and unlock Lesson 12. / Amsa duk tambayoyi biyar. Kana buƙatar aƙalla 4/5 domin cin jarabawa da buɗe Lesson 12.</p>
+<form id="quiz11">
+<div class="question"><p><strong>1. What is the main job of DNS? / Menene babban aikin DNS?</strong></p><label class="option"><input name="l11q1" type="radio" value="a"/> Encrypting all files / Ɓoye duk fayiloli</label><label class="option"><input name="l11q1" type="radio" value="b"/> Translating domain names to IP addresses / Juya sunan domain zuwa IP</label><label class="option"><input name="l11q1" type="radio" value="c"/> Assigning keyboard keys / Raba maɓallan keyboard</label><label class="option"><input name="l11q1" type="radio" value="d"/> Charging a battery / Cajin baturi</label></div>
+<div class="question"><p><strong>2. What is the correct DHCP sequence? / Wane ne tsarin DORA daidai?</strong></p><label class="option"><input name="l11q2" type="radio" value="a"/> Request, Discover, Acknowledge, Offer</label><label class="option"><input name="l11q2" type="radio" value="b"/> Discover, Offer, Request, Acknowledge</label><label class="option"><input name="l11q2" type="radio" value="c"/> Download, Open, Read, Apply</label><label class="option"><input name="l11q2" type="radio" value="d"/> Discover, Request, Offer, Acknowledge</label></div>
+<div class="question"><p><strong>3. What does HTTPS use to protect web communication? / Me HTTPS ke amfani da shi domin kare sadarwa?</strong></p><label class="option"><input name="l11q3" type="radio" value="a"/> DHCP</label><label class="option"><input name="l11q3" type="radio" value="b"/> FTP only</label><label class="option"><input name="l11q3" type="radio" value="c"/> TLS</label><label class="option"><input name="l11q3" type="radio" value="d"/> A printer driver</label></div>
+<div class="question"><p><strong>4. Which DNS record is used to identify mail servers? / Wane record ke nuna mail servers?</strong></p><label class="option"><input name="l11q4" type="radio" value="a"/> A</label><label class="option"><input name="l11q4" type="radio" value="b"/> AAAA</label><label class="option"><input name="l11q4" type="radio" value="c"/> CNAME</label><label class="option"><input name="l11q4" type="radio" value="d"/> MX</label></div>
+<div class="question"><p><strong>5. Which statement about HTTPS is correct? / Wane bayani ne daidai game da HTTPS?</strong></p><label class="option"><input name="l11q5" type="radio" value="a"/> It guarantees every website is honest / Yana tabbatar da duk website gaskiya ne</label><label class="option"><input name="l11q5" type="radio" value="b"/> It protects communication, but a phishing site can also use it / Yana kare sadarwa amma shafin yaudara ma na iya amfani da shi</label><label class="option"><input name="l11q5" type="radio" value="c"/> It replaces DNS / Yana maye gurbin DNS</label><label class="option"><input name="l11q5" type="radio" value="d"/> It assigns IP addresses / Yana raba IP addresses</label></div>
+<button onclick="checkQuiz11()" type="button">Submit Answers / Aika Amsoshi</button></form>
+<p aria-live="polite" class="result" id="result11"></p>
+<p class="notice" hidden id="lesson11Complete"><strong>Lesson 11 Passed — Excellent work!</strong><br/>Topic 11 of the official Level 1 roadmap is complete. Lesson 12 is Basic Cybersecurity Terminologies. / Ka kammala topic na goma sha ɗaya. Darasi na 12 shi ne Basic Cybersecurity Terminologies.</p>
+<button class="secondary" onclick="openLesson10()" type="button">Back to Lesson 10 / Komawa Darasi na 10</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
 </section>
 
 </main>
 <footer>ABAP AI CYBERSECURITY ACADEMY<br/>Prepared by Abbas Bukar</footer>
 <script>
-const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1"];
+const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1","abap_level1_topic11_dns_dhcp_http_https_passed_v1"];
 // Preserve previously earned passes when older versions used legacy keys.
 if(localStorage.getItem(lessonKeys[2]) !== "yes" && localStorage.getItem("abap_lesson3_passed") === "yes"){
   localStorage.setItem(lessonKeys[2], "yes");
@@ -790,6 +853,7 @@ let passed7 = localStorage.getItem(lessonKeys[6]) === "yes";
 let passed8 = localStorage.getItem(lessonKeys[7]) === "yes";
 let passed9 = localStorage.getItem(lessonKeys[8]) === "yes";
 let passed10 = localStorage.getItem(lessonKeys[9]) === "yes";
+let passed11 = localStorage.getItem(lessonKeys[10]) === "yes";
 
 function updateProgress(){
   if(passed1){
@@ -830,14 +894,15 @@ function updateProgress(){
   if(passed7){ const done7 = document.getElementById("lesson7Complete"); if(done7) done7.hidden = false; const next7=document.getElementById("next7"); if(next7){next7.disabled=false;next7.textContent="Open Lesson 8 — Networking Fundamentals / Buɗe Darasi na 8";next7.onclick=openLesson8;} }
   if(passed8){ const done8=document.getElementById("lesson8Complete"); if(done8) done8.hidden=false; const next8=document.getElementById("next8"); if(next8){next8.disabled=false;next8.textContent="Open Lesson 9 — IP and MAC Addresses / Buɗe Darasi na 9";next8.onclick=openLesson9;} const jump9=document.getElementById("jumpLesson9"); if(jump9){jump9.disabled=false;jump9.textContent="Lesson 9";} }
   if(passed9){ const done9=document.getElementById("lesson9Complete"); if(done9) done9.hidden=false; const next10=document.getElementById("next10"); if(next10){next10.disabled=false;next10.textContent="Open Lesson 10 — TCP/IP and OSI Models / Buɗe Darasi na 10";} const jump10=document.getElementById("jumpLesson10"); if(jump10){jump10.disabled=false;jump10.textContent="Lesson 10";} }
-  if(passed10){ const done10=document.getElementById("lesson10Complete"); if(done10) done10.hidden=false; }
-  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8, passed9, passed10].filter(Boolean).length;
+  if(passed10){ const done10=document.getElementById("lesson10Complete"); if(done10) done10.hidden=false; const next11=document.getElementById("next11"); if(next11){next11.disabled=false;next11.textContent="Open Lesson 11 — DNS, DHCP, HTTP and HTTPS / Buɗe Darasi na 11";next11.onclick=openLesson11;} }
+  if(passed11){ const done11=document.getElementById("lesson11Complete"); if(done11) done11.hidden=false; }
+  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8, passed9, passed10, passed11].filter(Boolean).length;
   const continueButton = document.getElementById("continueLearningButton");
   if(continueButton){
-    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : !passed9 ? 9 : !passed10 ? 10 : 11;
+    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : !passed9 ? 9 : !passed10 ? 10 : !passed11 ? 11 : 12;
     continueButton.textContent = nextLesson <= 6
       ? "Continue Learning — Lesson " + nextLesson + " / Ci gaba da Koyo — Darasi na " + nextLesson
-      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : nextLesson === 9 ? "Continue Learning — Lesson 9 / Ci gaba da Koyo — Darasi na 9" : nextLesson === 10 ? "Continue Learning — Lesson 10 / Ci gaba da Koyo — Darasi na 10" : "All available lessons completed / An kammala duk darussan da suke nan";
+      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : nextLesson === 9 ? "Continue Learning — Lesson 9 / Ci gaba da Koyo — Darasi na 9" : nextLesson === 10 ? "Continue Learning — Lesson 10 / Ci gaba da Koyo — Darasi na 10" : nextLesson === 11 ? "Continue Learning — Lesson 11 / Ci gaba da Koyo — Darasi na 11" : "All available lessons completed / An kammala duk darussan da suke nan";
   }
   const value = Math.round((completed / 15) * 100);
   document.getElementById("bar").style.width = value + "%";
@@ -882,7 +947,8 @@ function startLesson(){
   if(!passed8) return openLesson8();
   if(!passed9) return openLesson9();
   if(!passed10) return openLesson10();
-  alert("You have completed all 10 lessons currently available. / Ka kammala darussa goma da ake da su yanzu.");
+  if(!passed11) return openLesson11();
+  alert("You have completed all 11 lessons currently available. / Ka kammala darussa goma sha ɗaya da ake da su yanzu.");
 }
 function returnToDashboard(){
   hideLessons();
@@ -1086,6 +1152,18 @@ function checkQuiz10(){
       document.getElementById("lesson10Complete").hidden = false;
     });
 }
+function openLesson11(){
+  if(!passed10){ alert("Pass Lesson 10 first. / Ka ci jarrabawar Darasi na 10 tukuna."); return; }
+  showLesson("lesson11");
+}
+function checkQuiz11(){
+  gradeQuiz(["l11q1","l11q2","l11q3","l11q4","l11q5"],
+    {l11q1:"b",l11q2:"b",l11q3:"c",l11q4:"d",l11q5:"b"},
+    4, "result11", lessonKeys[10], () => {
+      passed11 = true;
+      document.getElementById("lesson11Complete").hidden = false;
+    });
+}
 
 function restoreProgress(){
   if(passed1){
@@ -1121,6 +1199,7 @@ function restoreProgress(){
   if(passed8){ document.getElementById("lesson8Complete").hidden = false; document.getElementById("result8").textContent = "Lesson 8 was previously passed. / Ka riga ka ci jarrabawar Darasi na 8."; }
   if(passed9){ document.getElementById("lesson9Complete").hidden = false; document.getElementById("result9").textContent = "Lesson 9 was previously passed. / Ka riga ka ci jarrabawar Darasi na 9."; }
   if(passed10){ document.getElementById("lesson10Complete").hidden = false; document.getElementById("result10").textContent = "Lesson 10 was previously passed. / Ka riga ka ci jarrabawar Darasi na 10."; }
+  if(passed11){ document.getElementById("lesson11Complete").hidden = false; document.getElementById("result11").textContent = "Lesson 11 was previously passed. / Ka riga ka ci jarrabawar Darasi na 11."; }
   updateProgress();
 }
 restoreProgress();
