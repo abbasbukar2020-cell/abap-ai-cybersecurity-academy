@@ -8,7 +8,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="#081426" name="theme-color"/>
-<title>ABAP AI Cybersecurity Academy — Lesson Navigation</title>
+<title>ABAP AI Cybersecurity Academy — Lessons 1–9</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,sans-serif;background:#081426;color:#eef5ff}
@@ -69,10 +69,10 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <button id="continueLearningButton" onclick="startLesson()" type="button">Continue Learning — Lesson 6 / Ci gaba da Koyo — Darasi na 6</button>
 <p class="small">The lessons open below this dashboard only after you select Start Learning.</p>
 </section>
-<section class="panel"><h2>Six-Level Professional Roadmap</h2><p>The order and topic counts below follow the supplied Cybersecurity &amp; Ethical Hacking Complete Professional Training Roadmap.</p><ol><li><strong>Level 1 — Beginner (15 topics)</strong> — Computer, internet, networking and cybersecurity foundations.</li><li><strong>Level 2 — Intermediate (18 topics)</strong> — Protecting devices, operating systems and networks.</li><li><strong>Level 3 — Advanced (21 topics)</strong> — Authorized security testing and threat investigation in labs.</li><li><strong>Level 4 — Specialist (19 topics)</strong> — Choosing and developing a specialist cybersecurity discipline.</li><li><strong>Level 5 — Expert / Master (20 topics)</strong> — Advanced security projects, architecture and research.</li><li><strong>Level 6 — Executive / Strategic Leadership (18 topics)</strong> — Leadership, governance, risk, policy and strategic security.</li></ol><p class="notice" id="roadmapAlignmentNotice">Curriculum alignment: Lessons 1–8 now follow the first eight topics in the official Level 1 roadmap. Older legacy material is not counted toward Level 1 completion and will not be presented as a substitute for the official topic order.</p></section>
+<section class="panel"><h2>Six-Level Professional Roadmap</h2><p>The order and topic counts below follow the supplied Cybersecurity &amp; Ethical Hacking Complete Professional Training Roadmap.</p><ol><li><strong>Level 1 — Beginner (15 topics)</strong> — Computer, internet, networking and cybersecurity foundations.</li><li><strong>Level 2 — Intermediate (18 topics)</strong> — Protecting devices, operating systems and networks.</li><li><strong>Level 3 — Advanced (21 topics)</strong> — Authorized security testing and threat investigation in labs.</li><li><strong>Level 4 — Specialist (19 topics)</strong> — Choosing and developing a specialist cybersecurity discipline.</li><li><strong>Level 5 — Expert / Master (20 topics)</strong> — Advanced security projects, architecture and research.</li><li><strong>Level 6 — Executive / Strategic Leadership (18 topics)</strong> — Leadership, governance, risk, policy and strategic security.</li></ol><p class="notice" id="roadmapAlignmentNotice">Curriculum alignment: Lessons 1–9 now follow the first nine topics in the official Level 1 roadmap. Older legacy material is not counted toward Level 1 completion and will not be presented as a substitute for the official topic order.</p></section>
 <section class="panel lesson" id="lesson1">
 <h2>LEVEL 1 — BEGINNER</h2>
-<nav aria-label="Lesson navigation" class="lesson-nav"><strong>Available lessons / Darussan da suke nan:</strong><button class="lesson-jump" onclick="showLesson1()" type="button">Lesson 1</button><button class="lesson-jump" onclick="showLesson2()" type="button">Lesson 2</button><button class="lesson-jump" onclick="openLesson3()" type="button">Lesson 3</button><button class="lesson-jump" onclick="openLesson4()" type="button">Lesson 4</button><button class="lesson-jump" onclick="openLesson5()" type="button">Lesson 5</button><button class="lesson-jump" onclick="openLesson8()" type="button">Lesson 8</button></nav>
+<nav aria-label="Lesson navigation" class="lesson-nav"><strong>Available lessons / Darussan da suke nan:</strong><button class="lesson-jump" onclick="showLesson1()" type="button">Lesson 1</button><button class="lesson-jump" onclick="showLesson2()" type="button">Lesson 2</button><button class="lesson-jump" onclick="openLesson3()" type="button">Lesson 3</button><button class="lesson-jump" onclick="openLesson4()" type="button">Lesson 4</button><button class="lesson-jump" onclick="openLesson5()" type="button">Lesson 5</button><button class="lesson-jump" onclick="openLesson8()" type="button">Lesson 8</button><button class="lesson-jump" id="jumpLesson9" disabled onclick="openLesson9()" type="button">Lesson 9 — Locked</button></nav>
 <h3>Lesson 1: Introduction to Cybersecurity</h3>
 <div class="notice"><strong>Learning Objectives / Manufofin Koyo</strong><p>By the end of this lesson, you should be able to define cybersecurity, explain why it matters, identify what it protects, recognize basic security risks, and describe the responsibilities of a cybersecurity professional.</p><p class="hausa">A ƙarshen wannan darasi, za ka iya bayyana ma'anar cybersecurity, muhimmancinsa, abubuwan da yake karewa, gane wasu barazanar tsaro, da bayyana ayyukan ƙwararren cybersecurity.</p></div>
 <h3>PART A — ENGLISH</h3>
@@ -648,13 +648,71 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <button onclick="checkQuiz8()" type="button">Submit Answers / Aika Amsoshi</button></form>
 <p aria-live="polite" class="result" id="result8"></p>
 <p class="notice" hidden id="lesson8Complete"><strong>Lesson 8 Passed — Excellent work!</strong><br/>Topic 8 of the official Level 1 roadmap is complete. Lesson 9 is IP Address and MAC Address. / Ka kammala topic na takwas. Darasi na 9 shi ne IP Address da MAC Address.</p>
+<button disabled id="next8" onclick="openLesson9()" type="button">Lesson 9 — Locked until Lesson 8 is passed / A kulle har sai an ci Darasi na 8</button>
 <button class="secondary" onclick="openLesson7()" type="button">Back to Lesson 7 / Komawa Darasi na 7</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
+</section>
+
+
+<section class="panel lesson" id="lesson9" style="display:none">
+<h2>LEVEL 1 — BEGINNER</h2>
+<nav aria-label="Lesson navigation" class="lesson-nav"><strong>Available lessons / Darussan da suke nan:</strong><button class="lesson-jump" onclick="showLesson1()" type="button">Lesson 1</button><button class="lesson-jump" onclick="showLesson2()" type="button">Lesson 2</button><button class="lesson-jump" onclick="openLesson3()" type="button">Lesson 3</button><button class="lesson-jump" onclick="openLesson4()" type="button">Lesson 4</button><button class="lesson-jump" onclick="openLesson5()" type="button">Lesson 5</button><button class="lesson-jump" onclick="openLesson6()" type="button">Lesson 6</button><button class="lesson-jump" onclick="openLesson7()" type="button">Lesson 7</button><button class="lesson-jump" onclick="openLesson8()" type="button">Lesson 8</button><button class="lesson-jump" onclick="openLesson9()" type="button">Lesson 9</button></nav>
+<h3>Lesson 9: IP and MAC Addresses / IP da MAC Addresses</h3>
+<div class="notice"><strong>Learning Objectives / Manufofin Koyo</strong><p>By the end of this lesson, you should be able to explain what an IP address and MAC address are, distinguish IPv4 and IPv6, understand public and private IP addresses, recognize a MAC address format, and explain why these addresses matter for networking and cybersecurity.</p><p class="hausa">A ƙarshen darasin, za ka iya bayyana IP address da MAC address, bambance IPv4 da IPv6, gane public da private IP, fahimtar tsarin MAC address, da dalilin muhimmancinsu a network da cybersecurity.</p></div>
+<h3>PART A — ENGLISH</h3>
+<h3>1. What is an IP Address?</h3>
+<p>An <strong>Internet Protocol (IP) address</strong> is a logical address assigned to a device or network interface so that data can be sent to the correct destination across an IP network. It is similar to a delivery address: it helps the network identify where information should go.</p>
+<p><strong>Example:</strong> A common IPv4 address looks like <code>192.168.1.10</code>. This is an example of a private local-network address, not a real person's identity.</p>
+<h3>2. IPv4 and IPv6</h3>
+<ul><li><strong>IPv4:</strong> uses 32 bits and is usually written as four decimal numbers separated by dots, for example <code>192.168.1.10</code>. Each number is from 0 to 255.</li><li><strong>IPv6:</strong> uses 128 bits and is written in hexadecimal groups separated by colons, for example <code>2001:db8::10</code>. This example uses a documentation range.</li></ul>
+<p>IPv6 provides a much larger address space than IPv4. Both versions are used to identify network interfaces for communication.</p>
+<h3>3. Public and Private IP Addresses</h3>
+<ul><li><strong>Public IP:</strong> an address used for routing across the public Internet. It is normally assigned by an Internet Service Provider or network operator.</li><li><strong>Private IP:</strong> an address used inside private networks such as homes, schools and offices. Common IPv4 private ranges include <code>10.0.0.0/8</code>, <code>172.16.0.0/12</code> and <code>192.168.0.0/16</code>.</li></ul>
+<p>A private IP address is not directly routable across the public Internet. A router commonly uses Network Address Translation (NAT) to allow devices on a private network to share a public connection.</p>
+<h3>4. What is a MAC Address?</h3>
+<p>A <strong>Media Access Control (MAC) address</strong> is a link-layer identifier associated with a network interface. It is commonly displayed as six pairs of hexadecimal characters, for example <code>00:1A:2B:3C:4D:5E</code>. The example is illustrative.</p>
+<p>MAC addresses are used for communication on a local network segment. A device may have different MAC addresses for its Wi-Fi and Ethernet interfaces. Some devices also use randomized MAC addresses for privacy when scanning for or connecting to Wi-Fi networks.</p>
+<h3>5. IP Address vs MAC Address</h3>
+<ul><li><strong>IP address:</strong> logical network-layer address used to route packets between networks.</li><li><strong>MAC address:</strong> link-layer identifier used to deliver frames on a local network link.</li><li>An IP address can change when a device joins a different network; a MAC address is associated with a particular network interface, although it can be changed or randomized by software.</li></ul>
+<div class="diagram"><strong>Simple communication example</strong><br/>Laptop → Wi-Fi Router → Internet → Website Server<br/><span class="hausa">IP address na taimakawa wajen kai packet zuwa inda ya kamata; MAC address na taimakawa wajen isar da frame a local network link.</span></div>
+<h3>6. Why Do These Addresses Matter in Cybersecurity?</h3>
+<ul><li>They help network administrators identify and troubleshoot devices and traffic.</li><li>IP addresses may appear in security logs and can help investigate suspicious activity, but an IP address alone does not prove who a person is.</li><li>MAC filtering is not strong authentication because MAC addresses can be copied or spoofed.</li><li>Do not publish screenshots containing your public IP or device details unnecessarily.</li><li>Use secure Wi-Fi encryption, strong router credentials, updates and appropriate firewall rules.</li></ul>
+<div class="notice"><strong>Important security note</strong><p>An IP address does not reliably reveal a person's exact home address or identity. IP geolocation is approximate, and addresses may be shared by many users.</p></div>
+<h3>PART B — HAUSA</h3>
+<h3>1. Menene IP Address?</h3>
+<p><strong>IP Address</strong> adireshi ne da ake bai wa na'ura ko network interface domin network ya san inda zai aika bayanai. Kamar adireshin gida ne da ake amfani da shi wajen kai kaya zuwa wurin da ya dace.</p>
+<h3>2. Bambancin IPv4 da IPv6</h3>
+<ul><li><strong>IPv4:</strong> yana amfani da bits 32, kuma yawanci ana rubuta shi da lambobi huɗu da digo a tsakaninsu, misali <code>192.168.1.10</code>.</li><li><strong>IPv6:</strong> yana amfani da bits 128, kuma ana rubuta shi da rukunan hexadecimal da colon a tsakaninsu, misali <code>2001:db8::10</code>.</li></ul>
+<p>IPv6 yana da damar samar da adireshi masu yawa fiye da IPv4.</p>
+<h3>3. Public IP da Private IP</h3>
+<p><strong>Public IP</strong> adireshi ne da ake amfani da shi wajen sadarwa a Internet. <strong>Private IP</strong> kuwa ana amfani da shi a cikin network na gida, makaranta ko ofis. Router na iya amfani da NAT domin na'urorin cikin gida su raba hanyar Internet guda.</p>
+<h3>4. Menene MAC Address?</h3>
+<p><strong>MAC Address</strong> wata alama ce da ke danganta da network interface kamar Wi-Fi ko Ethernet. Ana yawan rubuta ta da rukunan hexadecimal guda shida, misali <code>00:1A:2B:3C:4D:5E</code>. Wannan misali ne kawai.</p>
+<h3>5. Bambancin IP da MAC Address</h3>
+<ul><li>IP address yana taimakawa wajen tura packets tsakanin networks.</li><li>MAC address yana taimakawa wajen isar da frames a local network link.</li><li>IP na iya canzawa idan na'ura ta shiga wani network; MAC kuma tana danganta da network interface, amma software na iya canza ko ɓoye ta da randomization.</li></ul>
+<h3>6. Muhimmancinsu ga Cybersecurity</h3>
+<ul><li>Suna taimaka wa masu kula da network wajen gano na'urori da binciken matsaloli.</li><li>IP a cikin security logs na iya taimakawa bincike, amma ba ya tabbatar da ainihin mutum shi kaɗai.</li><li>MAC filtering ba cikakkiyar kariya ba ce domin ana iya kwaikwayon MAC address.</li><li>A kare Wi-Fi da password mai ƙarfi, encryption na zamani, updates da firewall.</li></ul>
+<h3>PART C — PRACTICAL EXERCISES / AYYUKAN AIKI</h3>
+<ol><li>On your own device, find the network settings page and identify whether it shows an IPv4 address. Do not post your public IP online. / A na'urarka, duba network settings ka gano ko akwai IPv4 address. Kada ka wallafa public IP ɗinka a Internet.</li><li>Identify whether your device is connected through Wi-Fi or Ethernet. / Gano ko na'urarka tana haɗe ta Wi-Fi ko Ethernet.</li><li>Explain in your own words why a router needs IP information to forward data. / Bayyana dalilin da ya sa router ke buƙatar IP domin tura bayanai.</li><li>Explain one difference between an IP address and a MAC address. / Bayyana bambanci guda tsakanin IP da MAC address.</li></ol>
+<h3>PART D — KEY TERMS / MUHIMMAN KALMOMI</h3>
+<ul><li><strong>IP address:</strong> logical address used by IP networks / adireshin sadarwar IP.</li><li><strong>IPv4:</strong> 32-bit Internet Protocol version / sigar IP mai bits 32.</li><li><strong>IPv6:</strong> 128-bit Internet Protocol version / sigar IP mai bits 128.</li><li><strong>Public IP:</strong> Internet-routable IP address / IP da ake iya amfani da shi a Internet.</li><li><strong>Private IP:</strong> IP address for private networks / IP na network na cikin gida.</li><li><strong>MAC address:</strong> link-layer identifier for a network interface / alamar network interface.</li><li><strong>NAT:</strong> Network Address Translation / hanyar canza adireshin network.</li><li><strong>Packet:</strong> unit of data at the network layer / ɓangaren bayanai a network layer.</li><li><strong>Frame:</strong> unit of data at the link layer / ɓangaren bayanai a link layer.</li></ul>
+<h2>Lesson 9 Assessment — Gwajin Darasi na 9</h2>
+<p>Choose one answer for each question. Pass mark: 4 out of 5. / Zaɓi amsa guda ɗaya ga kowace tambaya. Ana buƙatar 4 cikin 5.</p>
+<form id="quiz9">
+<div class="quiz-question"><p><strong>1. What is the main purpose of an IP address?</strong><br/><span class="hausa">Menene babban aikin IP address?</span></p><label class="option"><input name="l9q1" type="radio" value="a"/> To identify a network destination for IP communication / Gano inda bayanan IP za su je</label><label class="option"><input name="l9q1" type="radio" value="b"/> To increase battery power / Ƙara ƙarfin batiri</label><label class="option"><input name="l9q1" type="radio" value="c"/> To clean a keyboard / Share keyboard</label><label class="option"><input name="l9q1" type="radio" value="d"/> To replace an operating system / Maye gurbin operating system</label></div>
+<div class="quiz-question"><p><strong>2. How many bits does IPv4 use?</strong><br/><span class="hausa">Bits nawa IPv4 ke amfani da su?</span></p><label class="option"><input name="l9q2" type="radio" value="a"/> 16 bits</label><label class="option"><input name="l9q2" type="radio" value="b"/> 32 bits</label><label class="option"><input name="l9q2" type="radio" value="c"/> 64 bits</label><label class="option"><input name="l9q2" type="radio" value="d"/> 128 bits</label></div>
+<div class="quiz-question"><p><strong>3. Which is an example of a private IPv4 address?</strong><br/><span class="hausa">Wanne misali ne na private IPv4 address?</span></p><label class="option"><input name="l9q3" type="radio" value="a"/> 8.8.8.8</label><label class="option"><input name="l9q3" type="radio" value="b"/> 1.1.1.1</label><label class="option"><input name="l9q3" type="radio" value="c"/> 192.168.1.10</label><label class="option"><input name="l9q3" type="radio" value="d"/> 2001:db8::10</label></div>
+<div class="quiz-question"><p><strong>4. What is a MAC address associated with?</strong><br/><span class="hausa">Me MAC address ke danganta da shi?</span></p><label class="option"><input name="l9q4" type="radio" value="a"/> A network interface / Network interface</label><label class="option"><input name="l9q4" type="radio" value="b"/> A website password / Password na website</label><label class="option"><input name="l9q4" type="radio" value="c"/> A computer screen size / Girman screen</label><label class="option"><input name="l9q4" type="radio" value="d"/> A battery model / Nau'in batiri</label></div>
+<div class="quiz-question"><p><strong>5. Which statement is correct?</strong><br/><span class="hausa">Wace magana ce daidai?</span></p><label class="option"><input name="l9q5" type="radio" value="a"/> A MAC filter alone guarantees Wi-Fi security / MAC filter kaɗai yana tabbatar da tsaron Wi-Fi</label><label class="option"><input name="l9q5" type="radio" value="b"/> An IP address always identifies one person exactly / IP koyaushe yana gano mutum ɗaya daidai</label><label class="option"><input name="l9q5" type="radio" value="c"/> IPv6 uses 32 bits / IPv6 yana amfani da bits 32</label><label class="option"><input name="l9q5" type="radio" value="d"/> A MAC address can be spoofed, so MAC filtering is not strong authentication / Ana iya kwaikwayon MAC, saboda haka MAC filtering ba cikakkiyar authentication ba ce</label></div>
+<button onclick="checkQuiz9()" type="button">Submit Answers / Aika Amsoshi</button></form>
+<p aria-live="polite" class="result" id="result9"></p>
+<p class="notice" hidden id="lesson9Complete"><strong>Lesson 9 Passed — Excellent work!</strong><br/>Topic 9 of the official Level 1 roadmap is complete. Lesson 10 is TCP/IP and OSI Models. / Ka kammala topic na tara. Darasi na 10 shi ne TCP/IP da OSI Models.</p>
+<button class="secondary" onclick="openLesson8()" type="button">Back to Lesson 8 / Komawa Darasi na 8</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
 </section>
 
 </main>
 <footer>ABAP AI CYBERSECURITY ACADEMY<br/>Prepared by Abbas Bukar</footer>
 <script>
-const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1"];
+const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1"];
 // Preserve previously earned passes when older versions used legacy keys.
 if(localStorage.getItem(lessonKeys[2]) !== "yes" && localStorage.getItem("abap_lesson3_passed") === "yes"){
   localStorage.setItem(lessonKeys[2], "yes");
@@ -670,6 +728,7 @@ let passed5 = localStorage.getItem(lessonKeys[4]) === "yes";
 let passed6 = localStorage.getItem(lessonKeys[5]) === "yes";
 let passed7 = localStorage.getItem(lessonKeys[6]) === "yes";
 let passed8 = localStorage.getItem(lessonKeys[7]) === "yes";
+let passed9 = localStorage.getItem(lessonKeys[8]) === "yes";
 
 function updateProgress(){
   if(passed1){
@@ -708,14 +767,15 @@ function updateProgress(){
     if(next6){ next6.disabled = false; next6.textContent = "Open Lesson 7 — Internet Fundamentals / Buɗe Darasi na 7"; next6.onclick = openLesson7; }
   }
   if(passed7){ const done7 = document.getElementById("lesson7Complete"); if(done7) done7.hidden = false; const next7=document.getElementById("next7"); if(next7){next7.disabled=false;next7.textContent="Open Lesson 8 — Networking Fundamentals / Buɗe Darasi na 8";next7.onclick=openLesson8;} }
-  if(passed8){ const done8=document.getElementById("lesson8Complete"); if(done8) done8.hidden=false; }
-  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8].filter(Boolean).length;
+  if(passed8){ const done8=document.getElementById("lesson8Complete"); if(done8) done8.hidden=false; const next8=document.getElementById("next8"); if(next8){next8.disabled=false;next8.textContent="Open Lesson 9 — IP and MAC Addresses / Buɗe Darasi na 9";next8.onclick=openLesson9;} const jump9=document.getElementById("jumpLesson9"); if(jump9){jump9.disabled=false;jump9.textContent="Lesson 9";} }
+  if(passed9){ const done9=document.getElementById("lesson9Complete"); if(done9) done9.hidden=false; }
+  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8, passed9].filter(Boolean).length;
   const continueButton = document.getElementById("continueLearningButton");
   if(continueButton){
-    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : 9;
+    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : !passed9 ? 9 : 10;
     continueButton.textContent = nextLesson <= 6
       ? "Continue Learning — Lesson " + nextLesson + " / Ci gaba da Koyo — Darasi na " + nextLesson
-      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : "All available lessons completed / An kammala duk darussan da suke nan";
+      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : nextLesson === 9 ? "Continue Learning — Lesson 9 / Ci gaba da Koyo — Darasi na 9" : "All available lessons completed / An kammala duk darussan da suke nan";
   }
   const value = Math.round((completed / 15) * 100);
   document.getElementById("bar").style.width = value + "%";
@@ -727,7 +787,7 @@ function updateProgress(){
     "Topic 2: " + (passed2 ? "Passed" : "Not completed") + " | " +
     "Topic 3: " + (passed3 ? "Passed" : "Not completed") + " | " +
     "Topic 4: " + (passed4 ? "Passed" : "Not completed") + " | " +
-    "Topic 5: " + (passed5 ? "Passed" : "Not completed") + " | Topic 6: " + (passed6 ? "Passed" : "Not completed") + " | Topic 7: " + (passed7 ? "Passed" : "Not completed") + " | Topic 8: " + (passed8 ? "Passed" : "Not completed") + " | Topics 9–15: Coming in roadmap order.";
+    "Topic 5: " + (passed5 ? "Passed" : "Not completed") + " | Topic 6: " + (passed6 ? "Passed" : "Not completed") + " | Topic 7: " + (passed7 ? "Passed" : "Not completed") + " | Topic 8: " + (passed8 ? "Passed" : "Not completed") + " | Topics 10–15: Coming in roadmap order.";
   const levelStatus = document.getElementById("levelStatus");
   if(levelStatus){
     levelStatus.textContent = "This progress indicator counts only official Level 1 roadmap topics passed so far. Older legacy lessons are not counted. / Wannan alamar tana ƙirga topics na Level 1 na ainihin roadmap da aka ci kawai. Ba ta ƙirga tsoffin darussan da ba su cikin jerin ba.";
@@ -758,7 +818,8 @@ function startLesson(){
   if(!passed6) return openLesson6();
   if(!passed7) return openLesson7();
   if(!passed8) return openLesson8();
-  alert("You have completed all 8 lessons currently available. / Ka kammala darussa 8 da ake da su yanzu.");
+  if(!passed9) return openLesson9();
+  alert("You have completed all 9 lessons currently available. / Ka kammala darussa 8 da ake da su yanzu.");
 }
 function returnToDashboard(){
   hideLessons();
@@ -936,6 +997,18 @@ function checkQuiz8(){
     4, "result8", lessonKeys[7], () => {
       passed8 = true;
       document.getElementById("lesson8Complete").hidden = false;
+    });
+}
+function openLesson9(){
+  if(!passed8){ alert("Pass Lesson 8 first. / Ka ci jarrabawar Darasi na 8 tukuna."); return; }
+  showLesson("lesson9");
+}
+function checkQuiz9(){
+  gradeQuiz(["l9q1","l9q2","l9q3","l9q4","l9q5"],
+    {l9q1:"a",l9q2:"b",l9q3:"c",l9q4:"a",l9q5:"d"},
+    4, "result9", lessonKeys[8], () => {
+      passed9 = true;
+      document.getElementById("lesson9Complete").hidden = false;
     });
 }
 
