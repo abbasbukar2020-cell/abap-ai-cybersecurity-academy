@@ -66,7 +66,7 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <p><strong>Learning system:</strong> Lessons, examples, practical exercises and assessments.</p>
 <div aria-label="Level 1 roadmap progress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress" role="progressbar"><div id="bar"></div></div>
 <p class="small" id="progressText">Level 1 roadmap progress: 0 of 15 topics passed</p>
-<button id="continueLearningButton" onclick="startLesson()" type="button">Continue Learning — Lesson 5 / Ci gaba da Koyo — Darasi na 5</button>
+<button id="continueLearningButton" onclick="startLesson()" type="button">Continue Learning — Lesson 6 / Ci gaba da Koyo — Darasi na 6</button>
 <p class="small">The lessons open below this dashboard only after you select Start Learning.</p>
 </section>
 <section class="panel"><h2>Six-Level Professional Roadmap</h2><p>The order and topic counts below follow the supplied Cybersecurity &amp; Ethical Hacking Complete Professional Training Roadmap.</p><ol><li><strong>Level 1 — Beginner (15 topics)</strong> — Computer, internet, networking and cybersecurity foundations.</li><li><strong>Level 2 — Intermediate (18 topics)</strong> — Protecting devices, operating systems and networks.</li><li><strong>Level 3 — Advanced (21 topics)</strong> — Authorized security testing and threat investigation in labs.</li><li><strong>Level 4 — Specialist (19 topics)</strong> — Choosing and developing a specialist cybersecurity discipline.</li><li><strong>Level 5 — Expert / Master (20 topics)</strong> — Advanced security projects, architecture and research.</li><li><strong>Level 6 — Executive / Strategic Leadership (18 topics)</strong> — Leadership, governance, risk, policy and strategic security.</li></ol><p class="notice" id="roadmapAlignmentNotice">Curriculum alignment: Lessons 1–4 now follow the first four topics in the official Level 1 roadmap. Older legacy material is not counted toward Level 1 completion and will not be presented as a substitute for the official topic order.</p></section>
@@ -465,12 +465,72 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <p aria-live="polite" class="result" id="result5"></p>
 <p class="notice" hidden id="lesson5Complete"><strong>Lesson 5 Passed — Excellent work!</strong><br/>Topic 5 of the official Level 1 roadmap is complete. Lesson 6 is Operating Systems. / Ka kammala topic na biyar. Darasi na 6 shi ne Operating Systems.</p>
 <button class="secondary" onclick="openLesson4()" type="button">Back to Lesson 4 / Komawa Darasi na 4</button>
+<button disabled id="next5" onclick="openLesson6()" type="button">Lesson 6 — Coming next / Darasi na 6 zai biyo baya</button>
 <button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
 </section>
+
+<section class="panel lesson" id="lesson6" style="display:none">
+<h2>LEVEL 1 — BEGINNER</h2>
+<nav aria-label="Lesson navigation" class="lesson-nav"><strong>Available lessons / Darussan da suke nan:</strong><button class="lesson-jump" onclick="showLesson1()" type="button">Lesson 1</button><button class="lesson-jump" onclick="showLesson2()" type="button">Lesson 2</button><button class="lesson-jump" onclick="openLesson3()" type="button">Lesson 3</button><button class="lesson-jump" onclick="openLesson4()" type="button">Lesson 4</button><button class="lesson-jump" onclick="openLesson5()" type="button">Lesson 5</button><button class="lesson-jump" onclick="openLesson6()" type="button">Lesson 6</button></nav>
+<h3>Lesson 6: Operating Systems</h3>
+<div class="notice"><strong>Learning Objectives / Manufofin Koyo</strong><p>By the end of this lesson, you should be able to define an operating system, explain its main functions, identify common operating systems, understand user accounts and permissions, and describe basic ways to keep an operating system secure.</p><p class="hausa">A ƙarshen wannan darasi, za ka iya bayyana ma'anar Operating System, ayyukansa, gane nau'o'in operating systems, fahimtar user accounts da permissions, da matakan kare operating system.</p></div>
+<h3>PART A — ENGLISH</h3>
+<h3>1. What is an Operating System?</h3>
+<p>An <strong>Operating System (OS)</strong> is the main system software that manages a computer's hardware and software resources and provides a platform for applications to run. It acts as a bridge between the user, applications and computer hardware.</p>
+<p><strong>Examples:</strong> Microsoft Windows, Linux, macOS, Android and iOS.</p>
+<h3>2. Main Functions of an Operating System</h3>
+<ul><li><strong>Process management:</strong> manages running programs and shares CPU time between them.</li><li><strong>Memory management:</strong> allocates and releases RAM for programs that need it.</li><li><strong>File management:</strong> organizes files and folders and controls how they are stored and accessed.</li><li><strong>Device management:</strong> coordinates hardware such as keyboards, printers, storage devices and network adapters, often with the help of drivers.</li><li><strong>User interface:</strong> provides a way to interact with the computer, such as a Graphical User Interface (GUI) or Command-Line Interface (CLI).</li><li><strong>Security and permissions:</strong> manages user accounts, sign-in and access rights.</li></ul>
+<h3>3. Types and Examples of Operating Systems</h3>
+<ul><li><strong>Desktop operating systems:</strong> Windows, macOS and desktop Linux distributions.</li><li><strong>Mobile operating systems:</strong> Android and iOS.</li><li><strong>Server operating systems:</strong> Windows Server and Linux server distributions, designed to provide services to other computers.</li><li><strong>Embedded operating systems:</strong> software in dedicated devices such as routers, smart televisions and some industrial equipment.</li></ul>
+<h3>4. GUI and CLI</h3>
+<p>A <strong>Graphical User Interface (GUI)</strong> lets users interact through windows, icons, menus and a pointer or touch screen. A <strong>Command-Line Interface (CLI)</strong> lets users enter text commands. Both are ways of interacting with an operating system. Commands can make powerful changes, so users should understand a command before running it.</p>
+<h3>5. User Accounts, Authentication and Permissions</h3>
+<p>An operating system can have multiple user accounts. A standard user normally has limited permissions for everyday work. An administrator account can make system-wide changes, install software and manage other accounts. Use administrator privileges only when necessary; do not share administrator passwords.</p>
+<p><strong>Authentication</strong> checks who is signing in. <strong>Authorization</strong> determines what that authenticated user is allowed to do. A strong password and multi-factor authentication, where available, help protect accounts.</p>
+<h3>6. Operating System Updates and Security</h3>
+<ul><li>Install security updates from the official operating system update service.</li><li>Use a supported operating system; versions that no longer receive security updates become increasingly risky.</li><li>Enable a firewall and use reputable security protection where appropriate.</li><li>Install applications from trusted sources and remove software you no longer need.</li><li>Use a standard account for everyday activities and restrict administrator access.</li><li>Back up important files regularly and test that you can restore them.</li><li>Lock your device when you leave it unattended.</li></ul>
+<h3>7. Why Operating Systems Matter in Cybersecurity</h3>
+<p>The operating system controls access to files, accounts, devices, memory and network connections. If it is outdated, misconfigured or compromised by malware, attackers may steal information, install unwanted programs or disrupt services. Keeping the OS updated, limiting permissions and monitoring unusual activity reduce these risks.</p>
+<div class="notice"><strong>Important Safety Rule</strong><p>Practice system administration only on devices you own or are authorized to manage. Do not disable security controls or run commands you do not understand on a real device.</p></div>
+<h3>PART B — HAUSA EXPLANATION</h3>
+<h3>1. Menene Operating System?</h3>
+<p><strong>Operating System (OS)</strong> shi ne babban manhajar tsarin kwamfuta da ke kula da hardware da sauran software. Shi ne ke haɗa mai amfani da kwamfuta, applications da kayan aikin kwamfuta. Misalai sun haɗa da Windows, Linux, macOS, Android da iOS.</p>
+<h3>2. Manyan Ayyukan Operating System</h3>
+<ul><li><strong>Process management:</strong> yana kula da programs da suke gudana, yana raba musu lokacin amfani da CPU.</li><li><strong>Memory management:</strong> yana rarraba RAM ga programs sannan ya sake ta idan ba a buƙata.</li><li><strong>File management:</strong> yana tsara files da folders da yadda ake buɗewa ko adana su.</li><li><strong>Device management:</strong> yana taimakawa wajen sarrafa keyboard, printer, storage da network devices ta amfani da drivers.</li><li><strong>User interface:</strong> yana ba mutum hanyar amfani da kwamfuta ta windows da icons (GUI), ko ta rubuta umarni (CLI).</li><li><strong>Security and permissions:</strong> yana kula da accounts, shiga cikin kwamfuta da izinin yin ayyuka.</li></ul>
+<h3>3. Nau'o'in Operating Systems</h3>
+<ul><li><strong>Desktop OS:</strong> Windows, macOS da Linux na kwamfutocin tebur.</li><li><strong>Mobile OS:</strong> Android da iOS na wayoyi da tablets.</li><li><strong>Server OS:</strong> Windows Server da Linux da ake amfani da su wajen samar da ayyuka ga wasu kwamfutoci.</li><li><strong>Embedded OS:</strong> tsarin da ke cikin na'urori na musamman kamar wasu routers da smart TVs.</li></ul>
+<h3>4. Bambancin GUI da CLI</h3>
+<p><strong>GUI</strong> yana ba ka damar amfani da windows, icons, menus da mouse ko taɓa allo. <strong>CLI</strong> kuma yana ba ka damar rubuta umarni. Dukansu hanyoyi ne na sarrafa operating system. Kada ka rubuta ko gudanar da umarnin da ba ka fahimta ba.</p>
+<h3>5. User Accounts da Permissions</h3>
+<p>Kwamfuta na iya samun accounts da yawa. Standard user yana da iyakantaccen izini don ayyukan yau da kullum. Administrator yana da ikon sauya manyan saitunan kwamfuta, saka software da kula da accounts. Kada a raba kalmar sirrin Administrator da kowa, kuma a yi amfani da wannan izini ne idan akwai buƙata.</p>
+<p><strong>Authentication</strong> yana tabbatar da wanda yake ƙoƙarin shiga. <strong>Authorization</strong> yana tantance irin ayyukan da aka ba wannan mutum izinin yi.</p>
+<h3>6. Yadda Ake Kare Operating System</h3>
+<ul><li>A riƙa saka security updates daga wurin hukuma.</li><li>A yi amfani da OS da har yanzu yake samun updates.</li><li>A kunna firewall da ingantaccen kariya.</li><li>A saka applications daga tushe amintacce.</li><li>A yi amfani da standard account a ayyukan yau da kullum.</li><li>A riƙa yin backup na muhimman files.</li><li>A kulle kwamfuta idan za a bar ta.</li></ul>
+<h3>7. Muhimmancin OS a Cybersecurity</h3>
+<p>Operating System yana kula da accounts, files, na'urori da network. Idan ba a sabunta shi ba ko aka saita shi ba daidai ba, masu hari ko malware na iya samun damar bayanai ko lalata aiki. Saboda haka updates, iyakance izini da lura da abubuwan da ba a saba gani ba suna taimakawa wajen kare kwamfuta.</p>
+<h3>PART C — PRACTICAL EXERCISES / AYYUKAN GWaji</h3>
+<ol><li>On your device, identify the operating system name and version. / Gano sunan OS da version a na'urarka.</li><li>Find the place where system updates are checked. Do not install anything unless you understand the update. / Gano wurin duba updates; kada ka saka wani abu idan ba ka fahimta ba.</li><li>Identify whether your everyday account is standard or administrator, if your device shows this information. / Gano ko account ɗinka standard ne ko administrator idan na'urarka ta nuna.</li><li>Give two examples of GUI and two examples of CLI use. / Bayyana misalai biyu na GUI da biyu na CLI.</li></ol>
+<h3>PART D — KEY TERMS / MUHIMMAN KALMOMI</h3>
+<ul><li><strong>Operating System (OS):</strong> software that manages computer resources / manhajar da ke sarrafa albarkatun kwamfuta.</li><li><strong>GUI:</strong> Graphical User Interface / hanyar amfani da hotuna, windows da menus.</li><li><strong>CLI:</strong> Command-Line Interface / hanyar amfani da rubutattun umarni.</li><li><strong>Driver:</strong> software that helps the OS communicate with a hardware device / manhajar da ke taimaka wa OS sadarwa da hardware.</li><li><strong>Administrator:</strong> account with elevated control / account mai babban izini.</li><li><strong>Patch/Update:</strong> software correction or improvement / gyara ko inganta manhaja.</li></ul>
+<h2>Lesson 6 Assessment — Gwajin Darasi na 6</h2>
+<p>Choose one answer for each question. Pass mark: 4 out of 5. / Zaɓi amsa guda ɗaya ga kowace tambaya. Ana buƙatar 4 cikin 5.</p>
+<form id="quiz6">
+<div class="quiz-question"><p><strong>1. What is the main purpose of an operating system?</strong><br/><span class="hausa">Menene babban manufar Operating System?</span></p><label class="option"><input name="l6q1" type="radio" value="a"/> To manage hardware and software resources / Sarrafa hardware da software</label><label class="option"><input name="l6q1" type="radio" value="b"/> To print papers only / Buga takardu kawai</label><label class="option"><input name="l6q1" type="radio" value="c"/> To replace the CPU / Sauya CPU</label><label class="option"><input name="l6q1" type="radio" value="d"/> To provide electricity / Samar da wutar lantarki</label></div>
+<div class="quiz-question"><p><strong>2. Which one is a mobile operating system?</strong><br/><span class="hausa">Wanne ne Operating System na waya?</span></p><label class="option"><input name="l6q2" type="radio" value="a"/> Microsoft Word / Microsoft Word</label><label class="option"><input name="l6q2" type="radio" value="b"/> Android / Android</label><label class="option"><input name="l6q2" type="radio" value="c"/> HDMI / HDMI</label><label class="option"><input name="l6q2" type="radio" value="d"/> Keyboard / Keyboard</label></div>
+<div class="quiz-question"><p><strong>3. What does memory management do?</strong><br/><span class="hausa">Menene aikin memory management?</span></p><label class="option"><input name="l6q3" type="radio" value="a"/> It cleans the monitor / Tana share monitor</label><label class="option"><input name="l6q3" type="radio" value="b"/> It creates internet signals / Samar da siginar intanet</label><label class="option"><input name="l6q3" type="radio" value="c"/> It allocates RAM to programs / Rarraba RAM ga programs</label><label class="option"><input name="l6q3" type="radio" value="d"/> It prints files / Buga files</label></div>
+<div class="quiz-question"><p><strong>4. Which account should normally be used for everyday tasks?</strong><br/><span class="hausa">Wane account ya fi dacewa da ayyukan yau da kullum?</span></p><label class="option"><input name="l6q4" type="radio" value="a"/> Shared administrator account / Administrator da kowa ke amfani da shi</label><label class="option"><input name="l6q4" type="radio" value="b"/> Unknown guest account / Guest account da ba a sani ba</label><label class="option"><input name="l6q4" type="radio" value="c"/> No account protection / Account ba tare da kariya ba</label><label class="option"><input name="l6q4" type="radio" value="d"/> Standard user account / Standard user account</label></div>
+<div class="quiz-question"><p><strong>5. What is a safe way to keep an operating system secure?</strong><br/><span class="hausa">Wace hanya ce mai kyau ta kare Operating System?</span></p><label class="option"><input name="l6q5" type="radio" value="a"/> Install updates from official sources / Saka updates daga tushe na hukuma</label><label class="option"><input name="l6q5" type="radio" value="b"/> Disable all security updates / Kashe duk security updates</label><label class="option"><input name="l6q5" type="radio" value="c"/> Share administrator password / Raba password na Administrator</label><label class="option"><input name="l6q5" type="radio" value="d"/> Install unknown programs / Saka programs da ba a sani ba</label></div>
+<button onclick="checkQuiz6()" type="button">Submit Answers / Aika Amsoshi</button></form>
+<p aria-live="polite" class="result" id="result6"></p>
+<p class="notice" hidden id="lesson6Complete"><strong>Lesson 6 Passed — Excellent work!</strong><br/>Topic 6 of the official Level 1 roadmap is complete. Lesson 7 is Internet Fundamentals. / Ka kammala topic na shida. Darasi na 7 shi ne Internet Fundamentals.</p>
+<button class="secondary" onclick="openLesson5()" type="button">Back to Lesson 5 / Komawa Darasi na 5</button>
+<button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
+</section>
+
 </main>
 <footer>ABAP AI CYBERSECURITY ACADEMY<br/>Prepared by Abbas Bukar</footer>
 <script>
-const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1"];
+const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1"];
 // Preserve previously earned passes when older versions used legacy keys.
 if(localStorage.getItem(lessonKeys[2]) !== "yes" && localStorage.getItem("abap_lesson3_passed") === "yes"){
   localStorage.setItem(lessonKeys[2], "yes");
@@ -483,6 +543,7 @@ let passed2 = localStorage.getItem(lessonKeys[1]) === "yes";
 let passed3 = localStorage.getItem(lessonKeys[2]) === "yes";
 let passed4 = localStorage.getItem(lessonKeys[3]) === "yes";
 let passed5 = localStorage.getItem(lessonKeys[4]) === "yes";
+let passed6 = localStorage.getItem(lessonKeys[5]) === "yes";
 
 function updateProgress(){
   if(passed1){
@@ -512,14 +573,17 @@ function updateProgress(){
   if(passed5){
     const done5 = document.getElementById("lesson5Complete");
     if(done5) done5.hidden = false;
+    const next5 = document.getElementById("next5");
+    if(next5){ next5.disabled = false; next5.textContent = "Open Lesson 6 — Operating Systems / Buɗe Darasi na 6"; next5.onclick = openLesson6; }
   }
-  const completed = [passed1, passed2, passed3, passed4, passed5].filter(Boolean).length;
+  if(passed6){ const done6 = document.getElementById("lesson6Complete"); if(done6) done6.hidden = false; }
+  const completed = [passed1, passed2, passed3, passed4, passed5, passed6].filter(Boolean).length;
   const continueButton = document.getElementById("continueLearningButton");
   if(continueButton){
-    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : 6;
-    continueButton.textContent = nextLesson <= 5
+    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : 7;
+    continueButton.textContent = nextLesson <= 6
       ? "Continue Learning — Lesson " + nextLesson + " / Ci gaba da Koyo — Darasi na " + nextLesson
-      : "All available lessons completed / Ka kammala duk darussan da ake da su";
+      : "Lesson 7 — Coming next / Darasi na 7 zai biyo baya";
   }
   const value = Math.round((completed / 15) * 100);
   document.getElementById("bar").style.width = value + "%";
@@ -531,7 +595,7 @@ function updateProgress(){
     "Topic 2: " + (passed2 ? "Passed" : "Not completed") + " | " +
     "Topic 3: " + (passed3 ? "Passed" : "Not completed") + " | " +
     "Topic 4: " + (passed4 ? "Passed" : "Not completed") + " | " +
-    "Topic 5: " + (passed5 ? "Passed" : "Not completed") + " | Topics 6–15: Coming in roadmap order.";
+    "Topic 5: " + (passed5 ? "Passed" : "Not completed") + " | Topic 6: " + (passed6 ? "Passed" : "Not completed") + " | Topics 7–15: Coming in roadmap order.";
   const levelStatus = document.getElementById("levelStatus");
   if(levelStatus){
     levelStatus.textContent = "This progress indicator counts only official Level 1 roadmap topics passed so far. Older legacy lessons are not counted. / Wannan alamar tana ƙirga topics na Level 1 na ainihin roadmap da aka ci kawai. Ba ta ƙirga tsoffin darussan da ba su cikin jerin ba.";
@@ -559,7 +623,8 @@ function startLesson(){
   if(!passed3) return openLesson3();
   if(!passed4) return openLesson4();
   if(!passed5) return openLesson5();
-  alert("You have completed all lessons currently available. Lesson 6 will open when it is added. / Ka kammala duk darussan da ake da su yanzu. Za a buɗe Darasi na 6 idan an ƙara shi.");
+  if(!passed6) return openLesson6();
+  alert("You have completed all lessons currently available. Lesson 7 will open when it is added. / Ka kammala duk darussan da ake da su yanzu. Za a buɗe Darasi na 7 idan an ƙara shi.");
 }
 function returnToDashboard(){
   hideLessons();
@@ -697,6 +762,22 @@ function checkQuiz5(){
     4, "result5", lessonKeys[4], () => {
       passed5 = true;
       document.getElementById("lesson5Complete").hidden = false;
+      const button = document.getElementById("next5");
+      button.disabled = false;
+      button.textContent = "Open Lesson 6 — Operating Systems / Buɗe Darasi na 6";
+      button.onclick = openLesson6;
+    });
+}
+function openLesson6(){
+  if(!passed5){ alert("Pass Lesson 5 first. / Ka ci jarrabawar Darasi na 5 tukuna."); return; }
+  showLesson("lesson6");
+}
+function checkQuiz6(){
+  gradeQuiz(["l6q1","l6q2","l6q3","l6q4","l6q5"],
+    {l6q1:"a",l6q2:"b",l6q3:"c",l6q4:"d",l6q5:"a"},
+    4, "result6", lessonKeys[5], () => {
+      passed6 = true;
+      document.getElementById("lesson6Complete").hidden = false;
     });
 }
 
@@ -726,7 +807,10 @@ function restoreProgress(){
   if(passed5){
     document.getElementById("lesson5Complete").hidden = false;
     document.getElementById("result5").textContent = "Lesson 5 was previously passed. / Ka riga ka ci jarrabawar Darasi na 5.";
+    const next5 = document.getElementById("next5");
+    next5.disabled = false; next5.textContent = "Open Lesson 6 — Operating Systems / Buɗe Darasi na 6"; next5.onclick = openLesson6;
   }
+  if(passed6){ document.getElementById("lesson6Complete").hidden = false; document.getElementById("result6").textContent = "Lesson 6 was previously passed. / Ka riga ka ci jarrabawar Darasi na 6."; }
   updateProgress();
 }
 restoreProgress();
