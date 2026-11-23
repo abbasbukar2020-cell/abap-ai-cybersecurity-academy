@@ -8,7 +8,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="#081426" name="theme-color"/>
-<title>ABAP AI Cybersecurity Academy — Lessons 1–13</title>
+<title>ABAP AI Cybersecurity Academy — Lessons 1–14</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,sans-serif;background:#081426;color:#eef5ff}
@@ -971,13 +971,48 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <button onclick="checkQuiz13()" type="button">Submit Answers / Aika Amsoshi</button></form>
 <p aria-live="polite" class="result" id="result13"></p>
 <p class="notice" hidden id="lesson13Complete"><strong>Lesson 13 Passed — Excellent work!</strong><br/>Topic 13 of the official Level 1 roadmap is complete. Lesson 14 is Authentication and Authorization. / Ka kammala topic na 13. Darasi na 14 shi ne Authentication and Authorization.</p>
-<button class="secondary" onclick="openLesson12()" type="button">Back to Lesson 12 / Komawa Darasi na 12</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
+<button class="secondary" id="next14" disabled onclick="openLesson14()" type="button">Lesson 14 — Locked / Darasi na 14 a kulle yake</button><button class="secondary" onclick="openLesson12()" type="button">Back to Lesson 12 / Komawa Darasi na 12</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
+</section>
+
+
+<section class="panel lesson" id="lesson14" style="display:none">
+<h2>LEVEL 1 — BEGINNER / MATAKIN FARKO</h2>
+<h3>Lesson 14: Authentication and Authorization</h3>
+<div class="notice"><strong>Learning Objectives / Manufofin Koyo</strong><p>By the end of this lesson, you should be able to explain authentication and authorization, distinguish identification from authentication, describe common authentication factors, understand least privilege, and recognize why access permissions matter.</p><p class="hausa">A ƙarshen darasin, za ka iya bayyana authentication da authorization, bambance bayyana sunan mai amfani da tabbatar da shi, fahimtar hanyoyin tabbatar da mutum, da muhimmancin ba da izini gwargwadon aikin mutum.</p></div>
+<h3>PART A — ENGLISH EXPLANATION</h3>
+<h3>1. What is Authentication?</h3><p><strong>Authentication</strong> is the process of verifying that a person, device or service is really who or what it claims to be. For example, entering a password, using a fingerprint or presenting a security key can authenticate a user.</p>
+<h3>2. What is Authorization?</h3><p><strong>Authorization</strong> is the process of deciding what an authenticated user is allowed to see or do. It controls permissions such as reading a file, editing a record, installing software or managing accounts.</p>
+<div class="diagram"><strong>Identification → Authentication → Authorization</strong><br/>Claim an identity → Prove the identity → Receive permitted access</div>
+<h3>3. Authentication vs Authorization</h3><ul><li><strong>Identification:</strong> stating who you are, such as entering a username.</li><li><strong>Authentication:</strong> proving that identity, such as entering a password or using a fingerprint.</li><li><strong>Authorization:</strong> checking what actions you are allowed to perform after your identity is verified.</li></ul>
+<h3>4. Authentication Factors</h3><p>Authentication factors are commonly grouped into three categories:</p><ul><li><strong>Something you know:</strong> password, PIN or passphrase.</li><li><strong>Something you have:</strong> a security key, smart card or authenticator device.</li><li><strong>Something you are:</strong> a biometric feature such as a fingerprint or face scan.</li></ul><p>Multi-Factor Authentication (MFA) uses two or more different factor categories. Two passwords alone are not true multi-factor authentication because both are something you know.</p>
+<h3>5. Authorization and Access Control</h3><p>Access control applies rules to decide who can access a resource and what they can do. Common permissions include read, write, modify, delete and administer. The <strong>principle of least privilege</strong> means giving each user only the minimum access needed to perform their duties, and removing access when it is no longer needed.</p>
+<h3>6. Common Access Control Models</h3><ul><li><strong>RBAC (Role-Based Access Control):</strong> permissions are assigned according to job roles, such as nurse, clerk or system administrator.</li><li><strong>DAC (Discretionary Access Control):</strong> an owner can decide who receives access to a resource.</li><li><strong>MAC (Mandatory Access Control):</strong> access is controlled by centrally defined security labels and rules.</li></ul>
+<h3>7. Good Security Practices</h3><ul><li>Use unique, strong passwords and a password manager where appropriate.</li><li>Enable MFA, especially for important accounts.</li><li>Never share passwords or one-time codes.</li><li>Lock your screen when leaving a workstation.</li><li>Review permissions regularly and remove unnecessary access.</li><li>Use individual accounts; do not share staff logins.</li></ul>
+<h3>PART B — HAUSA EXPLANATION</h3>
+<h3>1. Authentication — Tabbatar da asalin mai amfani</h3><p class="hausa">Authentication hanya ce ta tabbatar da cewa mutum ko na'ura ita ce abin da take ikirari. Misali, shigar da password, amfani da yatsan hannu (fingerprint), ko security key domin tabbatar da mai amfani.</p>
+<h3>2. Authorization — Ba da izinin abin da mutum zai iya yi</h3><p class="hausa">Authorization shi ne tantance irin abubuwan da aka ba mutum izinin gani ko yi bayan an tabbatar da asalinsa. Misali, ma'aikaci na iya samun izinin karanta bayanai amma ba shi da izinin gogewa ko canza su.</p>
+<h3>3. Bambancin Identification, Authentication da Authorization</h3><ul><li><strong>Identification:</strong> bayyana ko wanene kai, kamar shigar da username.</li><li><strong>Authentication:</strong> tabbatar da cewa kai ne, kamar shigar da password ko fingerprint.</li><li><strong>Authorization:</strong> duba irin izinin da aka ba ka bayan an tabbatar da kai.</li></ul>
+<h3>4. Nau'o'in hanyoyin tabbatarwa</h3><ul><li><strong>Something you know:</strong> abin da ka sani, kamar password ko PIN.</li><li><strong>Something you have:</strong> abin da kake da shi, kamar security key ko smart card.</li><li><strong>Something you are:</strong> sifar jikinka, kamar fingerprint ko fuska.</li></ul><p class="hausa">MFA yana amfani da rukuni biyu ko fiye na hanyoyin tabbatarwa. Password biyu ba su zama MFA na gaskiya ba, domin duka abubuwan da ka sani ne.</p>
+<h3>5. Access Control da Least Privilege</h3><p class="hausa">Access control yana tsara wanda zai iya shiga wani bayani da abin da zai iya yi. Least privilege yana nufin a ba kowane ma'aikaci izinin da ya dace da aikinsa kawai. Kada a ba kowa ikon admin idan aikinsa ba ya bukatar hakan.</p>
+<h3>6. Misali daga asibiti</h3><p class="hausa">Ma'aikaciyar jinya ta shigar da username da password domin tabbatar da ita ce (authentication). Bayan shiga, tsarin ya ba ta damar duba bayanan marasa lafiya da take kula da su, amma bai ba ta damar canza saitunan server ba (authorization). Wannan yana taimakawa wajen kare sirrin bayanai da rage kuskure.</p>
+<h3>PART C — PRACTICAL EXERCISE / AIKIN GWaji</h3><div class="notice"><strong>Scenario:</strong> A hospital worker enters a username and password, then the system allows the worker to view assigned patient records but not change system settings. Identify the authentication step and the authorization decision.<p class="hausa"><strong>Yanayi:</strong> Ma'aikacin asibiti ya shigar da username da password, sannan tsarin ya ba shi damar duba bayanan marasa lafiyar da aka ba shi amma bai ba shi damar canza saitunan system ba. Gano matakin authentication da hukuncin authorization.</p></div>
+<h3>KEY POINTS TO REMEMBER / MUHIMMAN ABUBUWA</h3><ol><li>Authentication verifies identity / Authentication yana tabbatar da asali.</li><li>Authorization controls permissions / Authorization yana sarrafa izini.</li><li>MFA uses different factor categories / MFA yana amfani da nau'o'in hanyoyin tabbatarwa daban-daban.</li><li>Least privilege gives only necessary access / Least privilege yana ba da izinin da ake bukata kawai.</li><li>Never share passwords or accounts / Kada a raba password ko account.</li></ol>
+<h3>Lesson 14 Assessment — Quiz (5 Questions) / Jarrabawar Darasi na 14</h3><p>Answer all five questions. You need at least <strong>4/5</strong> to pass. / Amsa tambayoyi biyar. Kana bukatar akalla <strong>4/5</strong> domin cin darasin.</p>
+<form id="quiz14" onsubmit="return false">
+<div class="quiz-question"><p><strong>1. What is authentication?</strong><br/><span class="hausa">Menene authentication?</span></p><label class="option"><input name="l14q1" type="radio" value="a"/> Verifying an identity / Tabbatar da asalin mutum</label><label class="option"><input name="l14q1" type="radio" value="b"/> Deleting a file / Goge fayil</label><label class="option"><input name="l14q1" type="radio" value="c"/> Giving everyone access / Ba kowa izinin shiga</label><label class="option"><input name="l14q1" type="radio" value="d"/> Turning off a computer / Kashe kwamfuta</label></div>
+<div class="quiz-question"><p><strong>2. What does authorization determine?</strong><br/><span class="hausa">Me authorization yake tantancewa?</span></p><label class="option"><input name="l14q2" type="radio" value="a"/> The user's hair colour / Launin gashin mai amfani</label><label class="option"><input name="l14q2" type="radio" value="b"/> What an authenticated user is allowed to do / Abin da aka ba mai amfani izinin yi</label><label class="option"><input name="l14q2" type="radio" value="c"/> The computer's screen size / Girman allon kwamfuta</label><label class="option"><input name="l14q2" type="radio" value="d"/> Internet speed only / Saurin intanet kawai</label></div>
+<div class="quiz-question"><p><strong>3. Which is an example of something you have?</strong><br/><span class="hausa">Wanne misali ne na abin da kake da shi?</span></p><label class="option"><input name="l14q3" type="radio" value="a"/> A PIN / PIN</label><label class="option"><input name="l14q3" type="radio" value="b"/> A password / Password</label><label class="option"><input name="l14q3" type="radio" value="c"/> A security key / Security key</label><label class="option"><input name="l14q3" type="radio" value="d"/> A fingerprint / Fingerprint</label></div>
+<div class="quiz-question"><p><strong>4. What does the principle of least privilege mean?</strong><br/><span class="hausa">Menene ma'anar least privilege?</span></p><label class="option"><input name="l14q4" type="radio" value="a"/> Give everyone administrator access / Ba kowa damar admin</label><label class="option"><input name="l14q4" type="radio" value="b"/> Give only the access needed for the job / Ba izinin da ake bukata don aikin kawai</label><label class="option"><input name="l14q4" type="radio" value="c"/> Share one account among staff / Raba account guda ga ma'aikata</label><label class="option"><input name="l14q4" type="radio" value="d"/> Disable all passwords / Kashe duk passwords</label></div>
+<div class="quiz-question"><p><strong>5. Which statement about MFA is correct?</strong><br/><span class="hausa">Wace magana ce daidai game da MFA?</span></p><label class="option"><input name="l14q5" type="radio" value="a"/> It uses two or more different factor categories / Yana amfani da rukuni biyu ko fiye na hanyoyin tabbatarwa daban-daban</label><label class="option"><input name="l14q5" type="radio" value="b"/> It means using two passwords only / Yana nufin amfani da passwords biyu kawai</label><label class="option"><input name="l14q5" type="radio" value="c"/> It removes the need for identity checks / Yana kawar da bukatar tabbatar da asali</label><label class="option"><input name="l14q5" type="radio" value="d"/> It allows everyone to share one login / Yana ba kowa damar amfani da login guda</label></div>
+<button onclick="checkQuiz14()" type="button">Submit Answers / Aika Amsoshi</button></form>
+<p aria-live="polite" class="result" id="result14"></p><p class="notice" hidden id="lesson14Complete"><strong>Lesson 14 Passed — Excellent work!</strong><br/>Topic 14 of the official Level 1 roadmap is complete. Lesson 15 is Basic Cyber Hygiene. / Ka kammala topic na 14. Darasi na 15 shi ne Basic Cyber Hygiene.</p>
+<button class="secondary" onclick="openLesson13()" type="button">Back to Lesson 13 / Komawa Darasi na 13</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
 </section>
 
 </main>
 <footer>ABAP AI CYBERSECURITY ACADEMY<br/>Prepared by Abbas Bukar</footer>
 <script>
-const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1","abap_level1_topic11_dns_dhcp_http_https_passed_v1","abap_level1_topic12_basic_cybersecurity_terminologies_passed_v1","abap_level1_topic13_cia_triad_passed_v1"];
+const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1","abap_level1_topic11_dns_dhcp_http_https_passed_v1","abap_level1_topic12_basic_cybersecurity_terminologies_passed_v1","abap_level1_topic13_cia_triad_passed_v1","abap_level1_topic14_authentication_authorization_passed_v1"];
 // Preserve previously earned passes when older versions used legacy keys.
 if(localStorage.getItem(lessonKeys[2]) !== "yes" && localStorage.getItem("abap_lesson3_passed") === "yes"){
   localStorage.setItem(lessonKeys[2], "yes");
@@ -998,6 +1033,7 @@ let passed10 = localStorage.getItem(lessonKeys[9]) === "yes";
 let passed11 = localStorage.getItem(lessonKeys[10]) === "yes";
 let passed12 = localStorage.getItem(lessonKeys[11]) === "yes";
 let passed13 = localStorage.getItem(lessonKeys[12]) === "yes";
+let passed14 = localStorage.getItem(lessonKeys[13]) === "yes";
 
 function updateProgress(){
   if(passed1){
@@ -1042,13 +1078,13 @@ function updateProgress(){
   if(passed11){ const done11=document.getElementById("lesson11Complete"); if(done11) done11.hidden=false; const next12=document.getElementById("next12"); if(next12){next12.disabled=false;next12.textContent="Open Lesson 12 — Basic Cybersecurity Terminologies / Buɗe Darasi na 12";next12.onclick=openLesson12;} }
   if(passed12){ const done12=document.getElementById("lesson12Complete"); if(done12) done12.hidden=false; const next13=document.getElementById("next13"); if(next13){next13.disabled=false;next13.textContent="Open Lesson 13 — CIA Triad / Buɗe Darasi na 13";next13.onclick=openLesson13;} }
   if(passed13){ const done13=document.getElementById("lesson13Complete"); if(done13) done13.hidden=false; }
-  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8, passed9, passed10, passed11, passed12, passed13].filter(Boolean).length;
+  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8, passed9, passed10, passed11, passed12, passed13, passed14].filter(Boolean).length;
   const continueButton = document.getElementById("continueLearningButton");
   if(continueButton){
-    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : !passed9 ? 9 : !passed10 ? 10 : !passed11 ? 11 : !passed12 ? 12 : !passed13 ? 13 : 14;
+    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : !passed9 ? 9 : !passed10 ? 10 : !passed11 ? 11 : !passed12 ? 12 : !passed13 ? 13 : !passed14 ? 14 : 15;
     continueButton.textContent = nextLesson <= 6
       ? "Continue Learning — Lesson " + nextLesson + " / Ci gaba da Koyo — Darasi na " + nextLesson
-      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : nextLesson === 9 ? "Continue Learning — Lesson 9 / Ci gaba da Koyo — Darasi na 9" : nextLesson === 10 ? "Continue Learning — Lesson 10 / Ci gaba da Koyo — Darasi na 10" : nextLesson === 11 ? "Continue Learning — Lesson 11 / Ci gaba da Koyo — Darasi na 11" : nextLesson === 12 ? "Continue Learning — Lesson 12 / Ci gaba da Koyo — Darasi na 12" : nextLesson === 13 ? "Continue Learning — Lesson 13 / Ci gaba da Koyo — Darasi na 13" : "All 13 available lessons completed / An kammala darussa 13 da suke nan";
+      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : nextLesson === 9 ? "Continue Learning — Lesson 9 / Ci gaba da Koyo — Darasi na 9" : nextLesson === 10 ? "Continue Learning — Lesson 10 / Ci gaba da Koyo — Darasi na 10" : nextLesson === 11 ? "Continue Learning — Lesson 11 / Ci gaba da Koyo — Darasi na 11" : nextLesson === 12 ? "Continue Learning — Lesson 12 / Ci gaba da Koyo — Darasi na 12" : nextLesson === 13 ? "Continue Learning — Lesson 13 / Ci gaba da Koyo — Darasi na 13" : nextLesson === 14 ? "Continue Learning — Lesson 14 / Ci gaba da Koyo — Darasi na 14" : "All 14 available lessons completed / An kammala darussa 14 da suke nan";
   }
   const value = Math.round((completed / 15) * 100);
   document.getElementById("bar").style.width = value + "%";
@@ -1060,7 +1096,7 @@ function updateProgress(){
     "Topic 2: " + (passed2 ? "Passed" : "Not completed") + " | " +
     "Topic 3: " + (passed3 ? "Passed" : "Not completed") + " | " +
     "Topic 4: " + (passed4 ? "Passed" : "Not completed") + " | " +
-    "Topic 5: " + (passed5 ? "Passed" : "Not completed") + " | Topic 6: " + (passed6 ? "Passed" : "Not completed") + " | Topic 7: " + (passed7 ? "Passed" : "Not completed") + " | Topic 8: " + (passed8 ? "Passed" : "Not completed") + " | Topic 9: " + (passed9 ? "Passed" : "Not completed") + " | Topic 10: " + (passed10 ? "Passed" : "Not completed") + " | Topic 11: " + (passed11 ? "Passed" : "Not completed") + " | Topic 12: " + (passed12 ? "Passed" : "Not completed") + " | Topics 13–15: Coming in roadmap order.";
+    "Topic 5: " + (passed5 ? "Passed" : "Not completed") + " | Topic 6: " + (passed6 ? "Passed" : "Not completed") + " | Topic 7: " + (passed7 ? "Passed" : "Not completed") + " | Topic 8: " + (passed8 ? "Passed" : "Not completed") + " | Topic 9: " + (passed9 ? "Passed" : "Not completed") + " | Topic 10: " + (passed10 ? "Passed" : "Not completed") + " | Topic 11: " + (passed11 ? "Passed" : "Not completed") + " | Topic 12: " + (passed12 ? "Passed" : "Not completed") + " | Topic 13: " + (passed13 ? "Passed" : "Not completed") + " | Topic 14: " + (passed14 ? "Passed" : "Not completed") + " | Topic 15: Coming next.";
   const levelStatus = document.getElementById("levelStatus");
   if(levelStatus){
     levelStatus.textContent = "This progress indicator counts only official Level 1 roadmap topics passed so far. Older legacy lessons are not counted. / Wannan alamar tana ƙirga topics na Level 1 na ainihin roadmap da aka ci kawai. Ba ta ƙirga tsoffin darussan da ba su cikin jerin ba.";
@@ -1096,7 +1132,8 @@ function startLesson(){
   if(!passed11) return openLesson11();
   if(!passed12) return openLesson12();
   if(!passed13) return openLesson13();
-  alert("You have completed all 13 lessons currently available. / Ka kammala darussa goma sha uku da ake da su yanzu.");
+  if(!passed14) return openLesson14();
+  alert("You have completed all 14 lessons currently available. / Ka kammala darussa goma sha hudu da ake da su yanzu.");
 }
 function returnToDashboard(){
   hideLessons();
@@ -1351,6 +1388,19 @@ function checkQuiz13(){
     });
 }
 
+function openLesson14(){
+  if(!passed13){ alert("Pass Lesson 13 first. / Ka ci jarrabawar Darasi na 13 tukuna."); return; }
+  showLesson("lesson14");
+}
+function checkQuiz14(){
+  gradeQuiz(["l14q1","l14q2","l14q3","l14q4","l14q5"],
+    {l14q1:"a",l14q2:"b",l14q3:"c",l14q4:"b",l14q5:"a"},
+    4, "result14", lessonKeys[13], () => {
+      passed14 = true;
+      document.getElementById("lesson14Complete").hidden = false;
+    });
+}
+
 function restoreProgress(){
   if(passed1){
     document.getElementById("lesson1Complete").hidden = false;
@@ -1388,6 +1438,7 @@ function restoreProgress(){
   if(passed11){ document.getElementById("lesson11Complete").hidden = false; document.getElementById("result11").textContent = "Lesson 11 was previously passed. / Ka riga ka ci jarrabawar Darasi na 11."; }
   if(passed12){ document.getElementById("lesson12Complete").hidden = false; document.getElementById("result12").textContent = "Lesson 12 was previously passed. / Ka riga ka ci jarrabawar Darasi na 12."; }
   if(passed13){ document.getElementById("lesson13Complete").hidden = false; document.getElementById("result13").textContent = "Lesson 13 was previously passed. / Ka riga ka ci jarrabawar Darasi na 13."; }
+  if(passed14){ document.getElementById("lesson14Complete").hidden = false; document.getElementById("result14").textContent = "Lesson 14 was previously passed. / Ka riga ka ci jarrabawar Darasi na 14."; }
   updateProgress();
 }
 restoreProgress();
