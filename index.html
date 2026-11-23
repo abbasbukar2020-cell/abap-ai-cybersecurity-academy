@@ -98,7 +98,7 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <p class="small" id="level2ProgressText">Level 2 progress: 0 of 18 lessons passed / Ci gaban Level 2: an ci darussa 0 cikin 18.</p>
 <div class="level1-list" id="level2LessonLibrary">
 <button type="button" id="startLevel2Button" onclick="openLevel2Lesson1()" disabled>Lesson 1 — Linux Administration / Gudanar da Linux (Locked)</button>
-<button type="button" disabled>Lesson 2 — Windows Administration / Gudanar da Windows (Locked)</button>
+<button type="button" id="startLevel2Lesson2Button" onclick="openLevel2Lesson2()" disabled>Lesson 2 — Windows Administration / Gudanar da Windows (Locked)</button>
 <button type="button" disabled>Lesson 3 — Command Line (CMD and PowerShell) / Amfani da umarnin kwamfuta (Locked)</button>
 <button type="button" disabled>Lesson 4 — Linux Terminal / Yin aiki da umarni a Linux (Locked)</button>
 <button type="button" disabled>Lesson 5 — Network Security / Kare hanyoyin sadarwa (Locked)</button>
@@ -116,7 +116,7 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <button type="button" disabled>Lesson 17 — Security Policies and Procedures / Dokoki da matakan tsaro (Locked)</button>
 <button type="button" disabled>Lesson 18 — Backup and Disaster Recovery / Ajiyar bayanai da dawo da aiki bayan matsala (Locked)</button>
 </div>
-<p class="small">Lesson 1 is Linux Administration. The other lessons remain locked until each preceding lesson is completed and passed. / Darasi na 1 shi ne Linux Administration. Sauran darussa za su kasance a kulle har sai an kammala kuma an ci darasin da ke gabansu.</p>
+<p class="small">Level 2 follows the official 18-topic roadmap. Each lesson unlocks only after the previous lesson is passed. / Level 2 yana bin ainihin roadmap mai darussa 18. Kowane darasi zai buɗe ne bayan an ci wanda ke gabansa.</p>
 </section>
 <section class="panel"><h2>Six-Level Professional Roadmap</h2><p>The order and topic counts below follow the supplied Cybersecurity &amp; Ethical Hacking Complete Professional Training Roadmap.</p><ol><li><strong>Level 1 — Beginner (15 topics)</strong> — Computer, internet, networking and cybersecurity foundations.</li><li><strong>Level 2 — Intermediate (18 topics)</strong> — Protecting devices, operating systems and networks.</li><li><strong>Level 3 — Advanced (21 topics)</strong> — Authorized security testing and threat investigation in labs.</li><li><strong>Level 4 — Specialist (19 topics)</strong> — Choosing and developing a specialist cybersecurity discipline.</li><li><strong>Level 5 — Expert / Master (20 topics)</strong> — Advanced security projects, architecture and research.</li><li><strong>Level 6 — Executive / Strategic Leadership (18 topics)</strong> — Leadership, governance, risk, policy and strategic security.</li></ol><p class="notice" id="roadmapAlignmentNotice">Curriculum alignment: Lessons 1–10 now follow the first ten topics in the official Level 1 roadmap. Older legacy material is not counted toward Level 1 completion and will not be presented as a substitute for the official topic order.</p></section>
 <section class="panel lesson" id="lesson1">
@@ -1152,7 +1152,70 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <div class="quiz-question"><p><strong>5. Where should administrators normally obtain software packages?</strong><br/><span class="hausa">Daga ina ya kamata administrators su riƙa samun software packages?</span></p><label class="option"><input name="l2q5" type="radio" value="a"/> From trusted official repositories / Daga sahihan repositories na hukuma</label><label class="option"><input name="l2q5" type="radio" value="b"/> From unknown links in messages / Daga links da ba a sani ba a saƙonni</label><label class="option"><input name="l2q5" type="radio" value="c"/> From random file-sharing sites / Daga random file-sharing sites</label><label class="option"><input name="l2q5" type="radio" value="d"/> From unverified USB drives / Daga USB da ba a tantance ba</label></div>
 <button type="button" onclick="checkLevel2Lesson1()">Submit Answers / Aika Amsoshi</button></form>
 <p aria-live="polite" class="result" id="resultL2_1"></p>
-<p class="notice" id="level2Lesson1Complete" hidden><strong>Level 2 — Lesson 1 Passed!</strong><br/>Linux Administration is complete. Lesson 2 is Windows Administration and will unlock when its lesson is added. / An kammala Linux Administration. Darasi na 2 shi ne Windows Administration; zai buɗe idan an ƙara darasin.</p>
+<p class="notice" id="level2Lesson1Complete" hidden><strong>Level 2 — Lesson 1 Passed!</strong><br/>Linux Administration is complete. Lesson 2 — Windows Administration — is now unlocked. / An kammala Linux Administration. Darasi na 2 — Windows Administration — ya buɗe yanzu.</p>
+<button class="secondary" id="nextLevel2Lesson2Button" type="button" onclick="openLevel2Lesson2()" disabled>Next: Lesson 2 — Windows Administration (Locked) / Na gaba: Darasi na 2 (A kulle)</button>
+<button class="secondary" type="button" onclick="returnToDashboard()">Return to Dashboard / Komawa Dashboard</button>
+</section>
+
+
+<section class="panel lesson" id="level2lesson2" style="display:none">
+<h2>LEVEL 2 — INTERMEDIATE / MATSAYI NA 2 — Matsakaicin Mataki</h2>
+<h3>Lesson 2: Windows Administration / Gudanar da Tsarin Windows</h3>
+<div class="notice"><strong>Learning Objectives / Manufofin Koyo</strong>
+<p>By the end of this lesson, you should be able to explain Windows administration, identify key Windows tools, manage user accounts and permissions safely, understand updates and services, use basic Task Manager and Event Viewer functions, recognize Windows security features, and follow safe troubleshooting practices.</p>
+<p class="hausa">A ƙarshen wannan darasi, za ka iya bayyana Windows Administration, gane muhimman kayan aikin Windows, kula da user accounts da permissions cikin aminci, fahimtar updates da services, amfani da muhimman ayyukan Task Manager da Event Viewer, gane kayan tsaron Windows, da bin hanyoyin gyara matsala cikin aminci.</p></div>
+<h3>PART A — ENGLISH</h3>
+<h3>1. What Is Windows Administration?</h3>
+<p>Windows administration is the work of configuring, maintaining, monitoring and securing computers that run Microsoft Windows. A Windows administrator helps keep devices reliable, updated, properly configured and available to authorized users. Administration may be performed on a personal computer, a workstation or a managed organization network.</p>
+<h3>2. Windows Editions and Environments</h3>
+<ul><li><strong>Windows Home:</strong> designed mainly for home and personal use.</li><li><strong>Windows Pro:</strong> includes additional business and management features, which can include BitLocker, Remote Desktop hosting and domain-joining support depending on version.</li><li><strong>Windows Enterprise/Education:</strong> editions intended for larger organizations and educational environments, with additional management and security capabilities.</li><li><strong>Windows Server:</strong> a separate Windows product designed to provide network services such as directory, file, application and other server roles.</li></ul>
+<p>Features differ by Windows version and edition. Always check the edition and version before following an administration procedure.</p>
+<h3>3. User Accounts, Groups and Permissions</h3>
+<p>Windows supports standard user accounts and administrator accounts. A standard user should be used for everyday activities. An administrator account can make system-wide changes, install software and manage other accounts. The principle of least privilege means giving each person only the access needed for their role.</p>
+<ul><li><strong>Local account:</strong> an account managed on that Windows device.</li><li><strong>Microsoft account:</strong> an online account that can connect Windows settings and services.</li><li><strong>Administrator:</strong> an account or role with elevated permissions.</li><li><strong>Standard user:</strong> an account with limited permissions for routine work.</li><li><strong>User Account Control (UAC):</strong> a Windows feature that asks for approval or administrator credentials before certain elevated changes.</li></ul>
+<h3>4. Important Windows Administration Tools</h3>
+<ul><li><strong>Settings:</strong> manage common device, account, network and update settings.</li><li><strong>Control Panel:</strong> provides access to many traditional configuration tools; availability varies by Windows version.</li><li><strong>Computer Management:</strong> brings together tools such as Event Viewer, Shared Folders, Local Users and Groups (where supported), and Disk Management.</li><li><strong>Device Manager:</strong> view hardware devices and manage their drivers.</li><li><strong>Task Manager:</strong> inspect running applications, processes, performance and startup apps.</li><li><strong>Services:</strong> view and manage background Windows services.</li><li><strong>Windows Security:</strong> access protection features such as Microsoft Defender Antivirus and firewall settings.</li></ul>
+<h3>5. Windows Update and Patch Management</h3>
+<p>Windows Update delivers security fixes, reliability improvements and feature updates. Security patches close known weaknesses that attackers might exploit. Restarting may be required to finish installing updates. On managed computers, follow the organization's update schedule and approval process rather than bypassing its controls.</p>
+<h3>6. Processes, Services and Event Logs</h3>
+<p>A process is a running instance of a program. A service is a background component that supports Windows or an application. Task Manager can help identify resource usage and unresponsive applications. Event Viewer records system, security and application events that can help administrators investigate errors or suspicious activity. Logs should be reviewed carefully and protected from unauthorized changes.</p>
+<h3>7. Core Windows Security Features</h3>
+<ul><li><strong>Microsoft Defender Antivirus:</strong> helps detect and block malicious software.</li><li><strong>Microsoft Defender Firewall:</strong> controls permitted inbound and outbound network traffic according to its rules.</li><li><strong>BitLocker:</strong> can encrypt supported drives to help protect data if a device is lost or stolen; availability depends on edition and hardware.</li><li><strong>Windows Hello:</strong> supports sign-in methods such as a PIN or biometric sign-in on compatible devices.</li><li><strong>Secure Boot:</strong> helps prevent unauthorized boot software from loading during startup on supported systems.</li><li><strong>UAC:</strong> helps prevent unauthorized changes by requesting approval for elevated actions.</li></ul>
+<h3>8. Safe Administration and Troubleshooting</h3>
+<ul><li>Use a standard account for everyday work and elevate privileges only when necessary.</li><li>Install applications and drivers from trusted, official sources.</li><li>Keep Windows and supported applications updated.</li><li>Do not disable antivirus or firewall protection just to make an unknown program run.</li><li>Back up important files before major system changes.</li><li>Record the error message and the changes made when troubleshooting.</li><li>Do not delete system files or change registry settings unless the procedure is trusted, understood and authorized.</li><li>On an organization's device, follow its IT policies and report suspected compromise promptly.</li></ul>
+<h3>PART B — HAUSA</h3>
+<h3>1. Menene Windows Administration?</h3>
+<p>Windows Administration shi ne aikin saitawa, kula da kwamfuta, sa ido da kuma kare na'urorin da ke amfani da Microsoft Windows. Windows administrator yana taimakawa wajen tabbatar da cewa na'urori suna aiki yadda ya kamata, suna samun updates, an saita su daidai, kuma masu izini ne kawai ke amfani da su. Ana iya yin wannan aiki a personal computer, workstation ko network na hukuma.</p>
+<h3>2. Nau'o'in Windows da Muhallansu</h3>
+<ul><li><strong>Windows Home:</strong> an fi tsara shi domin amfani a gida da na kai.</li><li><strong>Windows Pro:</strong> yana da ƙarin kayan aikin kasuwanci da gudanarwa, kamar BitLocker, Remote Desktop hosting da shiga domain bisa version.</li><li><strong>Windows Enterprise/Education:</strong> nau'o'i ne da aka tsara domin manyan hukumomi da makarantu, tare da ƙarin damar tsaro da gudanarwa.</li><li><strong>Windows Server:</strong> wani samfurin Windows ne daban da aka tsara domin samar da ayyukan network kamar directory, file da sauran server roles.</li></ul>
+<p>Abubuwan da kowanne edition ke iya yi sun bambanta bisa version. Ka fara duba edition da version kafin bin umarnin gudanarwa.</p>
+<h3>3. User Accounts, Groups da Permissions</h3>
+<p>Windows yana da standard user account da administrator account. Ya fi dacewa a yi amfani da standard user wajen ayyukan yau da kullum. Administrator na iya yin manyan sauye-sauye ga tsarin, girka software da kula da sauran accounts. Ka'idar least privilege tana nufin a ba kowane mutum izinin da aikinsa yake buƙata kawai.</p>
+<ul><li><strong>Local account:</strong> account da ake sarrafawa a kan wannan kwamfutar.</li><li><strong>Microsoft account:</strong> account na online da zai iya haɗa saitunan Windows da wasu services.</li><li><strong>Administrator:</strong> account ko matsayi mai ƙarin izini.</li><li><strong>Standard user:</strong> account mai iyakantaccen izini domin ayyukan yau da kullum.</li><li><strong>User Account Control (UAC):</strong> fasalin Windows da ke neman amincewa ko bayanan administrator kafin wasu manyan sauye-sauye.</li></ul>
+<h3>4. Muhimman Kayan Aikin Windows Administration</h3>
+<ul><li><strong>Settings:</strong> kula da saitunan na'ura, account, network da updates.</li><li><strong>Control Panel:</strong> yana ba da damar shiga wasu tsofaffin kayan saitawa; samuwarsa tana bambanta bisa Windows version.</li><li><strong>Computer Management:</strong> yana haɗa kayan aiki kamar Event Viewer, Shared Folders, Local Users and Groups (idan version ɗin ya goyi baya), da Disk Management.</li><li><strong>Device Manager:</strong> duba hardware da kula da drivers.</li><li><strong>Task Manager:</strong> duba applications da ke gudana, processes, performance da startup apps.</li><li><strong>Services:</strong> duba da sarrafa ayyukan Windows da ke gudana a baya.</li><li><strong>Windows Security:</strong> shiga fasalolin kariya kamar Microsoft Defender Antivirus da firewall settings.</li></ul>
+<h3>5. Windows Update da Patch Management</h3>
+<p>Windows Update yana kawo gyaran tsaro, inganta aiki da wasu sabbin fasaloli. Security patches suna rufe sanannun raunin tsaro da mahara za su iya amfani da su. Wani lokaci sai an sake kunna kwamfuta domin kammala update. A kwamfutar hukuma, ka bi jadawalin updates da tsarin amincewa na IT maimakon kauce wa dokokinsu.</p>
+<h3>6. Processes, Services da Event Logs</h3>
+<p>Process shi ne program da ke gudana a wannan lokaci. Service kuma wani ɓangare ne da ke aiki a baya domin taimaka wa Windows ko application. Task Manager yana taimakawa wajen gano amfani da CPU, memory da matsalar application da ta tsaya. Event Viewer yana adana abubuwan da suka faru a system, security da applications domin taimaka wa administrator binciken kuskure ko abin zargi. Dole ne a kare logs daga sauye-sauyen da ba su da izini.</p>
+<h3>7. Muhimman Kayan Tsaron Windows</h3>
+<ul><li><strong>Microsoft Defender Antivirus:</strong> yana taimakawa gano da toshe malware.</li><li><strong>Microsoft Defender Firewall:</strong> yana sarrafa network traffic da aka yarda ya shiga ko fita bisa dokokinsa.</li><li><strong>BitLocker:</strong> yana iya ɓoye bayanan drive da ake tallafawa domin kare su idan aka rasa na'ura ko aka sace ta; samuwarsa tana danganta da edition da hardware.</li><li><strong>Windows Hello:</strong> yana taimakawa shiga kwamfuta ta PIN ko biometric idan na'urar ta goyi baya.</li><li><strong>Secure Boot:</strong> yana taimakawa hana software mara izini fara aiki yayin boot a tsarin da ke goyon bayansa.</li><li><strong>UAC:</strong> yana taimakawa hana sauye-sauyen da ba a amince da su ba ta hanyar neman izini.</li></ul>
+<h3>8. Gudanarwa da Gyara Matsala Cikin Aminci</h3>
+<ul><li>Yi amfani da standard account a kullum; ɗaga izini ne kawai idan ana buƙata.</li><li>Girka applications da drivers daga sahihan wuraren hukuma.</li><li>Ka riƙa sabunta Windows da applications da ake tallafawa.</li><li>Kada ka kashe antivirus ko firewall domin kawai wani program da ba ka sani ba ya yi aiki.</li><li>Yi backup na muhimman fayiloli kafin manyan sauye-sauye.</li><li>Rubuta saƙon kuskure da sauye-sauyen da aka yi yayin gyara matsala.</li><li>Kada ka goge system files ko sauya registry settings sai idan hanyar ta tabbata, ka fahimce ta kuma kana da izini.</li><li>A kwamfutar hukuma, bi dokokin IT kuma kai rahoto da wuri idan kana zargin an kutsa cikin na'ura.</li></ul>
+<h3>Practical Exercise / Aikin Gwaji</h3>
+<p>On a Windows computer you own or are authorized to use, open Task Manager with <code>Ctrl + Shift + Esc</code>. Identify the Processes, Performance and Startup sections. Then open Windows Security and locate Virus &amp; threat protection and Firewall &amp; network protection. Observe the settings; do not disable protection or change managed-device settings.</p>
+<p class="hausa">A kwamfutar Windows taka ko wadda aka ba ka izinin amfani da ita, buɗe Task Manager da <code>Ctrl + Shift + Esc</code>. Gano sassan Processes, Performance da Startup. Sannan buɗe Windows Security ka gano Virus &amp; threat protection da Firewall &amp; network protection. Ka duba saitunan kawai; kada ka kashe kariya ko sauya saitunan kwamfutar hukuma.</p>
+<h3>Assessment — Quiz (5 Questions) / Jarrabawa — Tambayoyi 5</h3>
+<p>You need at least <strong>4/5</strong> to pass. Every question and every answer choice is bilingual. / Kana buƙatar aƙalla <strong>4/5</strong> domin cin darasin. Tambayoyi da duk zaɓukan amsa suna Turanci da Hausa.</p>
+<form id="quizL2_2" onsubmit="return false">
+<div class="quiz-question"><p><strong>1. What is the main purpose of Windows Administration?</strong><br/><span class="hausa">Menene babban manufar Windows Administration?</span></p><label class="option"><input name="l2_2q1" type="radio" value="a"/> To configure, maintain and secure Windows computers / Saita, kula da kare kwamfutocin Windows</label><label class="option"><input name="l2_2q1" type="radio" value="b"/> To design computer monitors / Ƙera allunan kwamfuta</label><label class="option"><input name="l2_2q1" type="radio" value="c"/> To replace every network cable / Sauya duk wayoyin network</label><label class="option"><input name="l2_2q1" type="radio" value="d"/> To publish passwords publicly / Bayyana passwords ga jama'a</label></div>
+<div class="quiz-question"><p><strong>2. Which account type is recommended for everyday tasks?</strong><br/><span class="hausa">Wane irin account aka fi ba da shawarar amfani da shi a ayyukan yau da kullum?</span></p><label class="option"><input name="l2_2q2" type="radio" value="a"/> Administrator account all the time / Administrator account a kowane lokaci</label><label class="option"><input name="l2_2q2" type="radio" value="b"/> Standard user account / Standard user account mai iyakantaccen izini</label><label class="option"><input name="l2_2q2" type="radio" value="c"/> A shared account for everyone / Account guda da kowa ke rabawa</label><label class="option"><input name="l2_2q2" type="radio" value="d"/> An account with no password and no controls / Account mara password kuma babu kariya</label></div>
+<div class="quiz-question"><p><strong>3. Which Windows tool helps you inspect running processes and performance?</strong><br/><span class="hausa">Wane kayan aikin Windows ne ke taimaka maka duba processes da performance?</span></p><label class="option"><input name="l2_2q3" type="radio" value="a"/> Paint / Paint</label><label class="option"><input name="l2_2q3" type="radio" value="b"/> Notepad / Notepad</label><label class="option"><input name="l2_2q3" type="radio" value="c"/> Task Manager / Task Manager</label><label class="option"><input name="l2_2q3" type="radio" value="d"/> Calculator / Calculator</label></div>
+<div class="quiz-question"><p><strong>4. Why are Windows security updates important?</strong><br/><span class="hausa">Me ya sa Windows security updates suke da muhimmanci?</span></p><label class="option"><input name="l2_2q4" type="radio" value="a"/> They make all files public / Suna bayyana duk fayiloli ga jama'a</label><label class="option"><input name="l2_2q4" type="radio" value="b"/> They remove the need for passwords / Suna kawar da bukatar passwords</label><label class="option"><input name="l2_2q4" type="radio" value="c"/> They disable every security feature / Suna kashe duk kayan tsaro</label><label class="option"><input name="l2_2q4" type="radio" value="d"/> They fix known weaknesses and improve security / Suna gyara sanannun rauni kuma suna inganta tsaro</label></div>
+<div class="quiz-question"><p><strong>5. What should you do if an unknown program asks you to disable antivirus protection?</strong><br/><span class="hausa">Me ya kamata ka yi idan wani program da ba ka sani ba ya nemi ka kashe antivirus?</span></p><label class="option"><input name="l2_2q5" type="radio" value="a"/> Disable antivirus immediately / Ka kashe antivirus nan take</label><label class="option"><input name="l2_2q5" type="radio" value="b"/> Keep protection enabled and verify the program with a trusted source / Ka bar kariya a kunne kuma ka tantance program ɗin daga sahihin tushe</label><label class="option"><input name="l2_2q5" type="radio" value="c"/> Share your administrator password / Ka ba shi administrator password</label><label class="option"><input name="l2_2q5" type="radio" value="d"/> Ignore all security warnings / Ka yi watsi da duk sanarwar tsaro</label></div>
+<button type="button" onclick="checkLevel2Lesson2()">Submit Answers / Aika Amsoshi</button></form>
+<p aria-live="polite" class="result" id="resultL2_2"></p>
+<p class="notice" id="level2Lesson2Complete" hidden><strong>Level 2 — Lesson 2 Passed!</strong><br/>Windows Administration is complete. Lesson 3 — Command Line (CMD and PowerShell) — is next. / An kammala Windows Administration. Darasi na 3 — Command Line (CMD and PowerShell) — shi ne na gaba.</p>
 <button class="secondary" type="button" onclick="returnToDashboard()">Return to Dashboard / Komawa Dashboard</button>
 </section>
 
@@ -1161,7 +1224,9 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <script>
 const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1","abap_level1_topic11_dns_dhcp_http_https_passed_v1","abap_level1_topic12_basic_cybersecurity_terminologies_passed_v1","abap_level1_topic13_cia_triad_passed_v1","abap_level1_topic14_authentication_authorization_passed_v1","abap_level1_topic15_basic_cyber_hygiene_passed_v1"];
 const level2Lesson1Key = "abap_level2_topic1_linux_administration_passed_v1";
+const level2Lesson2Key = "abap_level2_topic2_windows_administration_passed_v1";
 let level2Lesson1Passed = localStorage.getItem(level2Lesson1Key) === "yes";
+let level2Lesson2Passed = localStorage.getItem(level2Lesson2Key) === "yes";
 // Preserve previously earned passes when older versions used legacy keys.
 if(localStorage.getItem(lessonKeys[2]) !== "yes" && localStorage.getItem("abap_lesson3_passed") === "yes"){
   localStorage.setItem(lessonKeys[2], "yes");
@@ -1321,14 +1386,27 @@ function startLesson(){
 }
 function updateLevel2Status(){
   const button = document.getElementById("startLevel2Button");
+  const lesson2Button = document.getElementById("startLevel2Lesson2Button");
+  const nextLesson2Button = document.getElementById("nextLevel2Lesson2Button");
   const status = document.getElementById("level2ProgressText");
-  if(status) status.textContent = "Level 2 progress: " + (level2Lesson1Passed ? "1" : "0") + " of 18 lessons passed / Ci gaban Level 2: an ci darussa " + (level2Lesson1Passed ? "1" : "0") + " cikin 18.";
+  const completed = [level2Lesson1Passed, level2Lesson2Passed].filter(Boolean).length;
+  if(status) status.textContent = "Level 2 progress: " + completed + " of 18 lessons passed / Ci gaban Level 2: an ci darussa " + completed + " cikin 18.";
   if(button){
     button.disabled = !passed15;
     button.textContent = !passed15 ? "Locked — Complete Level 1 first / A kulle — Ka kammala Level 1 tukuna" : (level2Lesson1Passed ? "Review Level 2 — Lesson 1 / Sake duba Level 2 — Darasi na 1" : "Start Level 2 — Lesson 1 / Fara Level 2 — Darasi na 1");
   }
+  if(nextLesson2Button){
+    nextLesson2Button.disabled = !level2Lesson1Passed;
+    nextLesson2Button.textContent = level2Lesson1Passed ? "Next: Lesson 2 — Windows Administration / Na gaba: Darasi na 2 — Windows Administration" : "Next: Lesson 2 — Windows Administration (Locked) / Na gaba: Darasi na 2 (A kulle)";
+  }
+  if(lesson2Button){
+    lesson2Button.disabled = !level2Lesson1Passed;
+    lesson2Button.textContent = !level2Lesson1Passed ? "Lesson 2 — Windows Administration (Locked) / A kulle" : (level2Lesson2Passed ? "Review Lesson 2 — Windows Administration / Sake duba Darasi na 2" : "Start Lesson 2 — Windows Administration / Fara Darasi na 2");
+  }
   const done = document.getElementById("level2Lesson1Complete");
   if(done && level2Lesson1Passed) done.hidden = false;
+  const done2 = document.getElementById("level2Lesson2Complete");
+  if(done2 && level2Lesson2Passed) done2.hidden = false;
 }
 function openLevel2Lesson1(){
   if(!passed15){ alert("Complete and pass all 15 Level 1 lessons first. / Ka kammala kuma ka ci duk darussa 15 na Level 1 tukuna."); return; }
@@ -1340,6 +1418,20 @@ function checkLevel2Lesson1(){
     4, "resultL2_1", level2Lesson1Key, () => {
       level2Lesson1Passed = true;
       const done = document.getElementById("level2Lesson1Complete");
+      if(done) done.hidden = false;
+      updateLevel2Status();
+    });
+}
+function openLevel2Lesson2(){
+  if(!level2Lesson1Passed){ alert("Pass Level 2 Lesson 1 — Linux Administration — first. / Ka fara ka ci Lesson 1 — Linux Administration — tukuna."); return; }
+  showLesson("level2lesson2");
+}
+function checkLevel2Lesson2(){
+  gradeQuiz(["l2_2q1","l2_2q2","l2_2q3","l2_2q4","l2_2q5"],
+    {l2_2q1:"a",l2_2q2:"b",l2_2q3:"c",l2_2q4:"d",l2_2q5:"b"},
+    4, "resultL2_2", level2Lesson2Key, () => {
+      level2Lesson2Passed = true;
+      const done = document.getElementById("level2Lesson2Complete");
       if(done) done.hidden = false;
       updateLevel2Status();
     });
@@ -1671,6 +1763,12 @@ if(level2Lesson1Passed){
   const resultL2 = document.getElementById("resultL2_1");
   if(doneL2) doneL2.hidden = false;
   if(resultL2) resultL2.textContent = "Level 2 Lesson 1 was previously passed. / Ka riga ka ci jarrabawar Lesson 1 na Level 2.";
+}
+if(level2Lesson2Passed){
+  const doneL22 = document.getElementById("level2Lesson2Complete");
+  const resultL22 = document.getElementById("resultL2_2");
+  if(doneL22) doneL22.hidden = false;
+  if(resultL22) resultL22.textContent = "Level 2 Lesson 2 was previously passed. / Ka riga ka ci jarrabawar Lesson 2 na Level 2.";
 }
 updateLevel2Status();
 </script>
