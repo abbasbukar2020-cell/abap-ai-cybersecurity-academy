@@ -829,13 +829,67 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <button onclick="checkQuiz11()" type="button">Submit Answers / Aika Amsoshi</button></form>
 <p aria-live="polite" class="result" id="result11"></p>
 <p class="notice" hidden id="lesson11Complete"><strong>Lesson 11 Passed — Excellent work!</strong><br/>Topic 11 of the official Level 1 roadmap is complete. Lesson 12 is Basic Cybersecurity Terminologies. / Ka kammala topic na goma sha ɗaya. Darasi na 12 shi ne Basic Cybersecurity Terminologies.</p>
+<button class="secondary" id="next12" disabled onclick="openLesson12()" type="button">Lesson 12 — Locked / Darasi na 12 a kulle yake</button>
 <button class="secondary" onclick="openLesson10()" type="button">Back to Lesson 10 / Komawa Darasi na 10</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
+</section>
+
+
+<section class="panel lesson" id="lesson12" style="display:none">
+<h2>LEVEL 1 — BEGINNER</h2>
+<nav aria-label="Lesson navigation" class="lesson-nav"><strong>Available lessons / Darussan da suke nan:</strong>
+<button class="lesson-jump" onclick="showLesson1()" type="button">Lesson 1</button><button class="lesson-jump" onclick="showLesson2()" type="button">Lesson 2</button><button class="lesson-jump" onclick="openLesson3()" type="button">Lesson 3</button><button class="lesson-jump" onclick="openLesson4()" type="button">Lesson 4</button><button class="lesson-jump" onclick="openLesson5()" type="button">Lesson 5</button><button class="lesson-jump" onclick="openLesson6()" type="button">Lesson 6</button><button class="lesson-jump" onclick="openLesson7()" type="button">Lesson 7</button><button class="lesson-jump" onclick="openLesson8()" type="button">Lesson 8</button><button class="lesson-jump" onclick="openLesson9()" type="button">Lesson 9</button><button class="lesson-jump" onclick="openLesson10()" type="button">Lesson 10</button><button class="lesson-jump" onclick="openLesson11()" type="button">Lesson 11</button><button class="lesson-jump" onclick="openLesson12()" type="button">Lesson 12</button>
+</nav>
+<h3>Lesson 12: Basic Cybersecurity Terminologies / Muhimman Kalmomin Cybersecurity</h3>
+<div class="notice"><strong>Learning Objectives / Manufofin Koyo</strong>
+<p>By the end of this lesson, you should be able to explain common cybersecurity terms, distinguish a vulnerability from a threat and risk, describe an attack surface, understand patches and encryption, and use security terminology correctly.</p>
+<p class="hausa">A ƙarshen darasin za ka iya bayyana muhimman kalmomin cybersecurity, bambance vulnerability da threat da risk, bayyana attack surface, fahimtar patches da encryption, da amfani da kalmomin tsaro yadda ya kamata.</p></div>
+<h3>PART A — ENGLISH</h3>
+<h3>1. Asset</h3><p>An <strong>asset</strong> is anything valuable that an individual or organization needs to protect. Examples include personal information, passwords, computers, phones, business records, networks and reputation.</p>
+<h3>2. Threat</h3><p>A <strong>threat</strong> is something that could cause harm to an asset. It may be a cybercriminal, malicious software, a careless insider, a fire or a power failure. A threat is a possible source of harm; it does not mean harm has already happened.</p>
+<h3>3. Vulnerability</h3><p>A <strong>vulnerability</strong> is a weakness that could be used to harm a system. Examples include outdated software, weak passwords, incorrect security settings and unprotected devices. A vulnerability is a weakness, not the attacker itself.</p>
+<h3>4. Risk</h3><p><strong>Risk</strong> is the possibility and potential impact of a threat exploiting a vulnerability. In simple terms, risk considers how likely harm is and how serious the result could be. Organizations reduce risk by fixing weaknesses, limiting access, backing up data and preparing response plans.</p>
+<div class="notice"><strong>Remember this distinction / Ka tuna bambancin:</strong><p><strong>Threat</strong> = possible source of harm. <strong>Vulnerability</strong> = weakness. <strong>Risk</strong> = likelihood and impact of harm if the weakness is exploited.</p><p class="hausa"><strong>Threat</strong> = abin da zai iya kawo hari. <strong>Vulnerability</strong> = rauni a tsarin tsaro. <strong>Risk</strong> = yiwuwar faruwar illa da girman illar idan aka yi amfani da wannan rauni.</p></div>
+<h3>5. Attack and Attack Surface</h3><p>A cyber <strong>attack</strong> is an attempt to access, damage, disrupt or steal from a system without proper authorization. The <strong>attack surface</strong> is the collection of places where an attacker might try to enter or affect a system, such as internet-facing services, email accounts, applications, devices and user accounts. Reducing unnecessary services and accounts helps reduce the attack surface.</p>
+<h3>6. Malware</h3><p><strong>Malware</strong> means malicious software designed to harm, disrupt, spy on or gain unauthorized access to devices or data. Viruses, worms, ransomware, spyware and trojans are examples of malware categories.</p>
+<h3>7. Phishing</h3><p><strong>Phishing</strong> is a deceptive message or website that tries to trick a person into revealing passwords, payment details or other sensitive information, or into opening a harmful attachment. Check the sender and web address carefully; do not follow unexpected links or share one-time codes.</p>
+<h3>8. Authentication and Authorization</h3><p><strong>Authentication</strong> verifies who a user is, for example by password, security key or fingerprint. <strong>Authorization</strong> determines what an authenticated user is allowed to access or do. Logging in proves identity; permissions control what happens after login.</p>
+<h3>9. Encryption and Decryption</h3><p><strong>Encryption</strong> transforms readable information (plaintext) into an unreadable form (ciphertext) using a cryptographic method and key. <strong>Decryption</strong> converts it back into readable information for an authorized recipient with the required key. Encryption helps protect confidentiality, but it does not automatically make a device or website completely safe.</p>
+<h3>10. Patch, Update and Backup</h3><p>A <strong>patch</strong> is a software change that fixes a bug or security weakness. An <strong>update</strong> may include patches, improvements or new features. A <strong>backup</strong> is a separate copy of important data that can help restore information after accidental deletion, device failure or ransomware. Backups should be protected and tested.</p>
+<h3>11. Firewall, Antivirus and MFA</h3><ul><li><strong>Firewall:</strong> monitors and controls network traffic according to security rules.</li><li><strong>Antivirus / Anti-malware:</strong> detects, blocks or removes many forms of malicious software.</li><li><strong>MFA (Multi-Factor Authentication):</strong> requires two or more different types of proof to verify a user's identity.</li></ul>
+<h3>12. Incident and Incident Response</h3><p>A <strong>security incident</strong> is an event that actually or potentially affects the confidentiality, integrity or availability of information or systems. <strong>Incident response</strong> is the organized process of identifying, containing, investigating, recovering from and learning from the incident. Report suspected incidents promptly and follow your organization's procedure.</p>
+<h3>PART B — HAUSA EXPLANATION</h3>
+<h3>1. Asset — Abu mai daraja</h3><p class="hausa">Asset shi ne duk wani abu mai muhimmanci da mutum ko kungiya ke bukatar karewa. Misalai sun hada da bayanan sirri, passwords, kwamfuta, waya, bayanan kasuwanci da network.</p>
+<h3>2. Threat — Barazana</h3><p class="hausa">Threat shi ne mutum, abu ko yanayi da zai iya jawo illa ga wani abu mai daraja. Misali hacker, malware, ma'aikacin da bai kula da tsaro ba, gobara ko katsewar wutar lantarki.</p>
+<h3>3. Vulnerability — Rauni</h3><p class="hausa">Vulnerability shi ne rauni ko gibi a tsarin tsaro da za a iya amfani da shi wajen kai hari. Misali tsohuwar manhaja da ba a sabunta ba, password mai saukin ganewa, ko saitin tsaro da ba daidai ba.</p>
+<h3>4. Risk — Hadari ko yiwuwar illa</h3><p class="hausa">Risk yana nufin yiwuwar barazana ta yi amfani da rauni ta jawo illa, tare da la'akari da girman illar. Misali, idan an bar account da password mai sauki, akwai hadarin wani ya shiga account din.</p>
+<h3>5. Attack Surface — Wuraren da za a iya kai hari</h3><p class="hausa">Attack surface shi ne dukkan hanyoyin da mai hari zai iya kokarin shiga ko cutar da system, kamar email, website, apps, na'urori da user accounts. Rage abubuwan da ba a bukata yana rage hanyoyin kai hari.</p>
+<h3>6. Malware da Phishing</h3><p class="hausa">Malware manhaja ce da aka kirkira domin cutarwa, leken asiri ko shiga na'ura ba tare da izini ba. Phishing kuwa yaudara ce ta hanyar sakon email, SMS ko website domin a sace password ko bayanan sirri.</p>
+<h3>7. Authentication da Authorization</h3><p class="hausa">Authentication tabbatar da wanene mai amfani, misali ta password ko fingerprint. Authorization kuma bayyana irin izinin da wannan mai amfani yake da shi bayan an tabbatar da shi.</p>
+<h3>8. Encryption da Decryption</h3><p class="hausa">Encryption juya bayanai zuwa rubutu da ba za a iya karantawa kai tsaye ba domin kare sirri. Decryption mayar da bayanan zuwa yadda za a iya karantawa ta amfani da mabuɗin da ya dace.</p>
+<h3>9. Patch, Update da Backup</h3><p class="hausa">Patch gyara ne da ake yi wa manhaja domin rufe matsala ko raunin tsaro. Update na iya kawo gyara da sabbin abubuwa. Backup kuwa kwafin bayanai ne da ake ajiye wa a wani wuri domin dawo da su idan asali ya lalace ko ya bace.</p>
+<h3>10. Firewall, Antivirus da MFA</h3><p class="hausa">Firewall yana kula da zirga-zirgar bayanai a network bisa dokokin tsaro. Antivirus yana gano ko hana malware. MFA yana bukatar hanyoyi biyu ko fiye na tabbatar da mutum kafin shiga account.</p>
+<h3>11. Security Incident</h3><p class="hausa">Security incident lamari ne da ya faru ko ake zargin ya faru wanda zai iya shafar sirrin bayanai, daidaitonsu ko samuwarsu. Idan ka ga alamar hari, ka sanar da wanda ya dace bisa tsarin wurin aikinka; kada ka boye matsalar.</p>
+<h3>PART C — PRACTICAL EXAMPLES</h3>
+<div class="notice"><strong>Example 1:</strong> A company uses an old application with a known weakness. The old application has a <strong>vulnerability</strong>; a criminal who tries to exploit it is a <strong>threat actor</strong>; the possible damage is part of the <strong>risk</strong>. Installing the vendor's security patch reduces that risk.<p class="hausa"><strong>Misali na 1:</strong> Kamfani yana amfani da tsohuwar manhaja mai rauni. Wannan raunin shi ne vulnerability; mai laifin da zai yi kokarin amfani da shi shi ne threat actor; yiwuwar barnar ita ce risk. Saka patch daga kamfanin da ya kera manhajar yana rage hadarin.</p></div>
+<div class="notice"><strong>Example 2:</strong> You receive a message saying your bank account will be blocked unless you click a link and enter your password. This may be <strong>phishing</strong>. Do not click the link; contact the bank through its official app or known phone number.<p class="hausa"><strong>Misali na 2:</strong> Ka samu sako cewa za a kulle account dinka sai ka danna link ka shigar da password. Wannan na iya zama phishing. Kada ka danna link; ka tuntubi banki ta official app ko lambar da ka sani.</p></div>
+<h3>PART D — KEY POINTS TO REMEMBER</h3><ol><li>Asset is what you protect.</li><li>Threat is a possible source of harm.</li><li>Vulnerability is a weakness.</li><li>Risk considers likelihood and impact.</li><li>Authentication verifies identity; authorization controls permissions.</li><li>Encryption protects data by making it unreadable without the right key.</li><li>Patch software and keep tested backups.</li><li>Report security incidents promptly.</li></ol>
+<h3>Lesson 12 Assessment — Gwajin Darasi na 12</h3><p>Answer all five questions. You need at least <strong>4/5</strong> to pass. If you score 3/5 or below, you must use Try Again and answer again. / Amsa tambayoyi biyar. Kana bukatar akalla <strong>4/5</strong> domin cin darasin. Idan ka samu 3/5 ko kasa da haka, sai ka danna Try Again ka sake amsawa.</p>
+<form id="quiz12">
+<div class="quiz-question"><p><strong>1. What is a vulnerability?</strong><br/><span class="hausa">Menene vulnerability?</span></p><label class="option"><input name="l12q1" type="radio" value="a"/> A security weakness / Rauni a tsarin tsaro</label><label class="option"><input name="l12q1" type="radio" value="b"/> A protected backup / Backup mai kariya</label><label class="option"><input name="l12q1" type="radio" value="c"/> A type of monitor / Nau'in monitor</label><label class="option"><input name="l12q1" type="radio" value="d"/> A user permission / Izinin mai amfani</label></div>
+<div class="quiz-question"><p><strong>2. Which term means verifying a user's identity?</strong><br/><span class="hausa">Wace kalma ce ke nufin tabbatar da asalin mai amfani?</span></p><label class="option"><input name="l12q2" type="radio" value="a"/> Authorization</label><label class="option"><input name="l12q2" type="radio" value="b"/> Encryption</label><label class="option"><input name="l12q2" type="radio" value="c"/> Authentication</label><label class="option"><input name="l12q2" type="radio" value="d"/> Backup</label></div>
+<div class="quiz-question"><p><strong>3. What is phishing mainly designed to do?</strong><br/><span class="hausa">Me phishing yake kokarin yi musamman?</span></p><label class="option"><input name="l12q3" type="radio" value="a"/> Improve internet speed / Kara saurin internet</label><label class="option"><input name="l12q3" type="radio" value="b"/> Trick people into revealing sensitive information / Yaudarar mutane su bayar da bayanan sirri</label><label class="option"><input name="l12q3" type="radio" value="c"/> Repair a computer / Gyara kwamfuta</label><label class="option"><input name="l12q3" type="radio" value="d"/> Create a backup / Yin backup</label></div>
+<div class="quiz-question"><p><strong>4. What does a software patch commonly do?</strong><br/><span class="hausa">Me software patch yake yi galibi?</span></p><label class="option"><input name="l12q4" type="radio" value="a"/> Deletes every user account / Goge duk accounts</label><label class="option"><input name="l12q4" type="radio" value="b"/> Turns off the network / Kashe network</label><label class="option"><input name="l12q4" type="radio" value="c"/> Replaces the computer / Sauya kwamfuta</label><label class="option"><input name="l12q4" type="radio" value="d"/> Fixes a bug or security weakness / Gyara matsala ko raunin tsaro</label></div>
+<div class="quiz-question"><p><strong>5. What is the difference between authentication and authorization?</strong><br/><span class="hausa">Menene bambancin authentication da authorization?</span></p><label class="option"><input name="l12q5" type="radio" value="a"/> Both mean making backups / Duka suna nufin yin backup</label><label class="option"><input name="l12q5" type="radio" value="b"/> Authentication verifies identity; authorization controls allowed access / Authentication na tabbatar da mutum; authorization na kayyade izininsa</label><label class="option"><input name="l12q5" type="radio" value="c"/> Authentication encrypts files; authorization removes malware / Daya na encrypt, dayan na cire malware</label><label class="option"><input name="l12q5" type="radio" value="d"/> They are both types of malware / Duka nau'in malware ne</label></div>
+<button onclick="checkQuiz12()" type="button">Submit Answers / Aika Amsoshi</button></form>
+<p aria-live="polite" class="result" id="result12"></p>
+<p class="notice" hidden id="lesson12Complete"><strong>Lesson 12 Passed — Excellent work!</strong><br/>Topic 12 of the official Level 1 roadmap is complete. Lesson 13 is CIA Triad. / Ka kammala topic na goma sha biyu. Darasi na 13 shi ne CIA Triad.</p>
+<button class="secondary" onclick="openLesson11()" type="button">Back to Lesson 11 / Komawa Darasi na 11</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
 </section>
 
 </main>
 <footer>ABAP AI CYBERSECURITY ACADEMY<br/>Prepared by Abbas Bukar</footer>
 <script>
-const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1","abap_level1_topic11_dns_dhcp_http_https_passed_v1"];
+const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1","abap_level1_topic11_dns_dhcp_http_https_passed_v1","abap_level1_topic12_basic_cybersecurity_terminologies_passed_v1"];
 // Preserve previously earned passes when older versions used legacy keys.
 if(localStorage.getItem(lessonKeys[2]) !== "yes" && localStorage.getItem("abap_lesson3_passed") === "yes"){
   localStorage.setItem(lessonKeys[2], "yes");
@@ -854,6 +908,7 @@ let passed8 = localStorage.getItem(lessonKeys[7]) === "yes";
 let passed9 = localStorage.getItem(lessonKeys[8]) === "yes";
 let passed10 = localStorage.getItem(lessonKeys[9]) === "yes";
 let passed11 = localStorage.getItem(lessonKeys[10]) === "yes";
+let passed12 = localStorage.getItem(lessonKeys[11]) === "yes";
 
 function updateProgress(){
   if(passed1){
@@ -895,14 +950,15 @@ function updateProgress(){
   if(passed8){ const done8=document.getElementById("lesson8Complete"); if(done8) done8.hidden=false; const next8=document.getElementById("next8"); if(next8){next8.disabled=false;next8.textContent="Open Lesson 9 — IP and MAC Addresses / Buɗe Darasi na 9";next8.onclick=openLesson9;} const jump9=document.getElementById("jumpLesson9"); if(jump9){jump9.disabled=false;jump9.textContent="Lesson 9";} }
   if(passed9){ const done9=document.getElementById("lesson9Complete"); if(done9) done9.hidden=false; const next10=document.getElementById("next10"); if(next10){next10.disabled=false;next10.textContent="Open Lesson 10 — TCP/IP and OSI Models / Buɗe Darasi na 10";} const jump10=document.getElementById("jumpLesson10"); if(jump10){jump10.disabled=false;jump10.textContent="Lesson 10";} }
   if(passed10){ const done10=document.getElementById("lesson10Complete"); if(done10) done10.hidden=false; const next11=document.getElementById("next11"); if(next11){next11.disabled=false;next11.textContent="Open Lesson 11 — DNS, DHCP, HTTP and HTTPS / Buɗe Darasi na 11";next11.onclick=openLesson11;} }
-  if(passed11){ const done11=document.getElementById("lesson11Complete"); if(done11) done11.hidden=false; }
-  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8, passed9, passed10, passed11].filter(Boolean).length;
+  if(passed11){ const done11=document.getElementById("lesson11Complete"); if(done11) done11.hidden=false; const next12=document.getElementById("next12"); if(next12){next12.disabled=false;next12.textContent="Open Lesson 12 — Basic Cybersecurity Terminologies / Buɗe Darasi na 12";next12.onclick=openLesson12;} }
+  if(passed12){ const done12=document.getElementById("lesson12Complete"); if(done12) done12.hidden=false; }
+  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8, passed9, passed10, passed11, passed12].filter(Boolean).length;
   const continueButton = document.getElementById("continueLearningButton");
   if(continueButton){
-    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : !passed9 ? 9 : !passed10 ? 10 : !passed11 ? 11 : 12;
+    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : !passed9 ? 9 : !passed10 ? 10 : !passed11 ? 11 : !passed12 ? 12 : 13;
     continueButton.textContent = nextLesson <= 6
       ? "Continue Learning — Lesson " + nextLesson + " / Ci gaba da Koyo — Darasi na " + nextLesson
-      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : nextLesson === 9 ? "Continue Learning — Lesson 9 / Ci gaba da Koyo — Darasi na 9" : nextLesson === 10 ? "Continue Learning — Lesson 10 / Ci gaba da Koyo — Darasi na 10" : nextLesson === 11 ? "Continue Learning — Lesson 11 / Ci gaba da Koyo — Darasi na 11" : "All available lessons completed / An kammala duk darussan da suke nan";
+      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : nextLesson === 9 ? "Continue Learning — Lesson 9 / Ci gaba da Koyo — Darasi na 9" : nextLesson === 10 ? "Continue Learning — Lesson 10 / Ci gaba da Koyo — Darasi na 10" : nextLesson === 11 ? "Continue Learning — Lesson 11 / Ci gaba da Koyo — Darasi na 11" : nextLesson === 12 ? "Continue Learning — Lesson 12 / Ci gaba da Koyo — Darasi na 12" : "All 12 available lessons completed / An kammala darussa 12 da suke nan";
   }
   const value = Math.round((completed / 15) * 100);
   document.getElementById("bar").style.width = value + "%";
@@ -914,7 +970,7 @@ function updateProgress(){
     "Topic 2: " + (passed2 ? "Passed" : "Not completed") + " | " +
     "Topic 3: " + (passed3 ? "Passed" : "Not completed") + " | " +
     "Topic 4: " + (passed4 ? "Passed" : "Not completed") + " | " +
-    "Topic 5: " + (passed5 ? "Passed" : "Not completed") + " | Topic 6: " + (passed6 ? "Passed" : "Not completed") + " | Topic 7: " + (passed7 ? "Passed" : "Not completed") + " | Topic 8: " + (passed8 ? "Passed" : "Not completed") + " | Topic 9: " + (passed9 ? "Passed" : "Not completed") + " | Topic 10: " + (passed10 ? "Passed" : "Not completed") + " | Topics 11–15: Coming in roadmap order.";
+    "Topic 5: " + (passed5 ? "Passed" : "Not completed") + " | Topic 6: " + (passed6 ? "Passed" : "Not completed") + " | Topic 7: " + (passed7 ? "Passed" : "Not completed") + " | Topic 8: " + (passed8 ? "Passed" : "Not completed") + " | Topic 9: " + (passed9 ? "Passed" : "Not completed") + " | Topic 10: " + (passed10 ? "Passed" : "Not completed") + " | Topic 11: " + (passed11 ? "Passed" : "Not completed") + " | Topic 12: " + (passed12 ? "Passed" : "Not completed") + " | Topics 13–15: Coming in roadmap order.";
   const levelStatus = document.getElementById("levelStatus");
   if(levelStatus){
     levelStatus.textContent = "This progress indicator counts only official Level 1 roadmap topics passed so far. Older legacy lessons are not counted. / Wannan alamar tana ƙirga topics na Level 1 na ainihin roadmap da aka ci kawai. Ba ta ƙirga tsoffin darussan da ba su cikin jerin ba.";
@@ -948,7 +1004,8 @@ function startLesson(){
   if(!passed9) return openLesson9();
   if(!passed10) return openLesson10();
   if(!passed11) return openLesson11();
-  alert("You have completed all 11 lessons currently available. / Ka kammala darussa goma sha ɗaya da ake da su yanzu.");
+  if(!passed12) return openLesson12();
+  alert("You have completed all 12 lessons currently available. / Ka kammala darussa goma sha biyu da ake da su yanzu.");
 }
 function returnToDashboard(){
   hideLessons();
@@ -967,58 +1024,71 @@ function openLesson3(){
 }
 
 function gradeQuiz(questions, answers, passMark, resultId, storageKey, onPass){
+  const result = document.getElementById(resultId);
+  const form = document.querySelector('input[name="' + questions[0] + '"]').closest("form");
+  // A completed attempt is frozen. Learners must explicitly choose Try Again after a fail.
+  if(form.dataset.graded === "yes") return;
   let score = 0;
-  // Remove feedback from an earlier attempt before grading again.
-  for(const question of questions){
-    document.querySelectorAll('input[name="' + question + '"]').forEach(input => {
-      input.closest("label").classList.remove("correct", "incorrect");
-    });
-    const oldReview = document.getElementById("review-" + question);
-    if(oldReview) oldReview.remove();
-  }
-
   for(const question of questions){
     const selected = document.querySelector('input[name="' + question + '"]:checked');
     if(!selected){
-      document.getElementById(resultId).textContent =
-        "Please answer every question first. / Da fatan ka amsa duk tambayoyin tukuna.";
+      result.textContent = "Please answer every question first. / Da fatan ka amsa duk tambayoyin tukuna.";
       return;
     }
     if(selected.value === answers[question]) score++;
   }
-
-  // Show the exact answer selected and mark the correct option for every question.
   for(const question of questions){
-    const selected = document.querySelector('input[name="' + question + '"]:checked');
     const options = Array.from(document.querySelectorAll('input[name="' + question + '"]'));
+    const selected = options.find(input => input.checked);
     const correct = options.find(input => input.value === answers[question]);
     selected.closest("label").classList.add(selected.value === answers[question] ? "correct" : "incorrect");
     correct.closest("label").classList.add("correct");
-
     const review = document.createElement("div");
     review.className = "answer-review";
     review.id = "review-" + question;
     const selectedText = selected.closest("label").textContent.trim();
     const correctText = correct.closest("label").textContent.trim();
     if(selected.value === answers[question]){
-      review.innerHTML = '<span class="right">✓ Correct! / Daidai!</span> You selected: ' + correctText;
+      review.innerHTML = '<span class="right">✓ Correct! / Daidai!</span> You selected: ' + selectedText;
     }else{
-      review.innerHTML = '<span class="wrong">✗ Your answer was incorrect. / Amsarka ba daidai ba ce.</span><br>' +
-        'Your answer: ' + selectedText + '<br><span class="right">✓ Correct answer: ' + correctText + '</span>';
+      review.innerHTML = '<span class="wrong">✗ Your answer was incorrect. / Amsarka ba daidai ba ce.</span><br>Your answer: ' + selectedText + '<br><span class="right">✓ Correct answer: ' + correctText + '</span>';
     }
     correct.closest("label").insertAdjacentElement("afterend", review);
   }
-
+  form.dataset.graded = "yes";
+  form.querySelectorAll('input[type="radio"]').forEach(input => input.disabled = true);
+  const submitButton = form.querySelector('button[type="button"]');
+  if(submitButton) submitButton.disabled = true;
   const total = questions.length;
+  let retry = document.getElementById("retry-" + resultId);
+  if(retry) retry.remove();
   if(score >= passMark){
     localStorage.setItem(storageKey, "yes");
     onPass();
-    document.getElementById(resultId).textContent =
-      "Congratulations! You passed: " + score + "/" + total + ". / Madalla! Ka ci jarrabawar.";
+    result.textContent = "PASS — Congratulations! You passed: " + score + "/" + total + ". / Madalla! Ka ci jarrabawar.";
   }else{
-    document.getElementById(resultId).textContent =
-      "Your score is " + score + "/" + total + ". You need " + passMark +
-      " correct answers to pass. The incorrect answers are marked below. Review and try again. / Ka samu " + score + "/" + total + ". An nuna maka inda ka yi kuskure da amsar da ta dace a ƙasa. Ka sake nazari sannan ka sake gwadawa.";
+    result.textContent = "TRY AGAIN — Your score is " + score + "/" + total + ". You need at least " + passMark + "/" + total + " to pass. Review the red and green answers, then select Try Again. / KA SAKE GWADAWA — Ka samu " + score + "/" + total + ". Kana bukatar akalla " + passMark + "/" + total + " domin cin jarabawar.";
+    retry = document.createElement("button");
+    retry.type = "button";
+    retry.className = "secondary";
+    retry.id = "retry-" + resultId;
+    retry.textContent = "Try Again / Sake Gw adawa";
+    retry.onclick = function(){
+      for(const question of questions){
+        document.querySelectorAll('input[name="' + question + '"]').forEach(input => {
+          input.checked = false;
+          input.disabled = false;
+          input.closest("label").classList.remove("correct", "incorrect");
+        });
+        const oldReview = document.getElementById("review-" + question);
+        if(oldReview) oldReview.remove();
+      }
+      form.dataset.graded = "no";
+      if(submitButton) submitButton.disabled = false;
+      result.textContent = "Choose your answers again. / Ka sake zabar amsoshinka.";
+      retry.remove();
+    };
+    result.insertAdjacentElement("afterend", retry);
   }
   updateProgress();
 }
@@ -1164,6 +1234,18 @@ function checkQuiz11(){
       document.getElementById("lesson11Complete").hidden = false;
     });
 }
+function openLesson12(){
+  if(!passed11){ alert("Pass Lesson 11 first. / Ka ci jarrabawar Darasi na 11 tukuna."); return; }
+  showLesson("lesson12");
+}
+function checkQuiz12(){
+  gradeQuiz(["l12q1","l12q2","l12q3","l12q4","l12q5"],
+    {l12q1:"a",l12q2:"c",l12q3:"b",l12q4:"d",l12q5:"b"},
+    4, "result12", lessonKeys[11], () => {
+      passed12 = true;
+      document.getElementById("lesson12Complete").hidden = false;
+    });
+}
 
 function restoreProgress(){
   if(passed1){
@@ -1200,6 +1282,7 @@ function restoreProgress(){
   if(passed9){ document.getElementById("lesson9Complete").hidden = false; document.getElementById("result9").textContent = "Lesson 9 was previously passed. / Ka riga ka ci jarrabawar Darasi na 9."; }
   if(passed10){ document.getElementById("lesson10Complete").hidden = false; document.getElementById("result10").textContent = "Lesson 10 was previously passed. / Ka riga ka ci jarrabawar Darasi na 10."; }
   if(passed11){ document.getElementById("lesson11Complete").hidden = false; document.getElementById("result11").textContent = "Lesson 11 was previously passed. / Ka riga ka ci jarrabawar Darasi na 11."; }
+  if(passed12){ document.getElementById("lesson12Complete").hidden = false; document.getElementById("result12").textContent = "Lesson 12 was previously passed. / Ka riga ka ci jarrabawar Darasi na 12."; }
   updateProgress();
 }
 restoreProgress();
