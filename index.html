@@ -8,7 +8,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="#081426" name="theme-color"/>
-<title>ABAP AI Cybersecurity Academy — Lessons 1–10</title>
+<title>ABAP AI Cybersecurity Academy — Lessons 1–13</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,sans-serif;background:#081426;color:#eef5ff}
@@ -883,13 +883,101 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <button onclick="checkQuiz12()" type="button">Submit Answers / Aika Amsoshi</button></form>
 <p aria-live="polite" class="result" id="result12"></p>
 <p class="notice" hidden id="lesson12Complete"><strong>Lesson 12 Passed — Excellent work!</strong><br/>Topic 12 of the official Level 1 roadmap is complete. Lesson 13 is CIA Triad. / Ka kammala topic na goma sha biyu. Darasi na 13 shi ne CIA Triad.</p>
+<button class="secondary" id="next13" disabled onclick="openLesson13()" type="button">Lesson 13 — Locked / Darasi na 13 a kulle yake</button>
 <button class="secondary" onclick="openLesson11()" type="button">Back to Lesson 11 / Komawa Darasi na 11</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
+</section>
+
+
+<section class="panel lesson" id="lesson13" style="display:none">
+<h2>LEVEL 1 — BEGINNER</h2>
+<nav aria-label="Lesson navigation" class="lesson-nav"><strong>Available lessons / Darussan da suke nan:</strong>
+<button class="lesson-jump" onclick="showLesson1()" type="button">Lesson 1</button><button class="lesson-jump" onclick="showLesson2()" type="button">Lesson 2</button><button class="lesson-jump" onclick="openLesson3()" type="button">Lesson 3</button><button class="lesson-jump" onclick="openLesson4()" type="button">Lesson 4</button><button class="lesson-jump" onclick="openLesson5()" type="button">Lesson 5</button><button class="lesson-jump" onclick="openLesson6()" type="button">Lesson 6</button><button class="lesson-jump" onclick="openLesson7()" type="button">Lesson 7</button><button class="lesson-jump" onclick="openLesson8()" type="button">Lesson 8</button><button class="lesson-jump" onclick="openLesson9()" type="button">Lesson 9</button><button class="lesson-jump" onclick="openLesson10()" type="button">Lesson 10</button><button class="lesson-jump" onclick="openLesson11()" type="button">Lesson 11</button><button class="lesson-jump" onclick="openLesson12()" type="button">Lesson 12</button><button class="lesson-jump" onclick="openLesson13()" type="button">Lesson 13</button>
+</nav>
+<h3>Lesson 13: CIA Triad — Confidentiality, Integrity and Availability / Sirrin Bayanai, Ingancinsu da Samuwarsu</h3>
+<div class="notice"><strong>Learning Objectives / Manufofin Koyo</strong>
+<p>By the end of this lesson, you should be able to define the CIA Triad, explain Confidentiality, Integrity and Availability, give practical examples, and identify which principle is affected in a security incident.</p>
+<p class="hausa">A ƙarshen wannan darasi, za ka iya bayyana CIA Triad, ka fassara Confidentiality, Integrity da Availability, ka bayar da misalai na zahiri, sannan ka gane wace ƙa'ida matsalar tsaro ta shafa.</p></div>
+<h3>PART A — ENGLISH</h3>
+<h3>1. What is the CIA Triad?</h3>
+<p>The <strong>CIA Triad</strong> is a basic information-security model made up of three principles: Confidentiality, Integrity and Availability. It helps organizations protect information and systems. The letters CIA here do not mean the intelligence agency; they are the initials of these three security principles.</p>
+<h3>2. Confidentiality</h3>
+<p><strong>Confidentiality</strong> means keeping information private and allowing only authorized people to see it. Examples include protecting patient records, passwords, bank details and private messages. Controls include strong passwords, multi-factor authentication, encryption and access permissions.</p>
+<h3>3. Integrity</h3>
+<p><strong>Integrity</strong> means keeping information accurate, complete and unchanged unless an authorized change is made. For example, a patient's medical record or a bank balance should not be secretly altered. Controls include permissions, audit logs, hashes, digital signatures and change control.</p>
+<h3>4. Availability</h3>
+<p><strong>Availability</strong> means ensuring that authorized users can access information and services when they need them. Examples include keeping a hospital system, website or network working. Controls include reliable systems, backups, maintenance, redundancy and protection against denial-of-service attacks.</p>
+<h3>5. How the Three Principles Differ</h3>
+<ul>
+<li><strong>Confidentiality:</strong> Who is allowed to see the information?</li>
+<li><strong>Integrity:</strong> Is the information accurate and protected from unauthorized changes?</li>
+<li><strong>Availability:</strong> Can authorized users access it when needed?</li>
+</ul>
+<h3>6. Practical Examples</h3>
+<p>If an attacker steals a password and reads private patient records, confidentiality is affected. If someone secretly changes a patient's test result, integrity is affected. If ransomware locks a hospital's computer system and staff cannot access records, availability is affected. One incident can affect more than one principle.</p>
+<h3>7. Why the CIA Triad Matters</h3>
+<p>The CIA Triad helps security teams choose suitable protections, assess incidents and explain the impact of cyberattacks. A strong security plan considers all three principles rather than focusing on only one.</p>
+<h3>PART B — HAUSA</h3>
+<h3>1. Menene CIA Triad?</h3>
+<p><strong>CIA Triad</strong> wani muhimmin tsari ne na kare bayanai da na'urorin kwamfuta. Ya ƙunshi ƙa'idoji uku: Confidentiality, Integrity da Availability. A nan CIA ba hukumar leƙen asiri ba ce; haruffan farko ne na waɗannan ƙa'idoji uku.</p>
+<h3>2. Confidentiality — Sirrin Bayanai</h3>
+<p>Confidentiality na nufin kiyaye bayanai su kasance na sirri, kuma waɗanda aka ba izini kaɗai su iya ganinsu. Misalai sun haɗa da bayanan marasa lafiya, kalmomin sirri, bayanan banki da saƙonnin sirri. Ana kare su da password mai ƙarfi, MFA, encryption da izinin shiga.</p>
+<h3>3. Integrity — Inganci da Cikar Bayanai</h3>
+<p>Integrity na nufin bayanai su kasance daidai kuma cikakku; kada wani ya canza su ba tare da izini ba. Misali, kada a canza sakamakon gwajin mara lafiya ko kuɗin asusun banki a ɓoye. Ana taimakawa wajen kare integrity da izinin amfani, tarihin canje-canje (audit logs), hashes da digital signatures.</p>
+<h3>4. Availability — Samuwar Bayanai da Ayyuka</h3>
+<p>Availability na nufin masu izini su iya samun bayanai ko amfani da tsarin kwamfuta a lokacin da suke buƙata. Misali, tsarin kwamfutar asibiti ko website ya kasance yana aiki. Ana taimakawa da backups, gyaran na'urori, madadin servers ko networks, da kariya daga hare-haren da ke hana aiki.</p>
+<h3>5. Yadda za ka bambance su</h3>
+<ul>
+<li><strong>Confidentiality:</strong> Wa ya kamata ya ga bayanin?</li>
+<li><strong>Integrity:</strong> Shin bayanin daidai ne kuma ba a canza shi ba bisa ƙa'ida?</li>
+<li><strong>Availability:</strong> Shin masu izini za su iya samun bayanin lokacin da suke buƙata?</li>
+</ul>
+<h3>6. Misalai na zahiri</h3>
+<p>Idan barawo ya sace password ya karanta bayanan marasa lafiya, an karya Confidentiality. Idan wani ya canza sakamakon gwajin mara lafiya ba tare da izini ba, an karya Integrity. Idan ransomware ya kulle tsarin kwamfutar asibiti har ma'aikata ba za su iya buɗe bayanai ba, Availability ta samu matsala. Hari guda na iya shafar ƙa'idoji fiye da ɗaya.</p>
+<h3>7. Muhimmancin CIA Triad</h3>
+<p>CIA Triad yana taimaka wa masu tsaro su zaɓi hanyoyin kariya, tantance hare-hare da fahimtar illolinsu. Tsarin tsaro mai kyau yana kula da dukkan ƙa'idoji ukun.</p>
+<div class="notice"><strong>Remember / Ka tuna:</strong>
+<p><strong>Confidentiality = Privacy.</strong> <strong>Integrity = Accuracy.</strong> <strong>Availability = Access when needed.</strong></p>
+<p class="hausa"><strong>Confidentiality = Sirri.</strong> <strong>Integrity = Daidaito da inganci.</strong> <strong>Availability = Samuwa a lokacin buƙata.</strong></p></div>
+<h3>Practical Exercise / Aikin Gwaji</h3>
+<p>For each situation, identify the CIA principle affected: (1) a stranger reads a private file; (2) a record is secretly changed; (3) a website is unavailable during an attack.</p>
+<p class="hausa">Ga kowane yanayi, ka gano ƙa'idar CIA da abin ya shafa: (1) baƙo ya karanta fayil na sirri; (2) an canza bayanai a ɓoye; (3) website ya daina aiki saboda hari.</p>
+<h3>Assessment — Quiz (5 Questions) / Jarrabawa — Tambayoyi 5</h3>
+<form id="quiz13" onsubmit="return false">
+<div class="quiz-question"><p><strong>1. What are the three parts of the CIA Triad?</strong><br/><span class="hausa">Waɗanne abubuwa uku ne ke cikin CIA Triad?</span></p>
+<label class="option"><input name="l13q1" type="radio" value="a"/> Confidentiality, Integrity and Availability / Sirri, Inganci da Samuwa</label>
+<label class="option"><input name="l13q1" type="radio" value="b"/> Control, Internet and Access / Sarrafawa, Intanet da Shiga</label>
+<label class="option"><input name="l13q1" type="radio" value="c"/> Computer, Information and Antivirus / Kwamfuta, Bayanai da Antivirus</label>
+<label class="option"><input name="l13q1" type="radio" value="d"/> Cyber, Identity and Application / Cyber, Shaida da Manhaja</label></div>
+<div class="quiz-question"><p><strong>2. Which principle protects information from being seen by unauthorized people?</strong><br/><span class="hausa">Wace ƙa'ida ce ke kare bayanai daga ganin mutanen da ba su da izini?</span></p>
+<label class="option"><input name="l13q2" type="radio" value="a"/> Availability / Samuwa</label>
+<label class="option"><input name="l13q2" type="radio" value="b"/> Confidentiality / Sirrin bayanai</label>
+<label class="option"><input name="l13q2" type="radio" value="c"/> Integrity / Inganci</label>
+<label class="option"><input name="l13q2" type="radio" value="d"/> Redundancy / Madadin tsari</label></div>
+<div class="quiz-question"><p><strong>3. An attacker secretly changes a patient's test result. Which principle is affected?</strong><br/><span class="hausa">Mahari ya canza sakamakon gwajin mara lafiya a ɓoye. Wace ƙa'ida aka karya?</span></p>
+<label class="option"><input name="l13q3" type="radio" value="a"/> Availability / Samuwa</label>
+<label class="option"><input name="l13q3" type="radio" value="b"/> Confidentiality / Sirri</label>
+<label class="option"><input name="l13q3" type="radio" value="c"/> Integrity / Inganci da daidaiton bayanai</label>
+<label class="option"><input name="l13q3" type="radio" value="d"/> Authentication / Tabbatar da asali</label></div>
+<div class="quiz-question"><p><strong>4. A hospital system is down and authorized staff cannot access records. Which principle is affected?</strong><br/><span class="hausa">Tsarin kwamfutar asibiti ya tsaya, ma'aikatan da ke da izini ba za su iya buɗe bayanai ba. Wace ƙa'ida ta samu matsala?</span></p>
+<label class="option"><input name="l13q4" type="radio" value="a"/> Confidentiality / Sirri</label>
+<label class="option"><input name="l13q4" type="radio" value="b"/> Integrity / Inganci</label>
+<label class="option"><input name="l13q4" type="radio" value="c"/> Encryption / ɓoye bayanai</label>
+<label class="option"><input name="l13q4" type="radio" value="d"/> Availability / Samuwa a lokacin buƙata</label></div>
+<div class="quiz-question"><p><strong>5. Which set of controls can help protect all three CIA principles?</strong><br/><span class="hausa">Wane rukuni na hanyoyin kariya zai iya taimakawa wajen kare dukkan ƙa'idojin CIA ukun?</span></p>
+<label class="option"><input name="l13q5" type="radio" value="a"/> Access controls, backups and audit logs / Izinin shiga, madadin bayanai da tarihin canje-canje</label>
+<label class="option"><input name="l13q5" type="radio" value="b"/> Sharing passwords with everyone / Raba password ga kowa</label>
+<label class="option"><input name="l13q5" type="radio" value="c"/> Disabling all security updates / Kashe duk sabunta tsaro</label>
+<label class="option"><input name="l13q5" type="radio" value="d"/> Using one weak password / Amfani da password guda mai rauni</label></div>
+<button onclick="checkQuiz13()" type="button">Submit Answers / Aika Amsoshi</button></form>
+<p aria-live="polite" class="result" id="result13"></p>
+<p class="notice" hidden id="lesson13Complete"><strong>Lesson 13 Passed — Excellent work!</strong><br/>Topic 13 of the official Level 1 roadmap is complete. Lesson 14 is Authentication and Authorization. / Ka kammala topic na 13. Darasi na 14 shi ne Authentication and Authorization.</p>
+<button class="secondary" onclick="openLesson12()" type="button">Back to Lesson 12 / Komawa Darasi na 12</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
 </section>
 
 </main>
 <footer>ABAP AI CYBERSECURITY ACADEMY<br/>Prepared by Abbas Bukar</footer>
 <script>
-const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1","abap_level1_topic11_dns_dhcp_http_https_passed_v1","abap_level1_topic12_basic_cybersecurity_terminologies_passed_v1"];
+const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1","abap_level1_topic11_dns_dhcp_http_https_passed_v1","abap_level1_topic12_basic_cybersecurity_terminologies_passed_v1","abap_level1_topic13_cia_triad_passed_v1"];
 // Preserve previously earned passes when older versions used legacy keys.
 if(localStorage.getItem(lessonKeys[2]) !== "yes" && localStorage.getItem("abap_lesson3_passed") === "yes"){
   localStorage.setItem(lessonKeys[2], "yes");
@@ -909,6 +997,7 @@ let passed9 = localStorage.getItem(lessonKeys[8]) === "yes";
 let passed10 = localStorage.getItem(lessonKeys[9]) === "yes";
 let passed11 = localStorage.getItem(lessonKeys[10]) === "yes";
 let passed12 = localStorage.getItem(lessonKeys[11]) === "yes";
+let passed13 = localStorage.getItem(lessonKeys[12]) === "yes";
 
 function updateProgress(){
   if(passed1){
@@ -951,14 +1040,15 @@ function updateProgress(){
   if(passed9){ const done9=document.getElementById("lesson9Complete"); if(done9) done9.hidden=false; const next10=document.getElementById("next10"); if(next10){next10.disabled=false;next10.textContent="Open Lesson 10 — TCP/IP and OSI Models / Buɗe Darasi na 10";} const jump10=document.getElementById("jumpLesson10"); if(jump10){jump10.disabled=false;jump10.textContent="Lesson 10";} }
   if(passed10){ const done10=document.getElementById("lesson10Complete"); if(done10) done10.hidden=false; const next11=document.getElementById("next11"); if(next11){next11.disabled=false;next11.textContent="Open Lesson 11 — DNS, DHCP, HTTP and HTTPS / Buɗe Darasi na 11";next11.onclick=openLesson11;} }
   if(passed11){ const done11=document.getElementById("lesson11Complete"); if(done11) done11.hidden=false; const next12=document.getElementById("next12"); if(next12){next12.disabled=false;next12.textContent="Open Lesson 12 — Basic Cybersecurity Terminologies / Buɗe Darasi na 12";next12.onclick=openLesson12;} }
-  if(passed12){ const done12=document.getElementById("lesson12Complete"); if(done12) done12.hidden=false; }
-  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8, passed9, passed10, passed11, passed12].filter(Boolean).length;
+  if(passed12){ const done12=document.getElementById("lesson12Complete"); if(done12) done12.hidden=false; const next13=document.getElementById("next13"); if(next13){next13.disabled=false;next13.textContent="Open Lesson 13 — CIA Triad / Buɗe Darasi na 13";next13.onclick=openLesson13;} }
+  if(passed13){ const done13=document.getElementById("lesson13Complete"); if(done13) done13.hidden=false; }
+  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8, passed9, passed10, passed11, passed12, passed13].filter(Boolean).length;
   const continueButton = document.getElementById("continueLearningButton");
   if(continueButton){
-    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : !passed9 ? 9 : !passed10 ? 10 : !passed11 ? 11 : !passed12 ? 12 : 13;
+    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : !passed9 ? 9 : !passed10 ? 10 : !passed11 ? 11 : !passed12 ? 12 : !passed13 ? 13 : 14;
     continueButton.textContent = nextLesson <= 6
       ? "Continue Learning — Lesson " + nextLesson + " / Ci gaba da Koyo — Darasi na " + nextLesson
-      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : nextLesson === 9 ? "Continue Learning — Lesson 9 / Ci gaba da Koyo — Darasi na 9" : nextLesson === 10 ? "Continue Learning — Lesson 10 / Ci gaba da Koyo — Darasi na 10" : nextLesson === 11 ? "Continue Learning — Lesson 11 / Ci gaba da Koyo — Darasi na 11" : nextLesson === 12 ? "Continue Learning — Lesson 12 / Ci gaba da Koyo — Darasi na 12" : "All 12 available lessons completed / An kammala darussa 12 da suke nan";
+      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : nextLesson === 9 ? "Continue Learning — Lesson 9 / Ci gaba da Koyo — Darasi na 9" : nextLesson === 10 ? "Continue Learning — Lesson 10 / Ci gaba da Koyo — Darasi na 10" : nextLesson === 11 ? "Continue Learning — Lesson 11 / Ci gaba da Koyo — Darasi na 11" : nextLesson === 12 ? "Continue Learning — Lesson 12 / Ci gaba da Koyo — Darasi na 12" : nextLesson === 13 ? "Continue Learning — Lesson 13 / Ci gaba da Koyo — Darasi na 13" : "All 13 available lessons completed / An kammala darussa 13 da suke nan";
   }
   const value = Math.round((completed / 15) * 100);
   document.getElementById("bar").style.width = value + "%";
@@ -1005,7 +1095,8 @@ function startLesson(){
   if(!passed10) return openLesson10();
   if(!passed11) return openLesson11();
   if(!passed12) return openLesson12();
-  alert("You have completed all 12 lessons currently available. / Ka kammala darussa goma sha biyu da ake da su yanzu.");
+  if(!passed13) return openLesson13();
+  alert("You have completed all 13 lessons currently available. / Ka kammala darussa goma sha uku da ake da su yanzu.");
 }
 function returnToDashboard(){
   hideLessons();
@@ -1247,6 +1338,19 @@ function checkQuiz12(){
     });
 }
 
+function openLesson13(){
+  if(!passed12){ alert("Pass Lesson 12 first. / Ka ci jarrabawar Darasi na 12 tukuna."); return; }
+  showLesson("lesson13");
+}
+function checkQuiz13(){
+  gradeQuiz(["l13q1","l13q2","l13q3","l13q4","l13q5"],
+    {l13q1:"a",l13q2:"b",l13q3:"c",l13q4:"d",l13q5:"a"},
+    4, "result13", lessonKeys[12], () => {
+      passed13 = true;
+      document.getElementById("lesson13Complete").hidden = false;
+    });
+}
+
 function restoreProgress(){
   if(passed1){
     document.getElementById("lesson1Complete").hidden = false;
@@ -1283,6 +1387,7 @@ function restoreProgress(){
   if(passed10){ document.getElementById("lesson10Complete").hidden = false; document.getElementById("result10").textContent = "Lesson 10 was previously passed. / Ka riga ka ci jarrabawar Darasi na 10."; }
   if(passed11){ document.getElementById("lesson11Complete").hidden = false; document.getElementById("result11").textContent = "Lesson 11 was previously passed. / Ka riga ka ci jarrabawar Darasi na 11."; }
   if(passed12){ document.getElementById("lesson12Complete").hidden = false; document.getElementById("result12").textContent = "Lesson 12 was previously passed. / Ka riga ka ci jarrabawar Darasi na 12."; }
+  if(passed13){ document.getElementById("lesson13Complete").hidden = false; document.getElementById("result13").textContent = "Lesson 13 was previously passed. / Ka riga ka ci jarrabawar Darasi na 13."; }
   updateProgress();
 }
 restoreProgress();
