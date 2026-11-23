@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="#081426" name="theme-color"/>
-<title>ABAP AI Cybersecurity Academy — Levels 1 and 2</title>
+<title>ABAP AI Cybersecurity Academy — Level 1 Library and Level 2</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,sans-serif;background:#081426;color:#eef5ff}
@@ -32,6 +32,9 @@ button:focus-visible,input:focus-visible{outline:3px solid #f5cf66;outline-offse
 .progress{height:10px;background:#294563;border-radius:20px;overflow:hidden}
 .progress div{height:100%;width:0;background:#54d6c5;transition:width .3s}
 .lesson{display:none}
+.level1-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px;margin-top:12px}
+.level1-list button{width:100%;text-align:left;margin:0}
+.level1-list button:disabled{opacity:.45;cursor:not-allowed}
 .result{font-weight:bold;margin-top:12px;line-height:1.6}
 .diagram{background:#071a30;border:1px solid #365777;border-radius:10px;padding:15px;margin:14px 0;text-align:center;line-height:2}
 .term{background:#172e4b;padding:12px;border-radius:9px;margin:9px 0;line-height:1.6}
@@ -65,6 +68,29 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <p class="small" id="progressText">Level 1 roadmap progress: 0 of 15 topics passed</p>
 <button id="continueLearningButton" onclick="startLesson()" type="button">Continue Learning — Lesson 6 / Ci gaba da Koyo — Darasi na 6</button>
 <p class="small">The lessons open below this dashboard only after you select Start Learning.</p>
+</section>
+<section class="panel" id="level1Dashboard">
+<h2>LEVEL 1 — BEGINNER / MATAKIN FARKO</h2>
+<p>Level 1 lesson library: all 15 official lessons remain here. You can reopen any lesson you have already passed for revision. / Kundin darussan Level 1: duk darussa 15 suna nan. Za ka iya sake buɗe duk darasin da ka riga ka ci domin bitar karatu.</p>
+<p class="small" id="level1ReviewProgress">Level 1 progress: 0 of 15 lessons passed / Ci gaban Level 1: an ci darussa 0 cikin 15.</p>
+<div class="level1-list" id="level1LessonLibrary">
+<button type="button" id="reviewLevel1Lesson1" onclick="openLevel1Review(1)">Lesson 1 — Introduction to Cybersecurity / Gabatarwa ga Cybersecurity</button>
+<button type="button" id="reviewLevel1Lesson2" onclick="openLevel1Review(2)">Lesson 2 — History of Cybersecurity / Tarihin Cybersecurity</button>
+<button type="button" id="reviewLevel1Lesson3" onclick="openLevel1Review(3)">Lesson 3 — Types of Cyber Threats / Nau'ikan Barazanar Cyber</button>
+<button type="button" id="reviewLevel1Lesson4" onclick="openLevel1Review(4)">Lesson 4 — Computer Fundamentals / Tushen Kwamfuta</button>
+<button type="button" id="reviewLevel1Lesson5" onclick="openLevel1Review(5)">Lesson 5 — Hardware and Software</button>
+<button type="button" id="reviewLevel1Lesson6" onclick="openLevel1Review(6)">Lesson 6 — Operating Systems</button>
+<button type="button" id="reviewLevel1Lesson7" onclick="openLevel1Review(7)">Lesson 7 — Internet Fundamentals</button>
+<button type="button" id="reviewLevel1Lesson8" onclick="openLevel1Review(8)">Lesson 8 — Networking Fundamentals</button>
+<button type="button" id="reviewLevel1Lesson9" onclick="openLevel1Review(9)">Lesson 9 — IP and MAC Addresses</button>
+<button type="button" id="reviewLevel1Lesson10" onclick="openLevel1Review(10)">Lesson 10 — TCP/IP and OSI Models</button>
+<button type="button" id="reviewLevel1Lesson11" onclick="openLevel1Review(11)">Lesson 11 — DNS, DHCP, HTTP and HTTPS</button>
+<button type="button" id="reviewLevel1Lesson12" onclick="openLevel1Review(12)">Lesson 12 — Basic Cybersecurity Terminologies</button>
+<button type="button" id="reviewLevel1Lesson13" onclick="openLevel1Review(13)">Lesson 13 — CIA Triad</button>
+<button type="button" id="reviewLevel1Lesson14" onclick="openLevel1Review(14)">Lesson 14 — Authentication and Authorization</button>
+<button type="button" id="reviewLevel1Lesson15" onclick="openLevel1Review(15)">Lesson 15 — Basic Cyber Hygiene</button>
+</div>
+<p class="small">Passed lessons can be reviewed anytime. New lessons still unlock in order. / Za a iya bitar darussan da aka ci a kowane lokaci. Sabbin darussa kuma suna buɗewa a jere.</p>
 </section>
 <section class="panel" id="level2Dashboard">
 <h2>LEVEL 2 — INTERMEDIATE / MATSAYI NA 2 — Matsakaici</h2>
@@ -1137,7 +1163,38 @@ let passed13 = localStorage.getItem(lessonKeys[12]) === "yes";
 let passed14 = localStorage.getItem(lessonKeys[13]) === "yes";
 let passed15 = localStorage.getItem(lessonKeys[14]) === "yes";
 
+function updateLevel1Library(){
+  const passed = [passed1,passed2,passed3,passed4,passed5,passed6,passed7,passed8,passed9,passed10,passed11,passed12,passed13,passed14,passed15];
+  const titles = [
+    "Introduction to Cybersecurity", "History of Cybersecurity", "Types of Cyber Threats",
+    "Computer Fundamentals", "Hardware and Software", "Operating Systems",
+    "Internet Fundamentals", "Networking Fundamentals", "IP and MAC Addresses",
+    "TCP/IP and OSI Models", "DNS, DHCP, HTTP and HTTPS", "Basic Cybersecurity Terminologies",
+    "CIA Triad", "Authentication and Authorization", "Basic Cyber Hygiene"
+  ];
+  const completed = passed.filter(Boolean).length;
+  const progress = document.getElementById("level1ReviewProgress");
+  if(progress) progress.textContent = "Level 1 progress: " + completed + " of 15 lessons passed / Ci gaban Level 1: an ci darussa " + completed + " cikin 15.";
+  for(let i=0;i<15;i++){
+    const button = document.getElementById("reviewLevel1Lesson" + (i+1));
+    if(!button) continue;
+    button.disabled = i>0 && !passed[i-1];
+    const state = passed[i] ? " — Passed / An ci" : (button.disabled ? " — Locked / A kulle" : " — Available / A buɗe");
+    button.textContent = "Lesson " + (i+1) + " — " + titles[i] + state;
+  }
+}
+function openLevel1Review(number){
+  const passed = [passed1,passed2,passed3,passed4,passed5,passed6,passed7,passed8,passed9,passed10,passed11,passed12,passed13,passed14,passed15];
+  if(number<1 || number>15) return;
+  if(number>1 && !passed[number-2]){
+    alert("Complete the previous lesson first. / Ka kammala darasin da ya gabata tukuna.");
+    return;
+  }
+  showLesson("lesson" + number);
+}
+
 function updateProgress(){
+  updateLevel1Library();
   if(passed1){
     const nextButton = document.getElementById("next1");
     if(nextButton){ nextButton.disabled = false; nextButton.textContent = "Open Lesson 2 / Buɗe Darasi na 2"; nextButton.onclick = showLesson2; }
