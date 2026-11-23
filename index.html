@@ -1006,13 +1006,50 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <div class="quiz-question"><p><strong>5. Which statement about MFA is correct?</strong><br/><span class="hausa">Wace magana ce daidai game da MFA?</span></p><label class="option"><input name="l14q5" type="radio" value="a"/> It uses two or more different factor categories / Yana amfani da rukuni biyu ko fiye na hanyoyin tabbatarwa daban-daban</label><label class="option"><input name="l14q5" type="radio" value="b"/> It means using two passwords only / Yana nufin amfani da passwords biyu kawai</label><label class="option"><input name="l14q5" type="radio" value="c"/> It removes the need for identity checks / Yana kawar da bukatar tabbatar da asali</label><label class="option"><input name="l14q5" type="radio" value="d"/> It allows everyone to share one login / Yana ba kowa damar amfani da login guda</label></div>
 <button onclick="checkQuiz14()" type="button">Submit Answers / Aika Amsoshi</button></form>
 <p aria-live="polite" class="result" id="result14"></p><p class="notice" hidden id="lesson14Complete"><strong>Lesson 14 Passed — Excellent work!</strong><br/>Topic 14 of the official Level 1 roadmap is complete. Lesson 15 is Basic Cyber Hygiene. / Ka kammala topic na 14. Darasi na 15 shi ne Basic Cyber Hygiene.</p>
-<button class="secondary" onclick="openLesson13()" type="button">Back to Lesson 13 / Komawa Darasi na 13</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
+<button class="secondary" id="next15" disabled onclick="openLesson15()" type="button">Lesson 15 — Locked until Lesson 14 is passed / A kulle har sai an ci Darasi na 14</button><button class="secondary" onclick="openLesson13()" type="button">Back to Lesson 13 / Komawa Darasi na 13</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
+</section>
+
+
+<section class="panel lesson" id="lesson15" style="display:none">
+<h2>LEVEL 1 — BEGINNER</h2>
+<h3>Lesson 15: Basic Cyber Hygiene / Muhimman Dabi'un Kare Tsaron Kwamfuta</h3>
+<div class="notice"><strong>Learning Objectives / Manufofin Koyo</strong><p>By the end of this lesson, you should be able to explain cyber hygiene, use safer passwords and updates, recognize phishing, protect devices and data, and respond safely to a suspected security incident.</p><p class="hausa">A ƙarshen darasin, za ka iya bayyana cyber hygiene, amfani da password mai ƙarfi da updates, gane phishing, kare na'urori da bayanai, da kuma ɗaukar mataki cikin aminci idan ka zargi matsalar tsaro.</p></div>
+<h3>PART A — ENGLISH</h3>
+<h3>1. What is Cyber Hygiene?</h3><p><strong>Cyber hygiene</strong> means the regular habits and simple actions people take to keep devices, accounts, networks and information secure. Like personal hygiene, it works best when practised consistently, not only after a problem occurs.</p>
+<h3>2. Use Strong, Unique Passwords</h3><p>Use a long, unique password or passphrase for every important account. Do not reuse one password across different services. A password manager can help create and store unique passwords. Never share passwords or write them where others can easily see them.</p>
+<h3>3. Enable Multi-Factor Authentication (MFA)</h3><p>Where available, enable MFA. It adds another proof of identity, such as an authenticator-app approval or a security key. Do not approve an unexpected login request and never share one-time codes with anyone.</p>
+<h3>4. Update Software and Devices</h3><p>Install security updates for operating systems, browsers, apps and routers. Updates often fix vulnerabilities attackers could exploit. Download apps only from trusted official sources and remove software you no longer need.</p>
+<h3>5. Recognize Phishing and Social Engineering</h3><p>Be careful with unexpected messages that create urgency, request passwords or money, or ask you to open attachments or links. Check the sender and website address independently. Do not use a link in a suspicious message to sign in. Report suspicious messages through the proper channel.</p>
+<h3>6. Protect Devices and Networks</h3><ul><li>Lock your screen when you step away.</li><li>Use a screen lock and device encryption where available.</li><li>Use trusted Wi-Fi; avoid sensitive work on unknown public networks.</li><li>Secure your home or office Wi-Fi with WPA2/WPA3 and a strong router password.</li><li>Do not connect unknown USB drives to work devices.</li></ul>
+<h3>7. Back Up Important Data</h3><p>Keep regular backups of important files. Use a secure cloud backup or an external drive that is disconnected when not backing up. Test that you can restore files. A backup helps recovery after device failure, accidental deletion or ransomware, but it does not replace other security controls.</p>
+<h3>8. Safe Use and Incident Reporting</h3><p>Use only the access you need. Do not install unauthorized software or bypass security controls. If you suspect an account or device is compromised, report it promptly to the responsible IT/security team, follow their instructions, and do not delete evidence or investigate beyond your authorization.</p>
+<h3>PART B — HAUSA</h3>
+<h3>1. Menene Cyber Hygiene?</h3><p><strong>Cyber hygiene</strong> na nufin kyawawan ɗabi'u da matakai na yau da kullum da mutum ke bi domin kare wayarsa, kwamfutarsa, account, network da bayanansa. Kamar tsaftar jiki, yana da muhimmanci a riƙa yin sa akai-akai, ba sai matsala ta faru ba.</p>
+<h3>2. Yi Amfani da Password Mai Ƙarfi kuma Na Musamman</h3><p>Yi amfani da password mai tsawo kuma daban ga kowane account mai muhimmanci. Kada ka yi amfani da password guda a wurare daban-daban. Password manager na iya taimaka maka ƙirƙira da adana passwords. Kada ka ba wani password ɗinka ko ka ajiye shi a inda kowa zai iya gani.</p>
+<h3>3. Kunna Multi-Factor Authentication (MFA)</h3><p>Idan akwai, kunna MFA. Yana ƙara wata hanya ta tabbatar da kai, kamar amincewa daga authenticator app ko security key. Kada ka amince da login request da ba ka nema ba, kuma kada ka ba kowa lambar OTP.</p>
+<h3>4. Sabunta Software da Na'urori</h3><p>Ka girka security updates na operating system, browser, apps da router. Updates suna gyara raunin tsaro da mahara za su iya amfani da shi. Ka sauke apps daga sahihan wuraren hukuma kawai, sannan ka cire software da ba ka buƙata.</p>
+<h3>5. Gane Phishing da Social Engineering</h3><p>Yi hankali da saƙonnin da ba ka yi tsammani ba waɗanda ke matsa maka da gaggawa, neman password ko kuɗi, ko sa ka buɗe link ko attachment. Ka binciki wanda ya aiko da saƙon da adireshin website ta wata hanya mai zaman kanta. Kada ka shiga account ta link ɗin saƙon da kake zargi. Ka kai rahoton saƙon da ake zargi ta hanyar da ta dace.</p>
+<h3>6. Kare Na'urori da Network</h3><ul><li>Ka kulle allon waya ko kwamfuta idan ka tashi daga wurin.</li><li>Yi amfani da screen lock da device encryption idan akwai.</li><li>Yi amfani da Wi-Fi amintacce; ka guji yin muhimman ayyuka ta public Wi-Fi da ba ka sani ba.</li><li>Kare Wi-Fi na gida ko ofis da WPA2/WPA3 da password mai ƙarfi na router.</li><li>Kada ka saka USB da ba ka sani ba a na'urar aiki.</li></ul>
+<h3>7. Yi Ajiyar Bayanai (Backup)</h3><p>Ka riƙa yin backup na muhimman fayiloli. Yi amfani da amintaccen cloud backup ko external drive wanda za ka cire idan ba ka yin backup. Ka gwada ko za ka iya dawo da fayiloli. Backup yana taimakawa bayan lalacewar na'ura, goge fayil bisa kuskure ko ransomware, amma ba ya maye gurbin sauran matakan tsaro.</p>
+<h3>8. Amfani Mai Aminci da Kai Rahoton Matsala</h3><p>Ka yi amfani da izinin da aikinka kawai yake buƙata. Kada ka girka software ba tare da izini ba ko ka karya dokokin tsaro. Idan ka zargi an kutsa cikin account ko na'urarka, kai rahoto da wuri ga IT/security team, bi umarninsu, kuma kada ka goge hujjoji ko ka binciki abin da ba a ba ka izini ba.</p>
+<div class="notice"><strong>KEY POINTS TO REMEMBER / MUHIMMAN ABUBUWA</strong><ol><li>Use unique passwords / Yi amfani da password daban-daban.</li><li>Enable MFA / Kunna MFA.</li><li>Install updates / Sabunta software.</li><li>Think before clicking / Yi tunani kafin danna link.</li><li>Back up important data / Yi backup na muhimman bayanai.</li><li>Report incidents quickly / Kai rahoton matsalar tsaro da wuri.</li></ol></div>
+<h3>Practical Exercise / Aikin Gwaji</h3><p>You receive an unexpected email claiming your account will be closed unless you click a link and enter your password. Explain three safe actions you should take.</p><p class="hausa">Ka samu email da ba ka yi tsammani ba yana cewa za a rufe account ɗinka idan ba ka danna link ka shigar da password ba. Bayyana matakai uku na aminci da ya kamata ka ɗauka.</p>
+<h3>Assessment — Quiz (5 Questions) / Jarrabawa — Tambayoyi 5</h3><p>You need at least <strong>4/5</strong> to pass. All questions and answer options are in English and Hausa. / Kana bukatar akalla <strong>4/5</strong> domin cin darasin. Duk tambayoyi da zaɓukan amsoshi suna Turanci da Hausa.</p>
+<form id="quiz15" onsubmit="return false">
+<div class="quiz-question"><p><strong>1. What does cyber hygiene mean?</strong><br/><span class="hausa">Menene ma'anar cyber hygiene?</span></p><label class="option"><input name="l15q1" type="radio" value="a"/> Regular habits that protect devices and information / Dabi'u na yau da kullum da ke kare na'urori da bayanai</label><label class="option"><input name="l15q1" type="radio" value="b"/> Sharing passwords with friends / Raba password da abokai</label><label class="option"><input name="l15q1" type="radio" value="c"/> Turning off all security updates / Kashe duk security updates</label><label class="option"><input name="l15q1" type="radio" value="d"/> Using one password everywhere / Amfani da password guda a ko'ina</label></div>
+<div class="quiz-question"><p><strong>2. Which password practice is safest?</strong><br/><span class="hausa">Wace hanya ce mafi aminci wajen amfani da password?</span></p><label class="option"><input name="l15q2" type="radio" value="a"/> Reuse one simple password / Maimaita password mai sauƙi</label><label class="option"><input name="l15q2" type="radio" value="b"/> Use a long, unique password for each account / Yi password mai tsawo kuma daban ga kowane account</label><label class="option"><input name="l15q2" type="radio" value="c"/> Share it with coworkers / Raba shi da abokan aiki</label><label class="option"><input name="l15q2" type="radio" value="d"/> Send it by public message / Aika shi a saƙon jama'a</label></div>
+<div class="quiz-question"><p><strong>3. What should you do with a suspicious login approval request you did not initiate?</strong><br/><span class="hausa">Me ya kamata ka yi idan ka samu login approval request da ba kai ka nema ba?</span></p><label class="option"><input name="l15q3" type="radio" value="a"/> Approve it quickly / Ka amince da shi da sauri</label><label class="option"><input name="l15q3" type="radio" value="b"/> Share the code with the sender / Ka ba wanda ya aiko lambar</label><label class="option"><input name="l15q3" type="radio" value="c"/> Deny it and report the activity / Ka ƙi amincewa da shi kuma ka kai rahoto</label><label class="option"><input name="l15q3" type="radio" value="d"/> Ignore all future security alerts / Ka yi watsi da duk sanarwar tsaro</label></div>
+<div class="quiz-question"><p><strong>4. Why are software security updates important?</strong><br/><span class="hausa">Me ya sa security updates na software suke da muhimmanci?</span></p><label class="option"><input name="l15q4" type="radio" value="a"/> They fix security weaknesses / Suna gyara raunin tsaro</label><label class="option"><input name="l15q4" type="radio" value="b"/> They always remove all files / Kullum suna goge duk fayiloli</label><label class="option"><input name="l15q4" type="radio" value="c"/> They make passwords public / Suna bayyana passwords ga jama'a</label><label class="option"><input name="l15q4" type="radio" value="d"/> They replace the need for backups / Suna kawar da bukatar backup</label></div>
+<div class="quiz-question"><p><strong>5. What is a safe first response if you suspect a work device is compromised?</strong><br/><span class="hausa">Wane mataki ne mai aminci idan ka zargi an kutsa cikin na'urar aikinka?</span></p><label class="option"><input name="l15q5" type="radio" value="a"/> Delete all evidence immediately / Goge duk hujjoji nan take</label><label class="option"><input name="l15q5" type="radio" value="b"/> Hide it and tell nobody / Ɓoye shi kada ka gaya wa kowa</label><label class="option"><input name="l15q5" type="radio" value="c"/> Try to hack the attacker back / Ka yi ƙoƙarin kai hari ga mahari</label><label class="option"><input name="l15q5" type="radio" value="d"/> Report promptly to the responsible IT/security team / Kai rahoto da wuri ga IT/security team mai alhaki</label></div>
+<button onclick="checkQuiz15()" type="button">Submit Answers / Aika Amsoshi</button></form>
+<p aria-live="polite" class="result" id="result15"></p><p class="notice" hidden id="lesson15Complete"><strong>Level 1 Completed — Excellent work!</strong><br/>You have passed all 15 official Level 1 topics. / Ka ci dukkan darussa 15 na Level 1. Madalla!</p>
+<button class="secondary" onclick="openLesson14()" type="button">Back to Lesson 14 / Komawa Darasi na 14</button><button class="secondary" onclick="returnToDashboard()" type="button">Return to Dashboard / Komawa Dashboard</button>
 </section>
 
 </main>
 <footer>ABAP AI CYBERSECURITY ACADEMY<br/>Prepared by Abbas Bukar</footer>
 <script>
-const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1","abap_level1_topic11_dns_dhcp_http_https_passed_v1","abap_level1_topic12_basic_cybersecurity_terminologies_passed_v1","abap_level1_topic13_cia_triad_passed_v1","abap_level1_topic14_authentication_authorization_passed_v1"];
+const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1","abap_level1_topic11_dns_dhcp_http_https_passed_v1","abap_level1_topic12_basic_cybersecurity_terminologies_passed_v1","abap_level1_topic13_cia_triad_passed_v1","abap_level1_topic14_authentication_authorization_passed_v1","abap_level1_topic15_basic_cyber_hygiene_passed_v1"];
 // Preserve previously earned passes when older versions used legacy keys.
 if(localStorage.getItem(lessonKeys[2]) !== "yes" && localStorage.getItem("abap_lesson3_passed") === "yes"){
   localStorage.setItem(lessonKeys[2], "yes");
@@ -1034,6 +1071,7 @@ let passed11 = localStorage.getItem(lessonKeys[10]) === "yes";
 let passed12 = localStorage.getItem(lessonKeys[11]) === "yes";
 let passed13 = localStorage.getItem(lessonKeys[12]) === "yes";
 let passed14 = localStorage.getItem(lessonKeys[13]) === "yes";
+let passed15 = localStorage.getItem(lessonKeys[14]) === "yes";
 
 function updateProgress(){
   if(passed1){
@@ -1077,14 +1115,15 @@ function updateProgress(){
   if(passed10){ const done10=document.getElementById("lesson10Complete"); if(done10) done10.hidden=false; const next11=document.getElementById("next11"); if(next11){next11.disabled=false;next11.textContent="Open Lesson 11 — DNS, DHCP, HTTP and HTTPS / Buɗe Darasi na 11";next11.onclick=openLesson11;} }
   if(passed11){ const done11=document.getElementById("lesson11Complete"); if(done11) done11.hidden=false; const next12=document.getElementById("next12"); if(next12){next12.disabled=false;next12.textContent="Open Lesson 12 — Basic Cybersecurity Terminologies / Buɗe Darasi na 12";next12.onclick=openLesson12;} }
   if(passed12){ const done12=document.getElementById("lesson12Complete"); if(done12) done12.hidden=false; const next13=document.getElementById("next13"); if(next13){next13.disabled=false;next13.textContent="Open Lesson 13 — CIA Triad / Buɗe Darasi na 13";next13.onclick=openLesson13;} }
-  if(passed13){ const done13=document.getElementById("lesson13Complete"); if(done13) done13.hidden=false; }
-  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8, passed9, passed10, passed11, passed12, passed13, passed14].filter(Boolean).length;
+  if(passed13){ const done13=document.getElementById("lesson13Complete"); if(done13) done13.hidden=false; const next14=document.getElementById("next14"); if(next14){next14.disabled=false;next14.textContent="Open Lesson 14 — Authentication and Authorization / Buɗe Darasi na 14";next14.onclick=openLesson14;} }
+  if(passed14){ const done14=document.getElementById("lesson14Complete"); if(done14) done14.hidden=false; const next15=document.getElementById("next15"); if(next15){next15.disabled=false;next15.textContent="Open Lesson 15 — Basic Cyber Hygiene / Buɗe Darasi na 15";next15.onclick=openLesson15;} }
+  const completed = [passed1, passed2, passed3, passed4, passed5, passed6, passed7, passed8, passed9, passed10, passed11, passed12, passed13, passed14, passed15].filter(Boolean).length;
   const continueButton = document.getElementById("continueLearningButton");
   if(continueButton){
-    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : !passed9 ? 9 : !passed10 ? 10 : !passed11 ? 11 : !passed12 ? 12 : !passed13 ? 13 : !passed14 ? 14 : 15;
+    const nextLesson = !passed1 ? 1 : !passed2 ? 2 : !passed3 ? 3 : !passed4 ? 4 : !passed5 ? 5 : !passed6 ? 6 : !passed7 ? 7 : !passed8 ? 8 : !passed9 ? 9 : !passed10 ? 10 : !passed11 ? 11 : !passed12 ? 12 : !passed13 ? 13 : !passed14 ? 14 : !passed15 ? 15 : 16;
     continueButton.textContent = nextLesson <= 6
       ? "Continue Learning — Lesson " + nextLesson + " / Ci gaba da Koyo — Darasi na " + nextLesson
-      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : nextLesson === 9 ? "Continue Learning — Lesson 9 / Ci gaba da Koyo — Darasi na 9" : nextLesson === 10 ? "Continue Learning — Lesson 10 / Ci gaba da Koyo — Darasi na 10" : nextLesson === 11 ? "Continue Learning — Lesson 11 / Ci gaba da Koyo — Darasi na 11" : nextLesson === 12 ? "Continue Learning — Lesson 12 / Ci gaba da Koyo — Darasi na 12" : nextLesson === 13 ? "Continue Learning — Lesson 13 / Ci gaba da Koyo — Darasi na 13" : nextLesson === 14 ? "Continue Learning — Lesson 14 / Ci gaba da Koyo — Darasi na 14" : "All 14 available lessons completed / An kammala darussa 14 da suke nan";
+      : nextLesson === 7 ? "Continue Learning — Lesson 7 / Ci gaba da Koyo — Darasi na 7" : nextLesson === 8 ? "Continue Learning — Lesson 8 / Ci gaba da Koyo — Darasi na 8" : nextLesson === 9 ? "Continue Learning — Lesson 9 / Ci gaba da Koyo — Darasi na 9" : nextLesson === 10 ? "Continue Learning — Lesson 10 / Ci gaba da Koyo — Darasi na 10" : nextLesson === 11 ? "Continue Learning — Lesson 11 / Ci gaba da Koyo — Darasi na 11" : nextLesson === 12 ? "Continue Learning — Lesson 12 / Ci gaba da Koyo — Darasi na 12" : nextLesson === 13 ? "Continue Learning — Lesson 13 / Ci gaba da Koyo — Darasi na 13" : nextLesson === 14 ? "Continue Learning — Lesson 14 / Ci gaba da Koyo — Darasi na 14" : nextLesson === 15 ? "Continue Learning — Lesson 15 / Ci gaba da Koyo — Darasi na 15" : "Level 1 completed — all 15 lessons passed / An kammala duk darussa 15 na Level 1";
   }
   const value = Math.round((completed / 15) * 100);
   document.getElementById("bar").style.width = value + "%";
@@ -1133,7 +1172,8 @@ function startLesson(){
   if(!passed12) return openLesson12();
   if(!passed13) return openLesson13();
   if(!passed14) return openLesson14();
-  alert("You have completed all 14 lessons currently available. / Ka kammala darussa goma sha hudu da ake da su yanzu.");
+  if(!passed15) return openLesson15();
+  alert("You have completed all 15 Level 1 lessons. / Ka kammala dukkan darussa 15 na Level 1.");
 }
 function returnToDashboard(){
   hideLessons();
@@ -1392,6 +1432,19 @@ function openLesson14(){
   if(!passed13){ alert("Pass Lesson 13 first. / Ka ci jarrabawar Darasi na 13 tukuna."); return; }
   showLesson("lesson14");
 }
+function openLesson15(){
+  if(!passed14){ alert("Pass Lesson 14 first. / Ka ci jarrabawar Darasi na 14 tukuna."); return; }
+  showLesson("lesson15");
+}
+function checkQuiz15(){
+  gradeQuiz(["l15q1","l15q2","l15q3","l15q4","l15q5"],
+    {l15q1:"a",l15q2:"b",l15q3:"c",l15q4:"a",l15q5:"d"},
+    4, "result15", lessonKeys[14], () => {
+      passed15 = true;
+      document.getElementById("lesson15Complete").hidden = false;
+    });
+}
+
 function checkQuiz14(){
   gradeQuiz(["l14q1","l14q2","l14q3","l14q4","l14q5"],
     {l14q1:"a",l14q2:"b",l14q3:"c",l14q4:"b",l14q5:"a"},
@@ -1439,6 +1492,7 @@ function restoreProgress(){
   if(passed12){ document.getElementById("lesson12Complete").hidden = false; document.getElementById("result12").textContent = "Lesson 12 was previously passed. / Ka riga ka ci jarrabawar Darasi na 12."; }
   if(passed13){ document.getElementById("lesson13Complete").hidden = false; document.getElementById("result13").textContent = "Lesson 13 was previously passed. / Ka riga ka ci jarrabawar Darasi na 13."; }
   if(passed14){ document.getElementById("lesson14Complete").hidden = false; document.getElementById("result14").textContent = "Lesson 14 was previously passed. / Ka riga ka ci jarrabawar Darasi na 14."; }
+  if(passed15){ const done15=document.getElementById("lesson15Complete"); if(done15) done15.hidden=false; const result15=document.getElementById("result15"); if(result15) result15.textContent="Level 1 completed — 15/15 passed. / An kammala Level 1 — an ci 15/15."; }
   updateProgress();
 }
 restoreProgress();
