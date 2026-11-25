@@ -99,7 +99,7 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <div class="level1-list" id="level2LessonLibrary">
 <button type="button" id="startLevel2Button" onclick="openLevel2Lesson1()" disabled>Lesson 1 — Linux Administration / Gudanar da Linux (Locked)</button>
 <button type="button" id="startLevel2Lesson2Button" onclick="openLevel2Lesson2()" disabled>Lesson 2 — Windows Administration / Gudanar da Windows (Locked)</button>
-<button type="button" disabled>Lesson 3 — Command Line (CMD and PowerShell) / Amfani da umarnin kwamfuta (Locked)</button>
+<button type="button" id="startLevel2Lesson3Button" onclick="openLevel2Lesson3()" disabled>Lesson 3 — Command Line (CMD and PowerShell) / Amfani da umarnin kwamfuta (Locked)</button>
 <button type="button" disabled>Lesson 4 — Linux Terminal / Yin aiki da umarni a Linux (Locked)</button>
 <button type="button" disabled>Lesson 5 — Network Security / Kare hanyoyin sadarwa (Locked)</button>
 <button type="button" disabled>Lesson 6 — Firewalls / Tacewa da sarrafa zirga-zirgar network (Locked)</button>
@@ -1219,14 +1219,49 @@ hr{border:0;border-top:1px solid #294563;margin:22px 0}
 <button class="secondary" type="button" onclick="returnToDashboard()">Return to Dashboard / Komawa Dashboard</button>
 </section>
 
+
+<section class="panel lesson" id="level2lesson3" style="display:none">
+<h2>LEVEL 2 — LESSON 3</h2>
+<h3>Command Line (CMD and PowerShell) / Amfani da Umarnin Kwamfuta</h3>
+<div class="notice"><strong>Learning Objectives / Manufofin Koyo</strong><p>Understand what a command-line interface is, distinguish Command Prompt (CMD) from PowerShell, use basic commands to inspect and navigate your computer, and follow safe practices when running commands.</p><p class="hausa">Fahimtar menene command-line interface, bambancin CMD da PowerShell, amfani da commands na asali wajen duba da zagayawa cikin kwamfuta, da bin matakan tsaro yayin gudanar da commands.</p></div>
+<h3>PART A — ENGLISH</h3>
+<h3>1. What Is a Command-Line Interface (CLI)?</h3><p>A CLI lets a user interact with a computer by typing commands instead of relying only on graphical buttons and menus. Commands can inspect information, manage files, configure settings and automate tasks. Only run commands you understand and are authorized to use.</p>
+<h3>2. Command Prompt (CMD)</h3><p>CMD is the traditional Windows command interpreter. It supports commands such as:</p><ul><li><code>dir</code> — list files and folders in the current location.</li><li><code>cd</code> — change the current directory.</li><li><code>cls</code> — clear the command window.</li><li><code>whoami</code> — display the current user.</li><li><code>ipconfig</code> — display basic network configuration.</li><li><code>help</code> — show help for supported commands.</li></ul>
+<h3>3. PowerShell</h3><p>PowerShell is a command-line shell and scripting language designed for administration and automation. It works with objects, making it useful for examining and managing Windows systems. Examples of common commands include:</p><ul><li><code>Get-Help</code> — view help about a command.</li><li><code>Get-Location</code> — show the current location.</li><li><code>Get-ChildItem</code> — list items in a folder (similar to <code>dir</code>).</li><li><code>Get-Process</code> — list running processes.</li><li><code>Get-Service</code> — list services.</li><li><code>Get-NetIPConfiguration</code> — view network configuration.</li></ul><p>Many PowerShell commands use a Verb-Noun naming pattern. Command names may have aliases, but learning the full names helps clarity.</p>
+<h3>4. Navigating and Inspecting Safely</h3><p>Start with read-only commands to understand your environment. Check your current directory, list its contents and identify your user. Avoid commands that delete files, change permissions, modify system settings or download-and-run scripts unless you understand them, have authorization and a trusted backup when appropriate.</p>
+<h3>5. Administrator Privileges</h3><p>Some tasks require an elevated shell (“Run as administrator”). Use elevation only for a specific authorized task. Do not keep an elevated terminal open unnecessarily, and never paste commands from an unknown source simply because someone says they are required.</p>
+<h3>6. Command Safety and Troubleshooting</h3><ul><li>Read help first: <code>command /?</code> in CMD or <code>Get-Help command</code> in PowerShell.</li><li>Check spelling and paths before executing.</li><li>Understand whether a command only reads information or changes the system.</li><li>Record errors and exact messages for troubleshooting.</li><li>Use a lab or your own device for practice; do not test on systems without permission.</li></ul>
+<h3>PART B — HAUSA</h3>
+<h3>1. Menene Command-Line Interface (CLI)?</h3><p>CLI hanya ce da mutum ke hulɗa da kwamfuta ta hanyar rubuta commands maimakon dogaro da buttons da menus kawai. Commands na iya duba bayanai, sarrafa fayiloli, saita tsarin kwamfuta da kuma taimakawa wajen automation. Ka gudanar da commands da ka fahimta kuma kana da izinin amfani da su kawai.</p>
+<h3>2. Command Prompt (CMD)</h3><p>CMD tsohon command interpreter ne na Windows. Ga wasu commands:</p><ul><li><code>dir</code> — nuna fayiloli da folders a wurin da kake.</li><li><code>cd</code> — canza directory.</li><li><code>cls</code> — share rubutun da ke command window.</li><li><code>whoami</code> — nuna user ɗin da kake amfani da shi.</li><li><code>ipconfig</code> — nuna wasu bayanan network configuration.</li><li><code>help</code> — nuna taimako ga commands.</li></ul>
+<h3>3. PowerShell</h3><p>PowerShell command-line shell ne da scripting language da aka tsara domin gudanarwa da automation. Yana aiki da objects, saboda haka yana taimakawa wajen duba da sarrafa Windows. Ga commands na asali:</p><ul><li><code>Get-Help</code> — duba bayanin command.</li><li><code>Get-Location</code> — nuna wurin da kake.</li><li><code>Get-ChildItem</code> — nuna abubuwan da ke folder (kamar <code>dir</code>).</li><li><code>Get-Process</code> — nuna processes da ke gudana.</li><li><code>Get-Service</code> — nuna services.</li><li><code>Get-NetIPConfiguration</code> — duba network configuration.</li></ul><p>Commands da yawa na PowerShell suna bin tsarin Verb-Noun. Fahimtar cikakken sunan command yana taimakawa wajen gane aikinsa.</p>
+<h3>4. Zagayawa da Duba Kwamfuta cikin Aminci</h3><p>Ka fara da commands da suke duba bayanai kawai. Duba directory ɗin da kake, nuna abubuwan da ke ciki, sannan ka gane user ɗinka. Ka guji commands da ke goge fayiloli, canza permissions ko system settings, ko download-and-run scripts sai ka fahimce su, kana da izini, kuma kana da backup idan ya dace.</p>
+<h3>5. Administrator Privileges</h3><p>Wasu ayyuka suna buƙatar shell da aka buɗe da “Run as administrator”. Yi amfani da wannan izini ne don takamaiman aiki da aka amince maka. Kada ka bar terminal mai elevated privileges a buɗe ba tare da buƙata ba, kuma kada ka liƙa command daga tushe da ba ka sani ba.</p>
+<h3>6. Tsaron Commands da Gyaran Matsaloli</h3><ul><li>Ka fara karanta help: <code>command /?</code> a CMD ko <code>Get-Help command</code> a PowerShell.</li><li>Ka duba rubutun command da path kafin gudanarwa.</li><li>Ka fahimci ko command yana duba bayanai ne ko yana canza tsarin.</li><li>Ka rubuta error da ainihin saƙonsa domin troubleshooting.</li><li>Yi practice a lab ko na'urarka; kada ka gwada a tsarin da ba ka da izini.</li></ul>
+<h3>Practical Exercise / Aikin Gwaji</h3><p>On your own Windows computer or an authorized practice machine, open CMD and run <code>whoami</code>, <code>dir</code>, <code>ipconfig</code>, and <code>help</code>. Then open PowerShell and run <code>Get-Location</code>, <code>Get-ChildItem</code>, and <code>Get-Process</code>. Record what each command shows. Do not change settings or run destructive commands.</p><p class="hausa">A kwamfutarka ko na'urar practice da aka ba ka izini, buɗe CMD ka gudanar da <code>whoami</code>, <code>dir</code>, <code>ipconfig</code> da <code>help</code>. Sannan buɗe PowerShell ka gudanar da <code>Get-Location</code>, <code>Get-ChildItem</code> da <code>Get-Process</code>. Rubuta abin da kowane command ya nuna. Kada ka canza settings ko gudanar da commands masu goge bayanai.</p>
+<h3>Assessment — Quiz (5 Questions) / Jarrabawa — Tambayoyi 5</h3><p>You need at least <strong>4/5</strong> to pass. Questions and choices are bilingual. / Kana buƙatar aƙalla <strong>4/5</strong>. Tambayoyi da zaɓukan amsa duk suna Turanci da Hausa.</p>
+<form id="quizL2_3" onsubmit="return false">
+<div class="quiz-question"><p><strong>1. What is a CLI?</strong><br/><span class="hausa">Menene CLI?</span></p><label class="option"><input name="l2_3q1" type="radio" value="a"/> A way to interact by typing commands / Hanyar hulɗa da kwamfuta ta rubuta commands</label><label class="option"><input name="l2_3q1" type="radio" value="b"/> A computer monitor / Allon kwamfuta</label><label class="option"><input name="l2_3q1" type="radio" value="c"/> A printer setting / Saitin printer</label><label class="option"><input name="l2_3q1" type="radio" value="d"/> A type of cable / Wani irin cable</label></div>
+<div class="quiz-question"><p><strong>2. Which CMD command lists files and folders?</strong><br/><span class="hausa">Wane command na CMD ne ke nuna files da folders?</span></p><label class="option"><input name="l2_3q2" type="radio" value="a"/> cls / cls</label><label class="option"><input name="l2_3q2" type="radio" value="b"/> dir / dir</label><label class="option"><input name="l2_3q2" type="radio" value="c"/> whoami / whoami</label><label class="option"><input name="l2_3q2" type="radio" value="d"/> help / help</label></div>
+<div class="quiz-question"><p><strong>3. What does PowerShell's Get-Process show?</strong><br/><span class="hausa">Menene Get-Process na PowerShell ke nunawa?</span></p><label class="option"><input name="l2_3q3" type="radio" value="a"/> Wi-Fi passwords / Passwords na Wi-Fi</label><label class="option"><input name="l2_3q3" type="radio" value="b"/> Deleted files only / Fayilolin da aka goge kawai</label><label class="option"><input name="l2_3q3" type="radio" value="c"/> Running processes / Processes da ke gudana</label><label class="option"><input name="l2_3q3" type="radio" value="d"/> Monitor brightness / Haske na monitor</label></div>
+<div class="quiz-question"><p><strong>4. When should you use an elevated Administrator shell?</strong><br/><span class="hausa">Yaushe ya kamata ka yi amfani da Administrator shell?</span></p><label class="option"><input name="l2_3q4" type="radio" value="a"/> For every command / Ga kowane command</label><label class="option"><input name="l2_3q4" type="radio" value="b"/> Only for a specific authorized task that requires it / Don takamaiman aikin da aka ba da izini kuma yake buƙata</label><label class="option"><input name="l2_3q4" type="radio" value="c"/> To bypass all security / Don kauce wa duk tsaro</label><label class="option"><input name="l2_3q4" type="radio" value="d"/> Whenever a website asks / Duk lokacin website ya nema</label></div>
+<div class="quiz-question"><p><strong>5. What is the safest approach to an unfamiliar command?</strong><br/><span class="hausa">Wace hanya ce mafi aminci ga command da ba ka sani ba?</span></p><label class="option"><input name="l2_3q5" type="radio" value="a"/> Run it immediately / Gudanar da shi nan take</label><label class="option"><input name="l2_3q5" type="radio" value="b"/> Paste it from any website / Liƙa shi daga kowane website</label><label class="option"><input name="l2_3q5" type="radio" value="c"/> Disable antivirus first / Kashe antivirus tukuna</label><label class="option"><input name="l2_3q5" type="radio" value="d"/> Read help, understand it and confirm authorization / Karanta help, fahimce shi kuma tabbatar da izini</label></div>
+<button type="button" onclick="checkLevel2Lesson3()">Submit Answers / Aika Amsoshi</button></form>
+<p aria-live="polite" class="result" id="resultL2_3"></p>
+<p class="notice" id="level2Lesson3Complete" hidden><strong>Level 2 — Lesson 3 Passed!</strong><br/>Command Line is complete. Lesson 4 — Linux Terminal — is next. / An kammala Command Line. Darasi na 4 — Linux Terminal — shi ne na gaba.</p>
+<button class="secondary" type="button" onclick="returnToDashboard()">Return to Dashboard / Komawa Dashboard</button>
+</section>
+
 </main>
 <footer>ABAP AI CYBERSECURITY ACADEMY<br/>Prepared by Abbas Bukar</footer>
 <script>
 const lessonKeys = ["abap_level1_topic1_passed_v2","abap_level1_topic2_history_passed_v1","abap_level1_topic3_threats_passed_v1","abap_level1_topic4_computer_fundamentals_passed_v1","abap_level1_topic5_hardware_software_passed_v1","abap_level1_topic6_operating_systems_passed_v1","abap_level1_topic7_internet_fundamentals_passed_v1","abap_level1_topic8_networking_fundamentals_passed_v1","abap_level1_topic9_ip_mac_addresses_passed_v1","abap_level1_topic10_tcp_ip_osi_passed_v1","abap_level1_topic11_dns_dhcp_http_https_passed_v1","abap_level1_topic12_basic_cybersecurity_terminologies_passed_v1","abap_level1_topic13_cia_triad_passed_v1","abap_level1_topic14_authentication_authorization_passed_v1","abap_level1_topic15_basic_cyber_hygiene_passed_v1"];
 const level2Lesson1Key = "abap_level2_topic1_linux_administration_passed_v1";
 const level2Lesson2Key = "abap_level2_topic2_windows_administration_passed_v1";
+const level2Lesson3Key = "abap_level2_topic3_command_line_passed_v1";
 let level2Lesson1Passed = localStorage.getItem(level2Lesson1Key) === "yes";
 let level2Lesson2Passed = localStorage.getItem(level2Lesson2Key) === "yes";
+let level2Lesson3Passed = localStorage.getItem(level2Lesson3Key) === "yes";
 // Preserve previously earned passes when older versions used legacy keys.
 if(localStorage.getItem(lessonKeys[2]) !== "yes" && localStorage.getItem("abap_lesson3_passed") === "yes"){
   localStorage.setItem(lessonKeys[2], "yes");
@@ -1387,9 +1422,10 @@ function startLesson(){
 function updateLevel2Status(){
   const button = document.getElementById("startLevel2Button");
   const lesson2Button = document.getElementById("startLevel2Lesson2Button");
+  const lesson3Button = document.getElementById("startLevel2Lesson3Button");
   const nextLesson2Button = document.getElementById("nextLevel2Lesson2Button");
   const status = document.getElementById("level2ProgressText");
-  const completed = [level2Lesson1Passed, level2Lesson2Passed].filter(Boolean).length;
+  const completed = [level2Lesson1Passed, level2Lesson2Passed, level2Lesson3Passed].filter(Boolean).length;
   if(status) status.textContent = "Level 2 progress: " + completed + " of 18 lessons passed / Ci gaban Level 2: an ci darussa " + completed + " cikin 18.";
   if(button){
     button.disabled = !passed15;
@@ -1403,10 +1439,16 @@ function updateLevel2Status(){
     lesson2Button.disabled = !level2Lesson1Passed;
     lesson2Button.textContent = !level2Lesson1Passed ? "Lesson 2 — Windows Administration (Locked) / A kulle" : (level2Lesson2Passed ? "Review Lesson 2 — Windows Administration / Sake duba Darasi na 2" : "Start Lesson 2 — Windows Administration / Fara Darasi na 2");
   }
+  if(lesson3Button){
+    lesson3Button.disabled = !level2Lesson2Passed;
+    lesson3Button.textContent = !level2Lesson2Passed ? "Lesson 3 — Command Line (Locked) / A kulle" : (level2Lesson3Passed ? "Review Lesson 3 — Command Line / Sake duba Darasi na 3" : "Start Lesson 3 — Command Line / Fara Darasi na 3");
+  }
   const done = document.getElementById("level2Lesson1Complete");
   if(done && level2Lesson1Passed) done.hidden = false;
   const done2 = document.getElementById("level2Lesson2Complete");
   if(done2 && level2Lesson2Passed) done2.hidden = false;
+  const done3 = document.getElementById("level2Lesson3Complete");
+  if(done3 && level2Lesson3Passed) done3.hidden = false;
 }
 function openLevel2Lesson1(){
   if(!passed15){ alert("Complete and pass all 15 Level 1 lessons first. / Ka kammala kuma ka ci duk darussa 15 na Level 1 tukuna."); return; }
@@ -1432,6 +1474,20 @@ function checkLevel2Lesson2(){
     4, "resultL2_2", level2Lesson2Key, () => {
       level2Lesson2Passed = true;
       const done = document.getElementById("level2Lesson2Complete");
+      if(done) done.hidden = false;
+      updateLevel2Status();
+    });
+}
+function openLevel2Lesson3(){
+  if(!level2Lesson2Passed){ alert("Pass Level 2 Lesson 2 — Windows Administration — first. / Ka fara ka ci Lesson 2 — Windows Administration — tukuna."); return; }
+  showLesson("level2lesson3");
+}
+function checkLevel2Lesson3(){
+  gradeQuiz(["l2_3q1","l2_3q2","l2_3q3","l2_3q4","l2_3q5"],
+    {l2_3q1:"a",l2_3q2:"b",l2_3q3:"c",l2_3q4:"b",l2_3q5:"d"},
+    4, "resultL2_3", level2Lesson3Key, () => {
+      level2Lesson3Passed = true;
+      const done = document.getElementById("level2Lesson3Complete");
       if(done) done.hidden = false;
       updateLevel2Status();
     });
@@ -1770,6 +1826,7 @@ if(level2Lesson2Passed){
   if(doneL22) doneL22.hidden = false;
   if(resultL22) resultL22.textContent = "Level 2 Lesson 2 was previously passed. / Ka riga ka ci jarrabawar Lesson 2 na Level 2.";
 }
+if(level2Lesson3Passed){ const doneL23=document.getElementById("level2Lesson3Complete"); const resultL23=document.getElementById("resultL2_3"); if(doneL23) doneL23.hidden=false; if(resultL23) resultL23.textContent="Level 2 Lesson 3 was previously passed. / Ka riga ka ci jarrabawar Lesson 3 na Level 2."; }
 updateLevel2Status();
 </script>
 </body>
